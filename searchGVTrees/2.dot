@@ -1,0 +1,15 @@
+digraph g {
+node [shape = Mrecord];
+nodo0[label="{EO: 0|cost: 0.0|A: null}"]
+nodo1[label="{EO: 1|cost: 1.0|A: GoB}"]
+
+nodo0 -> nodo1;
+nodo2[label="{EO: 2|cost: 1.0|A: GoF}"]
+
+nodo0 -> nodo2;
+nodo3[label="{EO: 3|cost: 1.0|A: GoP}"]
+
+nodo0 -> nodo3;
+
+
+}
