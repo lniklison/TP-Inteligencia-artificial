@@ -25,7 +25,12 @@ import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 import frsf.cidisi.faia.state.AgentState;
 import frsf.cidisi.faia.state.EnvironmentState;
 
-public class GoK extends SearchAction {
+public class GoX extends SearchAction {
+    private String nodo = "";
+    
+    public GoX(String x){
+        this.nodo = x;
+    }
 
     /**
      * This method updates a tree node state when the search process is running.
@@ -35,14 +40,16 @@ public class GoK extends SearchAction {
     public SearchBasedAgentState execute(SearchBasedAgentState s) {
         RobotAgentState agentState = (RobotAgentState) s;
 
-        if (agentState.getVisitedPositions().contains(RobotAgentState.K)) {
+        if (agentState.getVisitedPositions().contains(this.nodo)) {
             return null;
         }
-        ArrayList<String> successors = new ArrayList<String>(agentState.getSuccessors());
+        ArrayList<String> successors = new ArrayList<String>();
+        successors.addAll(agentState.getSuccessors());
         if (successors != null) {
-            int index = successors.indexOf(RobotAgentState.K);
+            int index = successors.indexOf(this.nodo);
             if (index >= 0) {
-                agentState.setPosition(RobotAgentState.K);
+                agentState.setPosition(this.nodo);
+
                 return agentState;
             }
 
@@ -68,6 +75,6 @@ public class GoK extends SearchAction {
 
     @Override
     public String toString() {
-        return "GoK";
+        return "Go"+this.nodo;
     }
 }

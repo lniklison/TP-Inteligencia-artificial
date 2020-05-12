@@ -43,23 +43,27 @@ public class RobotAgent extends SearchBasedAgent {
 
         // Robot agent actions
         Vector<SearchAction> actions = new Vector<SearchAction>();
-        actions.addElement(new GoA());
-        actions.addElement(new GoB());
-        actions.addElement(new GoC());
-        actions.addElement(new GoD());
-        actions.addElement(new GoE());
-        actions.addElement(new GoF());
-        actions.addElement(new GoG());
-        actions.addElement(new GoH());
-        actions.addElement(new GoI());
-        actions.addElement(new GoJ());
-        actions.addElement(new GoK());
-        actions.addElement(new GoL());
-        actions.addElement(new GoM());
-        actions.addElement(new GoN());
-        actions.addElement(new GoO());
-        actions.addElement(new GoP());
-        actions.addElement(new GoQ());
+        
+        for(int i = 0; i<RobotEnvironmentState.POSITIONS.length; i++){
+            actions.addElement(new GoX(RobotEnvironmentState.POSITIONS[i][0]));
+        }
+        System.out.println("Acciones: "+actions.toString());        
+//        actions.addElement(new GoB());
+//        actions.addElement(new GoC());
+//        actions.addElement(new GoD());
+//        actions.addElement(new GoE());
+//        actions.addElement(new GoF());
+//        actions.addElement(new GoG());
+//        actions.addElement(new GoH());
+//        actions.addElement(new GoI());
+//        actions.addElement(new GoJ());
+//        actions.addElement(new GoK());
+//        actions.addElement(new GoL());
+//        actions.addElement(new GoM());
+//        actions.addElement(new GoN());
+//        actions.addElement(new GoO());
+//        actions.addElement(new GoP());
+//        actions.addElement(new GoQ());
 
         // Robot agent problem
         Problem problem = new Problem(goal, agentState, actions);
