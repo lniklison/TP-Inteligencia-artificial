@@ -1,15 +1,2382 @@
 digraph g {
 node [shape = Mrecord];
 nodo0[label="{EO: 0|cost: 0.0|A: null}"]
-nodo1[label="{EO: 1|cost: 1.0|A: GoB}"]
+nodo1[label="{EO: 1|cost: -1.0|A: GoE}"]
+nodo2[label="{EO: 2|cost: -2.0|A: GoF|Posicion:\nE}"]
+nodo5[label="{EO: 5|cost: -3.0|A: GoG|Posicion:\nF}"]
+nodo8[label="{EO: 8|cost: -4.0|A: GoQ|Posicion:\nG}"]
+nodo9[label="{EO: 9|cost: -5.0|A: GoB|Posicion:\nQ}"]
+nodo11[label="{EO: 11|cost: -6.0|A: GoJ|Posicion:\nB}"]
+nodo14[label="{EO: 14|cost: -7.0|A: GoH|Posicion:\nJ}"]
+nodo17[label="{EO: 17|cost: -8.0|A: GoI|Posicion:\nH}"]
+nodo18[label="{EO: 18|cost: -9.0|A: GoL|Posicion:\nI}"]
+nodo19[label="{EO: 19|cost: -10.0|A: GoK|Posicion:\nL}"]
+nodo21[label="{EO: 21|cost: -11.0|A: GoN|Posicion:\nK}"]
+nodo22[label="{EO: 22|cost: -12.0|A: GoM|Posicion:\nN}"]
+
+nodo21 -> nodo22;
+
+nodo19 -> nodo21;
+
+nodo18 -> nodo19;
+nodo20[label="{EO: 20|cost: -10.0|A: GoM|Posicion:\nL}"]
+nodo23[label="{EO: 23|cost: -11.0|A: GoN|Posicion:\nM}"]
+nodo24[label="{EO: 24|cost: -12.0|A: GoK|Posicion:\nN}"]
+
+nodo23 -> nodo24;
+
+nodo20 -> nodo23;
+
+nodo18 -> nodo20;
+
+nodo17 -> nodo18;
+
+nodo14 -> nodo17;
+
+nodo11 -> nodo14;
+nodo15[label="{EO: 15|cost: -7.0|A: GoI|Posicion:\nJ}"]
+nodo25[label="{EO: 25|cost: -8.0|A: GoH|Posicion:\nI}"]
+
+nodo15 -> nodo25;
+nodo26[label="{EO: 26|cost: -8.0|A: GoL|Posicion:\nI}"]
+nodo27[label="{EO: 27|cost: -9.0|A: GoK|Posicion:\nL}"]
+nodo29[label="{EO: 29|cost: -10.0|A: GoN|Posicion:\nK}"]
+nodo30[label="{EO: 30|cost: -11.0|A: GoM|Posicion:\nN}"]
+
+nodo29 -> nodo30;
+
+nodo27 -> nodo29;
+
+nodo26 -> nodo27;
+nodo28[label="{EO: 28|cost: -9.0|A: GoM|Posicion:\nL}"]
+nodo31[label="{EO: 31|cost: -10.0|A: GoN|Posicion:\nM}"]
+nodo32[label="{EO: 32|cost: -11.0|A: GoK|Posicion:\nN}"]
+
+nodo31 -> nodo32;
+
+nodo28 -> nodo31;
+
+nodo26 -> nodo28;
+
+nodo15 -> nodo26;
+
+nodo11 -> nodo15;
+nodo16[label="{EO: 16|cost: -7.0|A: GoK|Posicion:\nJ}"]
+nodo33[label="{EO: 33|cost: -8.0|A: GoL|Posicion:\nK}"]
+nodo35[label="{EO: 35|cost: -9.0|A: GoI|Posicion:\nL}"]
+nodo37[label="{EO: 37|cost: -10.0|A: GoH|Posicion:\nI}"]
+
+nodo35 -> nodo37;
+
+nodo33 -> nodo35;
+nodo36[label="{EO: 36|cost: -9.0|A: GoM|Posicion:\nL}"]
+nodo38[label="{EO: 38|cost: -10.0|A: GoN|Posicion:\nM}"]
+
+nodo36 -> nodo38;
+
+nodo33 -> nodo36;
+
+nodo16 -> nodo33;
+nodo34[label="{EO: 34|cost: -8.0|A: GoN|Posicion:\nK}"]
+nodo39[label="{EO: 39|cost: -9.0|A: GoM|Posicion:\nN}"]
+nodo40[label="{EO: 40|cost: -10.0|A: GoL|Posicion:\nM}"]
+nodo41[label="{EO: 41|cost: -11.0|A: GoI|Posicion:\nL}"]
+nodo42[label="{EO: 42|cost: -12.0|A: GoH|Posicion:\nI}"]
+
+nodo41 -> nodo42;
+
+nodo40 -> nodo41;
+
+nodo39 -> nodo40;
+
+nodo34 -> nodo39;
+
+nodo16 -> nodo34;
+
+nodo11 -> nodo16;
+
+nodo9 -> nodo11;
+nodo12[label="{EO: 12|cost: -6.0|A: GoK|Posicion:\nB}"]
+nodo43[label="{EO: 43|cost: -7.0|A: GoJ|Posicion:\nK}"]
+nodo46[label="{EO: 46|cost: -8.0|A: GoH|Posicion:\nJ}"]
+nodo48[label="{EO: 48|cost: -9.0|A: GoI|Posicion:\nH}"]
+nodo49[label="{EO: 49|cost: -10.0|A: GoL|Posicion:\nI}"]
+nodo50[label="{EO: 50|cost: -11.0|A: GoM|Posicion:\nL}"]
+nodo51[label="{EO: 51|cost: -12.0|A: GoN|Posicion:\nM}"]
+
+nodo50 -> nodo51;
+
+nodo49 -> nodo50;
+
+nodo48 -> nodo49;
+
+nodo46 -> nodo48;
+
+nodo43 -> nodo46;
+nodo47[label="{EO: 47|cost: -8.0|A: GoI|Posicion:\nJ}"]
+nodo52[label="{EO: 52|cost: -9.0|A: GoH|Posicion:\nI}"]
+
+nodo47 -> nodo52;
+nodo53[label="{EO: 53|cost: -9.0|A: GoL|Posicion:\nI}"]
+nodo54[label="{EO: 54|cost: -10.0|A: GoM|Posicion:\nL}"]
+nodo55[label="{EO: 55|cost: -11.0|A: GoN|Posicion:\nM}"]
+
+nodo54 -> nodo55;
+
+nodo53 -> nodo54;
+
+nodo47 -> nodo53;
+
+nodo43 -> nodo47;
+
+nodo12 -> nodo43;
+nodo44[label="{EO: 44|cost: -7.0|A: GoL|Posicion:\nK}"]
+nodo56[label="{EO: 56|cost: -8.0|A: GoI|Posicion:\nL}"]
+nodo58[label="{EO: 58|cost: -9.0|A: GoH|Posicion:\nI}"]
+nodo60[label="{EO: 60|cost: -10.0|A: GoJ|Posicion:\nH}"]
+
+nodo58 -> nodo60;
+
+nodo56 -> nodo58;
+nodo59[label="{EO: 59|cost: -9.0|A: GoJ|Posicion:\nI}"]
+nodo61[label="{EO: 61|cost: -10.0|A: GoH|Posicion:\nJ}"]
+
+nodo59 -> nodo61;
+
+nodo56 -> nodo59;
+
+nodo44 -> nodo56;
+nodo57[label="{EO: 57|cost: -8.0|A: GoM|Posicion:\nL}"]
+nodo62[label="{EO: 62|cost: -9.0|A: GoN|Posicion:\nM}"]
+
+nodo57 -> nodo62;
+
+nodo44 -> nodo57;
+
+nodo12 -> nodo44;
+nodo45[label="{EO: 45|cost: -7.0|A: GoN|Posicion:\nK}"]
+nodo63[label="{EO: 63|cost: -8.0|A: GoM|Posicion:\nN}"]
+nodo64[label="{EO: 64|cost: -9.0|A: GoL|Posicion:\nM}"]
+nodo65[label="{EO: 65|cost: -10.0|A: GoI|Posicion:\nL}"]
+nodo66[label="{EO: 66|cost: -11.0|A: GoH|Posicion:\nI}"]
+nodo68[label="{EO: 68|cost: -12.0|A: GoJ|Posicion:\nH}"]
+
+nodo66 -> nodo68;
+
+nodo65 -> nodo66;
+nodo67[label="{EO: 67|cost: -11.0|A: GoJ|Posicion:\nI}"]
+nodo69[label="{EO: 69|cost: -12.0|A: GoH|Posicion:\nJ}"]
+
+nodo67 -> nodo69;
+
+nodo65 -> nodo67;
+
+nodo64 -> nodo65;
+
+nodo63 -> nodo64;
+
+nodo45 -> nodo63;
+
+nodo12 -> nodo45;
+
+nodo9 -> nodo12;
+nodo13[label="{EO: 13|cost: -6.0|A: GoO|Posicion:\nB}"]
+nodo70[label="{EO: 70|cost: -7.0|A: GoP|Posicion:\nO}"]
+
+nodo13 -> nodo70;
+
+nodo9 -> nodo13;
+
+nodo8 -> nodo9;
+nodo10[label="{EO: 10|cost: -5.0|A: GoP|Posicion:\nQ}"]
+nodo71[label="{EO: 71|cost: -6.0|A: GoO|Posicion:\nP}"]
+nodo72[label="{EO: 72|cost: -7.0|A: GoB|Posicion:\nO}"]
+nodo73[label="{EO: 73|cost: -8.0|A: GoJ|Posicion:\nB}"]
+nodo75[label="{EO: 75|cost: -9.0|A: GoH|Posicion:\nJ}"]
+nodo78[label="{EO: 78|cost: -10.0|A: GoI|Posicion:\nH}"]
+nodo79[label="{EO: 79|cost: -11.0|A: GoL|Posicion:\nI}"]
+nodo80[label="{EO: 80|cost: -12.0|A: GoK|Posicion:\nL}"]
+nodo82[label="{EO: 82|cost: -13.0|A: GoN|Posicion:\nK}"]
+nodo83[label="{EO: 83|cost: -14.0|A: GoM|Posicion:\nN}"]
+
+nodo82 -> nodo83;
+
+nodo80 -> nodo82;
+
+nodo79 -> nodo80;
+nodo81[label="{EO: 81|cost: -12.0|A: GoM|Posicion:\nL}"]
+nodo84[label="{EO: 84|cost: -13.0|A: GoN|Posicion:\nM}"]
+nodo85[label="{EO: 85|cost: -14.0|A: GoK|Posicion:\nN}"]
+
+nodo84 -> nodo85;
+
+nodo81 -> nodo84;
+
+nodo79 -> nodo81;
+
+nodo78 -> nodo79;
+
+nodo75 -> nodo78;
+
+nodo73 -> nodo75;
+nodo76[label="{EO: 76|cost: -9.0|A: GoI|Posicion:\nJ}"]
+nodo86[label="{EO: 86|cost: -10.0|A: GoH|Posicion:\nI}"]
+
+nodo76 -> nodo86;
+nodo87[label="{EO: 87|cost: -10.0|A: GoL|Posicion:\nI}"]
+nodo88[label="{EO: 88|cost: -11.0|A: GoK|Posicion:\nL}"]
+nodo90[label="{EO: 90|cost: -12.0|A: GoN|Posicion:\nK}"]
+nodo91[label="{EO: 91|cost: -13.0|A: GoM|Posicion:\nN}"]
+
+nodo90 -> nodo91;
+
+nodo88 -> nodo90;
+
+nodo87 -> nodo88;
+nodo89[label="{EO: 89|cost: -11.0|A: GoM|Posicion:\nL}"]
+nodo92[label="{EO: 92|cost: -12.0|A: GoN|Posicion:\nM}"]
+nodo93[label="{EO: 93|cost: -13.0|A: GoK|Posicion:\nN}"]
+
+nodo92 -> nodo93;
+
+nodo89 -> nodo92;
+
+nodo87 -> nodo89;
+
+nodo76 -> nodo87;
+
+nodo73 -> nodo76;
+nodo77[label="{EO: 77|cost: -9.0|A: GoK|Posicion:\nJ}"]
+nodo94[label="{EO: 94|cost: -10.0|A: GoL|Posicion:\nK}"]
+nodo96[label="{EO: 96|cost: -11.0|A: GoI|Posicion:\nL}"]
+nodo98[label="{EO: 98|cost: -12.0|A: GoH|Posicion:\nI}"]
+
+nodo96 -> nodo98;
+
+nodo94 -> nodo96;
+nodo97[label="{EO: 97|cost: -11.0|A: GoM|Posicion:\nL}"]
+nodo99[label="{EO: 99|cost: -12.0|A: GoN|Posicion:\nM}"]
+
+nodo97 -> nodo99;
+
+nodo94 -> nodo97;
+
+nodo77 -> nodo94;
+nodo95[label="{EO: 95|cost: -10.0|A: GoN|Posicion:\nK}"]
+nodo100[label="{EO: 100|cost: -11.0|A: GoM|Posicion:\nN}"]
+nodo101[label="{EO: 101|cost: -12.0|A: GoL|Posicion:\nM}"]
+nodo102[label="{EO: 102|cost: -13.0|A: GoI|Posicion:\nL}"]
+nodo103[label="{EO: 103|cost: -14.0|A: GoH|Posicion:\nI}"]
+
+nodo102 -> nodo103;
+
+nodo101 -> nodo102;
+
+nodo100 -> nodo101;
+
+nodo95 -> nodo100;
+
+nodo77 -> nodo95;
+
+nodo73 -> nodo77;
+
+nodo72 -> nodo73;
+nodo74[label="{EO: 74|cost: -8.0|A: GoK|Posicion:\nB}"]
+nodo104[label="{EO: 104|cost: -9.0|A: GoJ|Posicion:\nK}"]
+nodo107[label="{EO: 107|cost: -10.0|A: GoH|Posicion:\nJ}"]
+nodo109[label="{EO: 109|cost: -11.0|A: GoI|Posicion:\nH}"]
+nodo110[label="{EO: 110|cost: -12.0|A: GoL|Posicion:\nI}"]
+nodo111[label="{EO: 111|cost: -13.0|A: GoM|Posicion:\nL}"]
+nodo112[label="{EO: 112|cost: -14.0|A: GoN|Posicion:\nM}"]
+
+nodo111 -> nodo112;
+
+nodo110 -> nodo111;
+
+nodo109 -> nodo110;
+
+nodo107 -> nodo109;
+
+nodo104 -> nodo107;
+nodo108[label="{EO: 108|cost: -10.0|A: GoI|Posicion:\nJ}"]
+nodo113[label="{EO: 113|cost: -11.0|A: GoH|Posicion:\nI}"]
+
+nodo108 -> nodo113;
+nodo114[label="{EO: 114|cost: -11.0|A: GoL|Posicion:\nI}"]
+nodo115[label="{EO: 115|cost: -12.0|A: GoM|Posicion:\nL}"]
+nodo116[label="{EO: 116|cost: -13.0|A: GoN|Posicion:\nM}"]
+
+nodo115 -> nodo116;
+
+nodo114 -> nodo115;
+
+nodo108 -> nodo114;
+
+nodo104 -> nodo108;
+
+nodo74 -> nodo104;
+nodo105[label="{EO: 105|cost: -9.0|A: GoL|Posicion:\nK}"]
+nodo117[label="{EO: 117|cost: -10.0|A: GoI|Posicion:\nL}"]
+nodo119[label="{EO: 119|cost: -11.0|A: GoH|Posicion:\nI}"]
+nodo121[label="{EO: 121|cost: -12.0|A: GoJ|Posicion:\nH}"]
+
+nodo119 -> nodo121;
+
+nodo117 -> nodo119;
+nodo120[label="{EO: 120|cost: -11.0|A: GoJ|Posicion:\nI}"]
+nodo122[label="{EO: 122|cost: -12.0|A: GoH|Posicion:\nJ}"]
+
+nodo120 -> nodo122;
+
+nodo117 -> nodo120;
+
+nodo105 -> nodo117;
+nodo118[label="{EO: 118|cost: -10.0|A: GoM|Posicion:\nL}"]
+nodo123[label="{EO: 123|cost: -11.0|A: GoN|Posicion:\nM}"]
+
+nodo118 -> nodo123;
+
+nodo105 -> nodo118;
+
+nodo74 -> nodo105;
+nodo106[label="{EO: 106|cost: -9.0|A: GoN|Posicion:\nK}"]
+nodo124[label="{EO: 124|cost: -10.0|A: GoM|Posicion:\nN}"]
+nodo125[label="{EO: 125|cost: -11.0|A: GoL|Posicion:\nM}"]
+nodo126[label="{EO: 126|cost: -12.0|A: GoI|Posicion:\nL}"]
+nodo127[label="{EO: 127|cost: -13.0|A: GoH|Posicion:\nI}"]
+nodo129[label="{EO: 129|cost: -14.0|A: GoJ|Posicion:\nH}"]
+
+nodo127 -> nodo129;
+
+nodo126 -> nodo127;
+nodo128[label="{EO: 128|cost: -13.0|A: GoJ|Posicion:\nI}"]
+nodo130[label="{EO: 130|cost: -14.0|A: GoH|Posicion:\nJ}"]
+
+nodo128 -> nodo130;
+
+nodo126 -> nodo128;
+
+nodo125 -> nodo126;
+
+nodo124 -> nodo125;
+
+nodo106 -> nodo124;
+
+nodo74 -> nodo106;
+
+nodo72 -> nodo74;
+
+nodo71 -> nodo72;
+
+nodo10 -> nodo71;
+
+nodo8 -> nodo10;
+
+nodo5 -> nodo8;
+
+nodo2 -> nodo5;
+nodo6[label="{EO: 6|cost: -3.0|A: GoH|Posicion:\nF}"]
+nodo131[label="{EO: 131|cost: -4.0|A: GoI|Posicion:\nH}"]
+nodo133[label="{EO: 133|cost: -5.0|A: GoJ|Posicion:\nI}"]
+nodo135[label="{EO: 135|cost: -6.0|A: GoB|Posicion:\nJ}"]
+nodo137[label="{EO: 137|cost: -7.0|A: GoK|Posicion:\nB}"]
+nodo139[label="{EO: 139|cost: -8.0|A: GoL|Posicion:\nK}"]
+nodo141[label="{EO: 141|cost: -9.0|A: GoM|Posicion:\nL}"]
+nodo142[label="{EO: 142|cost: -10.0|A: GoN|Posicion:\nM}"]
+
+nodo141 -> nodo142;
+
+nodo139 -> nodo141;
+
+nodo137 -> nodo139;
+nodo140[label="{EO: 140|cost: -8.0|A: GoN|Posicion:\nK}"]
+nodo143[label="{EO: 143|cost: -9.0|A: GoM|Posicion:\nN}"]
+nodo144[label="{EO: 144|cost: -10.0|A: GoL|Posicion:\nM}"]
+
+nodo143 -> nodo144;
+
+nodo140 -> nodo143;
+
+nodo137 -> nodo140;
+
+nodo135 -> nodo137;
+nodo138[label="{EO: 138|cost: -7.0|A: GoO|Posicion:\nB}"]
+nodo145[label="{EO: 145|cost: -8.0|A: GoP|Posicion:\nO}"]
+nodo146[label="{EO: 146|cost: -9.0|A: GoQ|Posicion:\nP}"]
+nodo147[label="{EO: 147|cost: -10.0|A: GoG|Posicion:\nQ}"]
+
+nodo146 -> nodo147;
+
+nodo145 -> nodo146;
+
+nodo138 -> nodo145;
+
+nodo135 -> nodo138;
+
+nodo133 -> nodo135;
+nodo136[label="{EO: 136|cost: -6.0|A: GoK|Posicion:\nJ}"]
+nodo148[label="{EO: 148|cost: -7.0|A: GoL|Posicion:\nK}"]
+nodo150[label="{EO: 150|cost: -8.0|A: GoM|Posicion:\nL}"]
+nodo151[label="{EO: 151|cost: -9.0|A: GoN|Posicion:\nM}"]
+
+nodo150 -> nodo151;
+
+nodo148 -> nodo150;
+
+nodo136 -> nodo148;
+nodo149[label="{EO: 149|cost: -7.0|A: GoN|Posicion:\nK}"]
+nodo152[label="{EO: 152|cost: -8.0|A: GoM|Posicion:\nN}"]
+nodo153[label="{EO: 153|cost: -9.0|A: GoL|Posicion:\nM}"]
+
+nodo152 -> nodo153;
+
+nodo149 -> nodo152;
+
+nodo136 -> nodo149;
+
+nodo133 -> nodo136;
+
+nodo131 -> nodo133;
+nodo134[label="{EO: 134|cost: -5.0|A: GoL|Posicion:\nI}"]
+nodo154[label="{EO: 154|cost: -6.0|A: GoK|Posicion:\nL}"]
+nodo156[label="{EO: 156|cost: -7.0|A: GoJ|Posicion:\nK}"]
+nodo158[label="{EO: 158|cost: -8.0|A: GoB|Posicion:\nJ}"]
+nodo159[label="{EO: 159|cost: -9.0|A: GoO|Posicion:\nB}"]
+nodo160[label="{EO: 160|cost: -10.0|A: GoP|Posicion:\nO}"]
+nodo161[label="{EO: 161|cost: -11.0|A: GoQ|Posicion:\nP}"]
+nodo162[label="{EO: 162|cost: -12.0|A: GoG|Posicion:\nQ}"]
+
+nodo161 -> nodo162;
+
+nodo160 -> nodo161;
+
+nodo159 -> nodo160;
+
+nodo158 -> nodo159;
+
+nodo156 -> nodo158;
+
+nodo154 -> nodo156;
+nodo157[label="{EO: 157|cost: -7.0|A: GoN|Posicion:\nK}"]
+nodo163[label="{EO: 163|cost: -8.0|A: GoM|Posicion:\nN}"]
+
+nodo157 -> nodo163;
+
+nodo154 -> nodo157;
+
+nodo134 -> nodo154;
+nodo155[label="{EO: 155|cost: -6.0|A: GoM|Posicion:\nL}"]
+nodo164[label="{EO: 164|cost: -7.0|A: GoN|Posicion:\nM}"]
+nodo165[label="{EO: 165|cost: -8.0|A: GoK|Posicion:\nN}"]
+nodo166[label="{EO: 166|cost: -9.0|A: GoJ|Posicion:\nK}"]
+nodo167[label="{EO: 167|cost: -10.0|A: GoB|Posicion:\nJ}"]
+nodo168[label="{EO: 168|cost: -11.0|A: GoO|Posicion:\nB}"]
+nodo169[label="{EO: 169|cost: -12.0|A: GoP|Posicion:\nO}"]
+nodo170[label="{EO: 170|cost: -13.0|A: GoQ|Posicion:\nP}"]
+nodo171[label="{EO: 171|cost: -14.0|A: GoG|Posicion:\nQ}"]
+
+nodo170 -> nodo171;
+
+nodo169 -> nodo170;
+
+nodo168 -> nodo169;
+
+nodo167 -> nodo168;
+
+nodo166 -> nodo167;
+
+nodo165 -> nodo166;
+
+nodo164 -> nodo165;
+
+nodo155 -> nodo164;
+
+nodo134 -> nodo155;
+
+nodo131 -> nodo134;
+
+nodo6 -> nodo131;
+nodo132[label="{EO: 132|cost: -4.0|A: GoJ|Posicion:\nH}"]
+nodo172[label="{EO: 172|cost: -5.0|A: GoB|Posicion:\nJ}"]
+nodo175[label="{EO: 175|cost: -6.0|A: GoK|Posicion:\nB}"]
+nodo177[label="{EO: 177|cost: -7.0|A: GoL|Posicion:\nK}"]
+nodo179[label="{EO: 179|cost: -8.0|A: GoI|Posicion:\nL}"]
+
+nodo177 -> nodo179;
+nodo180[label="{EO: 180|cost: -8.0|A: GoM|Posicion:\nL}"]
+nodo181[label="{EO: 181|cost: -9.0|A: GoN|Posicion:\nM}"]
+
+nodo180 -> nodo181;
+
+nodo177 -> nodo180;
+
+nodo175 -> nodo177;
+nodo178[label="{EO: 178|cost: -7.0|A: GoN|Posicion:\nK}"]
+nodo182[label="{EO: 182|cost: -8.0|A: GoM|Posicion:\nN}"]
+nodo183[label="{EO: 183|cost: -9.0|A: GoL|Posicion:\nM}"]
+nodo184[label="{EO: 184|cost: -10.0|A: GoI|Posicion:\nL}"]
+
+nodo183 -> nodo184;
+
+nodo182 -> nodo183;
+
+nodo178 -> nodo182;
+
+nodo175 -> nodo178;
+
+nodo172 -> nodo175;
+nodo176[label="{EO: 176|cost: -6.0|A: GoO|Posicion:\nB}"]
+nodo185[label="{EO: 185|cost: -7.0|A: GoP|Posicion:\nO}"]
+nodo186[label="{EO: 186|cost: -8.0|A: GoQ|Posicion:\nP}"]
+nodo187[label="{EO: 187|cost: -9.0|A: GoG|Posicion:\nQ}"]
+
+nodo186 -> nodo187;
+
+nodo185 -> nodo186;
+
+nodo176 -> nodo185;
+
+nodo172 -> nodo176;
+
+nodo132 -> nodo172;
+nodo173[label="{EO: 173|cost: -5.0|A: GoI|Posicion:\nJ}"]
+nodo188[label="{EO: 188|cost: -6.0|A: GoL|Posicion:\nI}"]
+nodo189[label="{EO: 189|cost: -7.0|A: GoK|Posicion:\nL}"]
+nodo191[label="{EO: 191|cost: -8.0|A: GoN|Posicion:\nK}"]
+nodo192[label="{EO: 192|cost: -9.0|A: GoM|Posicion:\nN}"]
+
+nodo191 -> nodo192;
+
+nodo189 -> nodo191;
+
+nodo188 -> nodo189;
+nodo190[label="{EO: 190|cost: -7.0|A: GoM|Posicion:\nL}"]
+nodo193[label="{EO: 193|cost: -8.0|A: GoN|Posicion:\nM}"]
+nodo194[label="{EO: 194|cost: -9.0|A: GoK|Posicion:\nN}"]
+
+nodo193 -> nodo194;
+
+nodo190 -> nodo193;
+
+nodo188 -> nodo190;
+
+nodo173 -> nodo188;
+
+nodo132 -> nodo173;
+nodo174[label="{EO: 174|cost: -5.0|A: GoK|Posicion:\nJ}"]
+nodo195[label="{EO: 195|cost: -6.0|A: GoL|Posicion:\nK}"]
+nodo197[label="{EO: 197|cost: -7.0|A: GoI|Posicion:\nL}"]
+
+nodo195 -> nodo197;
+nodo198[label="{EO: 198|cost: -7.0|A: GoM|Posicion:\nL}"]
+nodo199[label="{EO: 199|cost: -8.0|A: GoN|Posicion:\nM}"]
+
+nodo198 -> nodo199;
+
+nodo195 -> nodo198;
+
+nodo174 -> nodo195;
+nodo196[label="{EO: 196|cost: -6.0|A: GoN|Posicion:\nK}"]
+nodo200[label="{EO: 200|cost: -7.0|A: GoM|Posicion:\nN}"]
+nodo201[label="{EO: 201|cost: -8.0|A: GoL|Posicion:\nM}"]
+nodo202[label="{EO: 202|cost: -9.0|A: GoI|Posicion:\nL}"]
+
+nodo201 -> nodo202;
+
+nodo200 -> nodo201;
+
+nodo196 -> nodo200;
+
+nodo174 -> nodo196;
+
+nodo132 -> nodo174;
+
+nodo6 -> nodo132;
+
+nodo2 -> nodo6;
+nodo7[label="{EO: 7|cost: -3.0|A: GoQ|Posicion:\nF}"]
+nodo203[label="{EO: 203|cost: -4.0|A: GoB|Posicion:\nQ}"]
+nodo206[label="{EO: 206|cost: -5.0|A: GoJ|Posicion:\nB}"]
+nodo209[label="{EO: 209|cost: -6.0|A: GoH|Posicion:\nJ}"]
+nodo212[label="{EO: 212|cost: -7.0|A: GoI|Posicion:\nH}"]
+nodo213[label="{EO: 213|cost: -8.0|A: GoL|Posicion:\nI}"]
+nodo214[label="{EO: 214|cost: -9.0|A: GoK|Posicion:\nL}"]
+nodo216[label="{EO: 216|cost: -10.0|A: GoN|Posicion:\nK}"]
+nodo217[label="{EO: 217|cost: -11.0|A: GoM|Posicion:\nN}"]
+
+nodo216 -> nodo217;
+
+nodo214 -> nodo216;
+
+nodo213 -> nodo214;
+nodo215[label="{EO: 215|cost: -9.0|A: GoM|Posicion:\nL}"]
+nodo218[label="{EO: 218|cost: -10.0|A: GoN|Posicion:\nM}"]
+nodo219[label="{EO: 219|cost: -11.0|A: GoK|Posicion:\nN}"]
+
+nodo218 -> nodo219;
+
+nodo215 -> nodo218;
+
+nodo213 -> nodo215;
+
+nodo212 -> nodo213;
+
+nodo209 -> nodo212;
+
+nodo206 -> nodo209;
+nodo210[label="{EO: 210|cost: -6.0|A: GoI|Posicion:\nJ}"]
+nodo220[label="{EO: 220|cost: -7.0|A: GoH|Posicion:\nI}"]
+
+nodo210 -> nodo220;
+nodo221[label="{EO: 221|cost: -7.0|A: GoL|Posicion:\nI}"]
+nodo222[label="{EO: 222|cost: -8.0|A: GoK|Posicion:\nL}"]
+nodo224[label="{EO: 224|cost: -9.0|A: GoN|Posicion:\nK}"]
+nodo225[label="{EO: 225|cost: -10.0|A: GoM|Posicion:\nN}"]
+
+nodo224 -> nodo225;
+
+nodo222 -> nodo224;
+
+nodo221 -> nodo222;
+nodo223[label="{EO: 223|cost: -8.0|A: GoM|Posicion:\nL}"]
+nodo226[label="{EO: 226|cost: -9.0|A: GoN|Posicion:\nM}"]
+nodo227[label="{EO: 227|cost: -10.0|A: GoK|Posicion:\nN}"]
+
+nodo226 -> nodo227;
+
+nodo223 -> nodo226;
+
+nodo221 -> nodo223;
+
+nodo210 -> nodo221;
+
+nodo206 -> nodo210;
+nodo211[label="{EO: 211|cost: -6.0|A: GoK|Posicion:\nJ}"]
+nodo228[label="{EO: 228|cost: -7.0|A: GoL|Posicion:\nK}"]
+nodo230[label="{EO: 230|cost: -8.0|A: GoI|Posicion:\nL}"]
+nodo232[label="{EO: 232|cost: -9.0|A: GoH|Posicion:\nI}"]
+
+nodo230 -> nodo232;
+
+nodo228 -> nodo230;
+nodo231[label="{EO: 231|cost: -8.0|A: GoM|Posicion:\nL}"]
+nodo233[label="{EO: 233|cost: -9.0|A: GoN|Posicion:\nM}"]
+
+nodo231 -> nodo233;
+
+nodo228 -> nodo231;
+
+nodo211 -> nodo228;
+nodo229[label="{EO: 229|cost: -7.0|A: GoN|Posicion:\nK}"]
+nodo234[label="{EO: 234|cost: -8.0|A: GoM|Posicion:\nN}"]
+nodo235[label="{EO: 235|cost: -9.0|A: GoL|Posicion:\nM}"]
+nodo236[label="{EO: 236|cost: -10.0|A: GoI|Posicion:\nL}"]
+nodo237[label="{EO: 237|cost: -11.0|A: GoH|Posicion:\nI}"]
+
+nodo236 -> nodo237;
+
+nodo235 -> nodo236;
+
+nodo234 -> nodo235;
+
+nodo229 -> nodo234;
+
+nodo211 -> nodo229;
+
+nodo206 -> nodo211;
+
+nodo203 -> nodo206;
+nodo207[label="{EO: 207|cost: -5.0|A: GoK|Posicion:\nB}"]
+nodo238[label="{EO: 238|cost: -6.0|A: GoJ|Posicion:\nK}"]
+nodo241[label="{EO: 241|cost: -7.0|A: GoH|Posicion:\nJ}"]
+nodo243[label="{EO: 243|cost: -8.0|A: GoI|Posicion:\nH}"]
+nodo244[label="{EO: 244|cost: -9.0|A: GoL|Posicion:\nI}"]
+nodo245[label="{EO: 245|cost: -10.0|A: GoM|Posicion:\nL}"]
+nodo246[label="{EO: 246|cost: -11.0|A: GoN|Posicion:\nM}"]
+
+nodo245 -> nodo246;
+
+nodo244 -> nodo245;
+
+nodo243 -> nodo244;
+
+nodo241 -> nodo243;
+
+nodo238 -> nodo241;
+nodo242[label="{EO: 242|cost: -7.0|A: GoI|Posicion:\nJ}"]
+nodo247[label="{EO: 247|cost: -8.0|A: GoH|Posicion:\nI}"]
+
+nodo242 -> nodo247;
+nodo248[label="{EO: 248|cost: -8.0|A: GoL|Posicion:\nI}"]
+nodo249[label="{EO: 249|cost: -9.0|A: GoM|Posicion:\nL}"]
+nodo250[label="{EO: 250|cost: -10.0|A: GoN|Posicion:\nM}"]
+
+nodo249 -> nodo250;
+
+nodo248 -> nodo249;
+
+nodo242 -> nodo248;
+
+nodo238 -> nodo242;
+
+nodo207 -> nodo238;
+nodo239[label="{EO: 239|cost: -6.0|A: GoL|Posicion:\nK}"]
+nodo251[label="{EO: 251|cost: -7.0|A: GoI|Posicion:\nL}"]
+nodo253[label="{EO: 253|cost: -8.0|A: GoH|Posicion:\nI}"]
+nodo255[label="{EO: 255|cost: -9.0|A: GoJ|Posicion:\nH}"]
+
+nodo253 -> nodo255;
+
+nodo251 -> nodo253;
+nodo254[label="{EO: 254|cost: -8.0|A: GoJ|Posicion:\nI}"]
+nodo256[label="{EO: 256|cost: -9.0|A: GoH|Posicion:\nJ}"]
+
+nodo254 -> nodo256;
+
+nodo251 -> nodo254;
+
+nodo239 -> nodo251;
+nodo252[label="{EO: 252|cost: -7.0|A: GoM|Posicion:\nL}"]
+nodo257[label="{EO: 257|cost: -8.0|A: GoN|Posicion:\nM}"]
+
+nodo252 -> nodo257;
+
+nodo239 -> nodo252;
+
+nodo207 -> nodo239;
+nodo240[label="{EO: 240|cost: -6.0|A: GoN|Posicion:\nK}"]
+nodo258[label="{EO: 258|cost: -7.0|A: GoM|Posicion:\nN}"]
+nodo259[label="{EO: 259|cost: -8.0|A: GoL|Posicion:\nM}"]
+nodo260[label="{EO: 260|cost: -9.0|A: GoI|Posicion:\nL}"]
+nodo261[label="{EO: 261|cost: -10.0|A: GoH|Posicion:\nI}"]
+nodo263[label="{EO: 263|cost: -11.0|A: GoJ|Posicion:\nH}"]
+
+nodo261 -> nodo263;
+
+nodo260 -> nodo261;
+nodo262[label="{EO: 262|cost: -10.0|A: GoJ|Posicion:\nI}"]
+nodo264[label="{EO: 264|cost: -11.0|A: GoH|Posicion:\nJ}"]
+
+nodo262 -> nodo264;
+
+nodo260 -> nodo262;
+
+nodo259 -> nodo260;
+
+nodo258 -> nodo259;
+
+nodo240 -> nodo258;
+
+nodo207 -> nodo240;
+
+nodo203 -> nodo207;
+nodo208[label="{EO: 208|cost: -5.0|A: GoO|Posicion:\nB}"]
+nodo265[label="{EO: 265|cost: -6.0|A: GoP|Posicion:\nO}"]
+
+nodo208 -> nodo265;
+
+nodo203 -> nodo208;
+
+nodo7 -> nodo203;
+nodo204[label="{EO: 204|cost: -4.0|A: GoG|Posicion:\nQ}"]
+
+nodo7 -> nodo204;
+nodo205[label="{EO: 205|cost: -4.0|A: GoP|Posicion:\nQ}"]
+nodo266[label="{EO: 266|cost: -5.0|A: GoO|Posicion:\nP}"]
+nodo267[label="{EO: 267|cost: -6.0|A: GoB|Posicion:\nO}"]
+nodo268[label="{EO: 268|cost: -7.0|A: GoJ|Posicion:\nB}"]
+nodo270[label="{EO: 270|cost: -8.0|A: GoH|Posicion:\nJ}"]
+nodo273[label="{EO: 273|cost: -9.0|A: GoI|Posicion:\nH}"]
+nodo274[label="{EO: 274|cost: -10.0|A: GoL|Posicion:\nI}"]
+nodo275[label="{EO: 275|cost: -11.0|A: GoK|Posicion:\nL}"]
+nodo277[label="{EO: 277|cost: -12.0|A: GoN|Posicion:\nK}"]
+nodo278[label="{EO: 278|cost: -13.0|A: GoM|Posicion:\nN}"]
+
+nodo277 -> nodo278;
+
+nodo275 -> nodo277;
+
+nodo274 -> nodo275;
+nodo276[label="{EO: 276|cost: -11.0|A: GoM|Posicion:\nL}"]
+nodo279[label="{EO: 279|cost: -12.0|A: GoN|Posicion:\nM}"]
+nodo280[label="{EO: 280|cost: -13.0|A: GoK|Posicion:\nN}"]
+
+nodo279 -> nodo280;
+
+nodo276 -> nodo279;
+
+nodo274 -> nodo276;
+
+nodo273 -> nodo274;
+
+nodo270 -> nodo273;
+
+nodo268 -> nodo270;
+nodo271[label="{EO: 271|cost: -8.0|A: GoI|Posicion:\nJ}"]
+nodo281[label="{EO: 281|cost: -9.0|A: GoH|Posicion:\nI}"]
+
+nodo271 -> nodo281;
+nodo282[label="{EO: 282|cost: -9.0|A: GoL|Posicion:\nI}"]
+nodo283[label="{EO: 283|cost: -10.0|A: GoK|Posicion:\nL}"]
+nodo285[label="{EO: 285|cost: -11.0|A: GoN|Posicion:\nK}"]
+nodo286[label="{EO: 286|cost: -12.0|A: GoM|Posicion:\nN}"]
+
+nodo285 -> nodo286;
+
+nodo283 -> nodo285;
+
+nodo282 -> nodo283;
+nodo284[label="{EO: 284|cost: -10.0|A: GoM|Posicion:\nL}"]
+nodo287[label="{EO: 287|cost: -11.0|A: GoN|Posicion:\nM}"]
+nodo288[label="{EO: 288|cost: -12.0|A: GoK|Posicion:\nN}"]
+
+nodo287 -> nodo288;
+
+nodo284 -> nodo287;
+
+nodo282 -> nodo284;
+
+nodo271 -> nodo282;
+
+nodo268 -> nodo271;
+nodo272[label="{EO: 272|cost: -8.0|A: GoK|Posicion:\nJ}"]
+nodo289[label="{EO: 289|cost: -9.0|A: GoL|Posicion:\nK}"]
+nodo291[label="{EO: 291|cost: -10.0|A: GoI|Posicion:\nL}"]
+nodo293[label="{EO: 293|cost: -11.0|A: GoH|Posicion:\nI}"]
+
+nodo291 -> nodo293;
+
+nodo289 -> nodo291;
+nodo292[label="{EO: 292|cost: -10.0|A: GoM|Posicion:\nL}"]
+nodo294[label="{EO: 294|cost: -11.0|A: GoN|Posicion:\nM}"]
+
+nodo292 -> nodo294;
+
+nodo289 -> nodo292;
+
+nodo272 -> nodo289;
+nodo290[label="{EO: 290|cost: -9.0|A: GoN|Posicion:\nK}"]
+nodo295[label="{EO: 295|cost: -10.0|A: GoM|Posicion:\nN}"]
+nodo296[label="{EO: 296|cost: -11.0|A: GoL|Posicion:\nM}"]
+nodo297[label="{EO: 297|cost: -12.0|A: GoI|Posicion:\nL}"]
+nodo298[label="{EO: 298|cost: -13.0|A: GoH|Posicion:\nI}"]
+
+nodo297 -> nodo298;
+
+nodo296 -> nodo297;
+
+nodo295 -> nodo296;
+
+nodo290 -> nodo295;
+
+nodo272 -> nodo290;
+
+nodo268 -> nodo272;
+
+nodo267 -> nodo268;
+nodo269[label="{EO: 269|cost: -7.0|A: GoK|Posicion:\nB}"]
+nodo299[label="{EO: 299|cost: -8.0|A: GoJ|Posicion:\nK}"]
+nodo302[label="{EO: 302|cost: -9.0|A: GoH|Posicion:\nJ}"]
+nodo304[label="{EO: 304|cost: -10.0|A: GoI|Posicion:\nH}"]
+nodo305[label="{EO: 305|cost: -11.0|A: GoL|Posicion:\nI}"]
+nodo306[label="{EO: 306|cost: -12.0|A: GoM|Posicion:\nL}"]
+nodo307[label="{EO: 307|cost: -13.0|A: GoN|Posicion:\nM}"]
+
+nodo306 -> nodo307;
+
+nodo305 -> nodo306;
+
+nodo304 -> nodo305;
+
+nodo302 -> nodo304;
+
+nodo299 -> nodo302;
+nodo303[label="{EO: 303|cost: -9.0|A: GoI|Posicion:\nJ}"]
+nodo308[label="{EO: 308|cost: -10.0|A: GoH|Posicion:\nI}"]
+
+nodo303 -> nodo308;
+nodo309[label="{EO: 309|cost: -10.0|A: GoL|Posicion:\nI}"]
+nodo310[label="{EO: 310|cost: -11.0|A: GoM|Posicion:\nL}"]
+nodo311[label="{EO: 311|cost: -12.0|A: GoN|Posicion:\nM}"]
+
+nodo310 -> nodo311;
+
+nodo309 -> nodo310;
+
+nodo303 -> nodo309;
+
+nodo299 -> nodo303;
+
+nodo269 -> nodo299;
+nodo300[label="{EO: 300|cost: -8.0|A: GoL|Posicion:\nK}"]
+nodo312[label="{EO: 312|cost: -9.0|A: GoI|Posicion:\nL}"]
+nodo314[label="{EO: 314|cost: -10.0|A: GoH|Posicion:\nI}"]
+nodo316[label="{EO: 316|cost: -11.0|A: GoJ|Posicion:\nH}"]
+
+nodo314 -> nodo316;
+
+nodo312 -> nodo314;
+nodo315[label="{EO: 315|cost: -10.0|A: GoJ|Posicion:\nI}"]
+nodo317[label="{EO: 317|cost: -11.0|A: GoH|Posicion:\nJ}"]
+
+nodo315 -> nodo317;
+
+nodo312 -> nodo315;
+
+nodo300 -> nodo312;
+nodo313[label="{EO: 313|cost: -9.0|A: GoM|Posicion:\nL}"]
+nodo318[label="{EO: 318|cost: -10.0|A: GoN|Posicion:\nM}"]
+
+nodo313 -> nodo318;
+
+nodo300 -> nodo313;
+
+nodo269 -> nodo300;
+nodo301[label="{EO: 301|cost: -8.0|A: GoN|Posicion:\nK}"]
+nodo319[label="{EO: 319|cost: -9.0|A: GoM|Posicion:\nN}"]
+nodo320[label="{EO: 320|cost: -10.0|A: GoL|Posicion:\nM}"]
+nodo321[label="{EO: 321|cost: -11.0|A: GoI|Posicion:\nL}"]
+nodo322[label="{EO: 322|cost: -12.0|A: GoH|Posicion:\nI}"]
+nodo324[label="{EO: 324|cost: -13.0|A: GoJ|Posicion:\nH}"]
+
+nodo322 -> nodo324;
+
+nodo321 -> nodo322;
+nodo323[label="{EO: 323|cost: -12.0|A: GoJ|Posicion:\nI}"]
+nodo325[label="{EO: 325|cost: -13.0|A: GoH|Posicion:\nJ}"]
+
+nodo323 -> nodo325;
+
+nodo321 -> nodo323;
+
+nodo320 -> nodo321;
+
+nodo319 -> nodo320;
+
+nodo301 -> nodo319;
+
+nodo269 -> nodo301;
+
+nodo267 -> nodo269;
+
+nodo266 -> nodo267;
+
+nodo205 -> nodo266;
+
+nodo7 -> nodo205;
+
+nodo2 -> nodo7;
+
+nodo1 -> nodo2;
+nodo3[label="{EO: 3|cost: -2.0|A: GoH|Posicion:\nE}"]
+nodo326[label="{EO: 326|cost: -3.0|A: GoF|Posicion:\nH}"]
+nodo329[label="{EO: 329|cost: -4.0|A: GoG|Posicion:\nF}"]
+nodo331[label="{EO: 331|cost: -5.0|A: GoQ|Posicion:\nG}"]
+nodo332[label="{EO: 332|cost: -6.0|A: GoB|Posicion:\nQ}"]
+nodo334[label="{EO: 334|cost: -7.0|A: GoJ|Posicion:\nB}"]
+nodo337[label="{EO: 337|cost: -8.0|A: GoI|Posicion:\nJ}"]
+nodo339[label="{EO: 339|cost: -9.0|A: GoL|Posicion:\nI}"]
+nodo340[label="{EO: 340|cost: -10.0|A: GoK|Posicion:\nL}"]
+nodo342[label="{EO: 342|cost: -11.0|A: GoN|Posicion:\nK}"]
+nodo343[label="{EO: 343|cost: -12.0|A: GoM|Posicion:\nN}"]
+
+nodo342 -> nodo343;
+
+nodo340 -> nodo342;
+
+nodo339 -> nodo340;
+nodo341[label="{EO: 341|cost: -10.0|A: GoM|Posicion:\nL}"]
+nodo344[label="{EO: 344|cost: -11.0|A: GoN|Posicion:\nM}"]
+nodo345[label="{EO: 345|cost: -12.0|A: GoK|Posicion:\nN}"]
+
+nodo344 -> nodo345;
+
+nodo341 -> nodo344;
+
+nodo339 -> nodo341;
+
+nodo337 -> nodo339;
+
+nodo334 -> nodo337;
+nodo338[label="{EO: 338|cost: -8.0|A: GoK|Posicion:\nJ}"]
+nodo346[label="{EO: 346|cost: -9.0|A: GoL|Posicion:\nK}"]
+nodo348[label="{EO: 348|cost: -10.0|A: GoI|Posicion:\nL}"]
+
+nodo346 -> nodo348;
+nodo349[label="{EO: 349|cost: -10.0|A: GoM|Posicion:\nL}"]
+nodo350[label="{EO: 350|cost: -11.0|A: GoN|Posicion:\nM}"]
+
+nodo349 -> nodo350;
+
+nodo346 -> nodo349;
+
+nodo338 -> nodo346;
+nodo347[label="{EO: 347|cost: -9.0|A: GoN|Posicion:\nK}"]
+nodo351[label="{EO: 351|cost: -10.0|A: GoM|Posicion:\nN}"]
+nodo352[label="{EO: 352|cost: -11.0|A: GoL|Posicion:\nM}"]
+nodo353[label="{EO: 353|cost: -12.0|A: GoI|Posicion:\nL}"]
+
+nodo352 -> nodo353;
+
+nodo351 -> nodo352;
+
+nodo347 -> nodo351;
+
+nodo338 -> nodo347;
+
+nodo334 -> nodo338;
+
+nodo332 -> nodo334;
+nodo335[label="{EO: 335|cost: -7.0|A: GoK|Posicion:\nB}"]
+nodo354[label="{EO: 354|cost: -8.0|A: GoJ|Posicion:\nK}"]
+nodo357[label="{EO: 357|cost: -9.0|A: GoI|Posicion:\nJ}"]
+nodo358[label="{EO: 358|cost: -10.0|A: GoL|Posicion:\nI}"]
+nodo359[label="{EO: 359|cost: -11.0|A: GoM|Posicion:\nL}"]
+nodo360[label="{EO: 360|cost: -12.0|A: GoN|Posicion:\nM}"]
+
+nodo359 -> nodo360;
+
+nodo358 -> nodo359;
+
+nodo357 -> nodo358;
+
+nodo354 -> nodo357;
+
+nodo335 -> nodo354;
+nodo355[label="{EO: 355|cost: -8.0|A: GoL|Posicion:\nK}"]
+nodo361[label="{EO: 361|cost: -9.0|A: GoI|Posicion:\nL}"]
+nodo363[label="{EO: 363|cost: -10.0|A: GoJ|Posicion:\nI}"]
+
+nodo361 -> nodo363;
+
+nodo355 -> nodo361;
+nodo362[label="{EO: 362|cost: -9.0|A: GoM|Posicion:\nL}"]
+nodo364[label="{EO: 364|cost: -10.0|A: GoN|Posicion:\nM}"]
+
+nodo362 -> nodo364;
+
+nodo355 -> nodo362;
+
+nodo335 -> nodo355;
+nodo356[label="{EO: 356|cost: -8.0|A: GoN|Posicion:\nK}"]
+nodo365[label="{EO: 365|cost: -9.0|A: GoM|Posicion:\nN}"]
+nodo366[label="{EO: 366|cost: -10.0|A: GoL|Posicion:\nM}"]
+nodo367[label="{EO: 367|cost: -11.0|A: GoI|Posicion:\nL}"]
+nodo368[label="{EO: 368|cost: -12.0|A: GoJ|Posicion:\nI}"]
+
+nodo367 -> nodo368;
+
+nodo366 -> nodo367;
+
+nodo365 -> nodo366;
+
+nodo356 -> nodo365;
+
+nodo335 -> nodo356;
+
+nodo332 -> nodo335;
+nodo336[label="{EO: 336|cost: -7.0|A: GoO|Posicion:\nB}"]
+nodo369[label="{EO: 369|cost: -8.0|A: GoP|Posicion:\nO}"]
+
+nodo336 -> nodo369;
+
+nodo332 -> nodo336;
+
+nodo331 -> nodo332;
+nodo333[label="{EO: 333|cost: -6.0|A: GoP|Posicion:\nQ}"]
+nodo370[label="{EO: 370|cost: -7.0|A: GoO|Posicion:\nP}"]
+nodo371[label="{EO: 371|cost: -8.0|A: GoB|Posicion:\nO}"]
+nodo372[label="{EO: 372|cost: -9.0|A: GoJ|Posicion:\nB}"]
+nodo374[label="{EO: 374|cost: -10.0|A: GoI|Posicion:\nJ}"]
+nodo376[label="{EO: 376|cost: -11.0|A: GoL|Posicion:\nI}"]
+nodo377[label="{EO: 377|cost: -12.0|A: GoK|Posicion:\nL}"]
+nodo379[label="{EO: 379|cost: -13.0|A: GoN|Posicion:\nK}"]
+nodo380[label="{EO: 380|cost: -14.0|A: GoM|Posicion:\nN}"]
+
+nodo379 -> nodo380;
+
+nodo377 -> nodo379;
+
+nodo376 -> nodo377;
+nodo378[label="{EO: 378|cost: -12.0|A: GoM|Posicion:\nL}"]
+nodo381[label="{EO: 381|cost: -13.0|A: GoN|Posicion:\nM}"]
+nodo382[label="{EO: 382|cost: -14.0|A: GoK|Posicion:\nN}"]
+
+nodo381 -> nodo382;
+
+nodo378 -> nodo381;
+
+nodo376 -> nodo378;
+
+nodo374 -> nodo376;
+
+nodo372 -> nodo374;
+nodo375[label="{EO: 375|cost: -10.0|A: GoK|Posicion:\nJ}"]
+nodo383[label="{EO: 383|cost: -11.0|A: GoL|Posicion:\nK}"]
+nodo385[label="{EO: 385|cost: -12.0|A: GoI|Posicion:\nL}"]
+
+nodo383 -> nodo385;
+nodo386[label="{EO: 386|cost: -12.0|A: GoM|Posicion:\nL}"]
+nodo387[label="{EO: 387|cost: -13.0|A: GoN|Posicion:\nM}"]
+
+nodo386 -> nodo387;
+
+nodo383 -> nodo386;
+
+nodo375 -> nodo383;
+nodo384[label="{EO: 384|cost: -11.0|A: GoN|Posicion:\nK}"]
+nodo388[label="{EO: 388|cost: -12.0|A: GoM|Posicion:\nN}"]
+nodo389[label="{EO: 389|cost: -13.0|A: GoL|Posicion:\nM}"]
+nodo390[label="{EO: 390|cost: -14.0|A: GoI|Posicion:\nL}"]
+
+nodo389 -> nodo390;
+
+nodo388 -> nodo389;
+
+nodo384 -> nodo388;
+
+nodo375 -> nodo384;
+
+nodo372 -> nodo375;
+
+nodo371 -> nodo372;
+nodo373[label="{EO: 373|cost: -9.0|A: GoK|Posicion:\nB}"]
+nodo391[label="{EO: 391|cost: -10.0|A: GoJ|Posicion:\nK}"]
+nodo394[label="{EO: 394|cost: -11.0|A: GoI|Posicion:\nJ}"]
+nodo395[label="{EO: 395|cost: -12.0|A: GoL|Posicion:\nI}"]
+nodo396[label="{EO: 396|cost: -13.0|A: GoM|Posicion:\nL}"]
+nodo397[label="{EO: 397|cost: -14.0|A: GoN|Posicion:\nM}"]
+
+nodo396 -> nodo397;
+
+nodo395 -> nodo396;
+
+nodo394 -> nodo395;
+
+nodo391 -> nodo394;
+
+nodo373 -> nodo391;
+nodo392[label="{EO: 392|cost: -10.0|A: GoL|Posicion:\nK}"]
+nodo398[label="{EO: 398|cost: -11.0|A: GoI|Posicion:\nL}"]
+nodo400[label="{EO: 400|cost: -12.0|A: GoJ|Posicion:\nI}"]
+
+nodo398 -> nodo400;
+
+nodo392 -> nodo398;
+nodo399[label="{EO: 399|cost: -11.0|A: GoM|Posicion:\nL}"]
+nodo401[label="{EO: 401|cost: -12.0|A: GoN|Posicion:\nM}"]
+
+nodo399 -> nodo401;
+
+nodo392 -> nodo399;
+
+nodo373 -> nodo392;
+nodo393[label="{EO: 393|cost: -10.0|A: GoN|Posicion:\nK}"]
+nodo402[label="{EO: 402|cost: -11.0|A: GoM|Posicion:\nN}"]
+nodo403[label="{EO: 403|cost: -12.0|A: GoL|Posicion:\nM}"]
+nodo404[label="{EO: 404|cost: -13.0|A: GoI|Posicion:\nL}"]
+nodo405[label="{EO: 405|cost: -14.0|A: GoJ|Posicion:\nI}"]
+
+nodo404 -> nodo405;
+
+nodo403 -> nodo404;
+
+nodo402 -> nodo403;
+
+nodo393 -> nodo402;
+
+nodo373 -> nodo393;
+
+nodo371 -> nodo373;
+
+nodo370 -> nodo371;
+
+nodo333 -> nodo370;
+
+nodo331 -> nodo333;
+
+nodo329 -> nodo331;
+
+nodo326 -> nodo329;
+nodo330[label="{EO: 330|cost: -4.0|A: GoQ|Posicion:\nF}"]
+nodo406[label="{EO: 406|cost: -5.0|A: GoB|Posicion:\nQ}"]
+nodo409[label="{EO: 409|cost: -6.0|A: GoJ|Posicion:\nB}"]
+nodo412[label="{EO: 412|cost: -7.0|A: GoI|Posicion:\nJ}"]
+nodo414[label="{EO: 414|cost: -8.0|A: GoL|Posicion:\nI}"]
+nodo415[label="{EO: 415|cost: -9.0|A: GoK|Posicion:\nL}"]
+nodo417[label="{EO: 417|cost: -10.0|A: GoN|Posicion:\nK}"]
+nodo418[label="{EO: 418|cost: -11.0|A: GoM|Posicion:\nN}"]
+
+nodo417 -> nodo418;
+
+nodo415 -> nodo417;
+
+nodo414 -> nodo415;
+nodo416[label="{EO: 416|cost: -9.0|A: GoM|Posicion:\nL}"]
+nodo419[label="{EO: 419|cost: -10.0|A: GoN|Posicion:\nM}"]
+nodo420[label="{EO: 420|cost: -11.0|A: GoK|Posicion:\nN}"]
+
+nodo419 -> nodo420;
+
+nodo416 -> nodo419;
+
+nodo414 -> nodo416;
+
+nodo412 -> nodo414;
+
+nodo409 -> nodo412;
+nodo413[label="{EO: 413|cost: -7.0|A: GoK|Posicion:\nJ}"]
+nodo421[label="{EO: 421|cost: -8.0|A: GoL|Posicion:\nK}"]
+nodo423[label="{EO: 423|cost: -9.0|A: GoI|Posicion:\nL}"]
+
+nodo421 -> nodo423;
+nodo424[label="{EO: 424|cost: -9.0|A: GoM|Posicion:\nL}"]
+nodo425[label="{EO: 425|cost: -10.0|A: GoN|Posicion:\nM}"]
+
+nodo424 -> nodo425;
+
+nodo421 -> nodo424;
+
+nodo413 -> nodo421;
+nodo422[label="{EO: 422|cost: -8.0|A: GoN|Posicion:\nK}"]
+nodo426[label="{EO: 426|cost: -9.0|A: GoM|Posicion:\nN}"]
+nodo427[label="{EO: 427|cost: -10.0|A: GoL|Posicion:\nM}"]
+nodo428[label="{EO: 428|cost: -11.0|A: GoI|Posicion:\nL}"]
+
+nodo427 -> nodo428;
+
+nodo426 -> nodo427;
+
+nodo422 -> nodo426;
+
+nodo413 -> nodo422;
+
+nodo409 -> nodo413;
+
+nodo406 -> nodo409;
+nodo410[label="{EO: 410|cost: -6.0|A: GoK|Posicion:\nB}"]
+nodo429[label="{EO: 429|cost: -7.0|A: GoJ|Posicion:\nK}"]
+nodo432[label="{EO: 432|cost: -8.0|A: GoI|Posicion:\nJ}"]
+nodo433[label="{EO: 433|cost: -9.0|A: GoL|Posicion:\nI}"]
+nodo434[label="{EO: 434|cost: -10.0|A: GoM|Posicion:\nL}"]
+nodo435[label="{EO: 435|cost: -11.0|A: GoN|Posicion:\nM}"]
+
+nodo434 -> nodo435;
+
+nodo433 -> nodo434;
+
+nodo432 -> nodo433;
+
+nodo429 -> nodo432;
+
+nodo410 -> nodo429;
+nodo430[label="{EO: 430|cost: -7.0|A: GoL|Posicion:\nK}"]
+nodo436[label="{EO: 436|cost: -8.0|A: GoI|Posicion:\nL}"]
+nodo438[label="{EO: 438|cost: -9.0|A: GoJ|Posicion:\nI}"]
+
+nodo436 -> nodo438;
+
+nodo430 -> nodo436;
+nodo437[label="{EO: 437|cost: -8.0|A: GoM|Posicion:\nL}"]
+nodo439[label="{EO: 439|cost: -9.0|A: GoN|Posicion:\nM}"]
+
+nodo437 -> nodo439;
+
+nodo430 -> nodo437;
+
+nodo410 -> nodo430;
+nodo431[label="{EO: 431|cost: -7.0|A: GoN|Posicion:\nK}"]
+nodo440[label="{EO: 440|cost: -8.0|A: GoM|Posicion:\nN}"]
+nodo441[label="{EO: 441|cost: -9.0|A: GoL|Posicion:\nM}"]
+nodo442[label="{EO: 442|cost: -10.0|A: GoI|Posicion:\nL}"]
+nodo443[label="{EO: 443|cost: -11.0|A: GoJ|Posicion:\nI}"]
+
+nodo442 -> nodo443;
+
+nodo441 -> nodo442;
+
+nodo440 -> nodo441;
+
+nodo431 -> nodo440;
+
+nodo410 -> nodo431;
+
+nodo406 -> nodo410;
+nodo411[label="{EO: 411|cost: -6.0|A: GoO|Posicion:\nB}"]
+nodo444[label="{EO: 444|cost: -7.0|A: GoP|Posicion:\nO}"]
+
+nodo411 -> nodo444;
+
+nodo406 -> nodo411;
+
+nodo330 -> nodo406;
+nodo407[label="{EO: 407|cost: -5.0|A: GoG|Posicion:\nQ}"]
+
+nodo330 -> nodo407;
+nodo408[label="{EO: 408|cost: -5.0|A: GoP|Posicion:\nQ}"]
+nodo445[label="{EO: 445|cost: -6.0|A: GoO|Posicion:\nP}"]
+nodo446[label="{EO: 446|cost: -7.0|A: GoB|Posicion:\nO}"]
+nodo447[label="{EO: 447|cost: -8.0|A: GoJ|Posicion:\nB}"]
+nodo449[label="{EO: 449|cost: -9.0|A: GoI|Posicion:\nJ}"]
+nodo451[label="{EO: 451|cost: -10.0|A: GoL|Posicion:\nI}"]
+nodo452[label="{EO: 452|cost: -11.0|A: GoK|Posicion:\nL}"]
+nodo454[label="{EO: 454|cost: -12.0|A: GoN|Posicion:\nK}"]
+nodo455[label="{EO: 455|cost: -13.0|A: GoM|Posicion:\nN}"]
+
+nodo454 -> nodo455;
+
+nodo452 -> nodo454;
+
+nodo451 -> nodo452;
+nodo453[label="{EO: 453|cost: -11.0|A: GoM|Posicion:\nL}"]
+nodo456[label="{EO: 456|cost: -12.0|A: GoN|Posicion:\nM}"]
+nodo457[label="{EO: 457|cost: -13.0|A: GoK|Posicion:\nN}"]
+
+nodo456 -> nodo457;
+
+nodo453 -> nodo456;
+
+nodo451 -> nodo453;
+
+nodo449 -> nodo451;
+
+nodo447 -> nodo449;
+nodo450[label="{EO: 450|cost: -9.0|A: GoK|Posicion:\nJ}"]
+nodo458[label="{EO: 458|cost: -10.0|A: GoL|Posicion:\nK}"]
+nodo460[label="{EO: 460|cost: -11.0|A: GoI|Posicion:\nL}"]
+
+nodo458 -> nodo460;
+nodo461[label="{EO: 461|cost: -11.0|A: GoM|Posicion:\nL}"]
+nodo462[label="{EO: 462|cost: -12.0|A: GoN|Posicion:\nM}"]
+
+nodo461 -> nodo462;
+
+nodo458 -> nodo461;
+
+nodo450 -> nodo458;
+nodo459[label="{EO: 459|cost: -10.0|A: GoN|Posicion:\nK}"]
+nodo463[label="{EO: 463|cost: -11.0|A: GoM|Posicion:\nN}"]
+nodo464[label="{EO: 464|cost: -12.0|A: GoL|Posicion:\nM}"]
+nodo465[label="{EO: 465|cost: -13.0|A: GoI|Posicion:\nL}"]
+
+nodo464 -> nodo465;
+
+nodo463 -> nodo464;
+
+nodo459 -> nodo463;
+
+nodo450 -> nodo459;
+
+nodo447 -> nodo450;
+
+nodo446 -> nodo447;
+nodo448[label="{EO: 448|cost: -8.0|A: GoK|Posicion:\nB}"]
+nodo466[label="{EO: 466|cost: -9.0|A: GoJ|Posicion:\nK}"]
+nodo469[label="{EO: 469|cost: -10.0|A: GoI|Posicion:\nJ}"]
+nodo470[label="{EO: 470|cost: -11.0|A: GoL|Posicion:\nI}"]
+nodo471[label="{EO: 471|cost: -12.0|A: GoM|Posicion:\nL}"]
+nodo472[label="{EO: 472|cost: -13.0|A: GoN|Posicion:\nM}"]
+
+nodo471 -> nodo472;
+
+nodo470 -> nodo471;
+
+nodo469 -> nodo470;
+
+nodo466 -> nodo469;
+
+nodo448 -> nodo466;
+nodo467[label="{EO: 467|cost: -9.0|A: GoL|Posicion:\nK}"]
+nodo473[label="{EO: 473|cost: -10.0|A: GoI|Posicion:\nL}"]
+nodo475[label="{EO: 475|cost: -11.0|A: GoJ|Posicion:\nI}"]
+
+nodo473 -> nodo475;
+
+nodo467 -> nodo473;
+nodo474[label="{EO: 474|cost: -10.0|A: GoM|Posicion:\nL}"]
+nodo476[label="{EO: 476|cost: -11.0|A: GoN|Posicion:\nM}"]
+
+nodo474 -> nodo476;
+
+nodo467 -> nodo474;
+
+nodo448 -> nodo467;
+nodo468[label="{EO: 468|cost: -9.0|A: GoN|Posicion:\nK}"]
+nodo477[label="{EO: 477|cost: -10.0|A: GoM|Posicion:\nN}"]
+nodo478[label="{EO: 478|cost: -11.0|A: GoL|Posicion:\nM}"]
+nodo479[label="{EO: 479|cost: -12.0|A: GoI|Posicion:\nL}"]
+nodo480[label="{EO: 480|cost: -13.0|A: GoJ|Posicion:\nI}"]
+
+nodo479 -> nodo480;
+
+nodo478 -> nodo479;
+
+nodo477 -> nodo478;
+
+nodo468 -> nodo477;
+
+nodo448 -> nodo468;
+
+nodo446 -> nodo448;
+
+nodo445 -> nodo446;
+
+nodo408 -> nodo445;
+
+nodo330 -> nodo408;
+
+nodo326 -> nodo330;
+
+nodo3 -> nodo326;
+nodo327[label="{EO: 327|cost: -3.0|A: GoI|Posicion:\nH}"]
+nodo481[label="{EO: 481|cost: -4.0|A: GoJ|Posicion:\nI}"]
+nodo483[label="{EO: 483|cost: -5.0|A: GoB|Posicion:\nJ}"]
+nodo485[label="{EO: 485|cost: -6.0|A: GoK|Posicion:\nB}"]
+nodo487[label="{EO: 487|cost: -7.0|A: GoL|Posicion:\nK}"]
+nodo489[label="{EO: 489|cost: -8.0|A: GoM|Posicion:\nL}"]
+nodo490[label="{EO: 490|cost: -9.0|A: GoN|Posicion:\nM}"]
+
+nodo489 -> nodo490;
+
+nodo487 -> nodo489;
+
+nodo485 -> nodo487;
+nodo488[label="{EO: 488|cost: -7.0|A: GoN|Posicion:\nK}"]
+nodo491[label="{EO: 491|cost: -8.0|A: GoM|Posicion:\nN}"]
+nodo492[label="{EO: 492|cost: -9.0|A: GoL|Posicion:\nM}"]
+
+nodo491 -> nodo492;
+
+nodo488 -> nodo491;
+
+nodo485 -> nodo488;
+
+nodo483 -> nodo485;
+nodo486[label="{EO: 486|cost: -6.0|A: GoO|Posicion:\nB}"]
+nodo493[label="{EO: 493|cost: -7.0|A: GoP|Posicion:\nO}"]
+nodo494[label="{EO: 494|cost: -8.0|A: GoQ|Posicion:\nP}"]
+nodo495[label="{EO: 495|cost: -9.0|A: GoF|Posicion:\nQ}"]
+nodo497[label="{EO: 497|cost: -10.0|A: GoG|Posicion:\nF}"]
+
+nodo495 -> nodo497;
+
+nodo494 -> nodo495;
+nodo496[label="{EO: 496|cost: -9.0|A: GoG|Posicion:\nQ}"]
+nodo498[label="{EO: 498|cost: -10.0|A: GoF|Posicion:\nG}"]
+
+nodo496 -> nodo498;
+
+nodo494 -> nodo496;
+
+nodo493 -> nodo494;
+
+nodo486 -> nodo493;
+
+nodo483 -> nodo486;
+
+nodo481 -> nodo483;
+nodo484[label="{EO: 484|cost: -5.0|A: GoK|Posicion:\nJ}"]
+nodo499[label="{EO: 499|cost: -6.0|A: GoL|Posicion:\nK}"]
+nodo501[label="{EO: 501|cost: -7.0|A: GoM|Posicion:\nL}"]
+nodo502[label="{EO: 502|cost: -8.0|A: GoN|Posicion:\nM}"]
+
+nodo501 -> nodo502;
+
+nodo499 -> nodo501;
+
+nodo484 -> nodo499;
+nodo500[label="{EO: 500|cost: -6.0|A: GoN|Posicion:\nK}"]
+nodo503[label="{EO: 503|cost: -7.0|A: GoM|Posicion:\nN}"]
+nodo504[label="{EO: 504|cost: -8.0|A: GoL|Posicion:\nM}"]
+
+nodo503 -> nodo504;
+
+nodo500 -> nodo503;
+
+nodo484 -> nodo500;
+
+nodo481 -> nodo484;
+
+nodo327 -> nodo481;
+nodo482[label="{EO: 482|cost: -4.0|A: GoL|Posicion:\nI}"]
+nodo505[label="{EO: 505|cost: -5.0|A: GoK|Posicion:\nL}"]
+nodo507[label="{EO: 507|cost: -6.0|A: GoJ|Posicion:\nK}"]
+nodo509[label="{EO: 509|cost: -7.0|A: GoB|Posicion:\nJ}"]
+nodo510[label="{EO: 510|cost: -8.0|A: GoO|Posicion:\nB}"]
+nodo511[label="{EO: 511|cost: -9.0|A: GoP|Posicion:\nO}"]
+nodo512[label="{EO: 512|cost: -10.0|A: GoQ|Posicion:\nP}"]
+nodo513[label="{EO: 513|cost: -11.0|A: GoF|Posicion:\nQ}"]
+nodo515[label="{EO: 515|cost: -12.0|A: GoG|Posicion:\nF}"]
+
+nodo513 -> nodo515;
+
+nodo512 -> nodo513;
+nodo514[label="{EO: 514|cost: -11.0|A: GoG|Posicion:\nQ}"]
+nodo516[label="{EO: 516|cost: -12.0|A: GoF|Posicion:\nG}"]
+
+nodo514 -> nodo516;
+
+nodo512 -> nodo514;
+
+nodo511 -> nodo512;
+
+nodo510 -> nodo511;
+
+nodo509 -> nodo510;
+
+nodo507 -> nodo509;
+
+nodo505 -> nodo507;
+nodo508[label="{EO: 508|cost: -6.0|A: GoN|Posicion:\nK}"]
+nodo517[label="{EO: 517|cost: -7.0|A: GoM|Posicion:\nN}"]
+
+nodo508 -> nodo517;
+
+nodo505 -> nodo508;
+
+nodo482 -> nodo505;
+nodo506[label="{EO: 506|cost: -5.0|A: GoM|Posicion:\nL}"]
+nodo518[label="{EO: 518|cost: -6.0|A: GoN|Posicion:\nM}"]
+nodo519[label="{EO: 519|cost: -7.0|A: GoK|Posicion:\nN}"]
+nodo520[label="{EO: 520|cost: -8.0|A: GoJ|Posicion:\nK}"]
+nodo521[label="{EO: 521|cost: -9.0|A: GoB|Posicion:\nJ}"]
+nodo522[label="{EO: 522|cost: -10.0|A: GoO|Posicion:\nB}"]
+nodo523[label="{EO: 523|cost: -11.0|A: GoP|Posicion:\nO}"]
+nodo524[label="{EO: 524|cost: -12.0|A: GoQ|Posicion:\nP}"]
+nodo525[label="{EO: 525|cost: -13.0|A: GoF|Posicion:\nQ}"]
+nodo527[label="{EO: 527|cost: -14.0|A: GoG|Posicion:\nF}"]
+
+nodo525 -> nodo527;
+
+nodo524 -> nodo525;
+nodo526[label="{EO: 526|cost: -13.0|A: GoG|Posicion:\nQ}"]
+nodo528[label="{EO: 528|cost: -14.0|A: GoF|Posicion:\nG}"]
+
+nodo526 -> nodo528;
+
+nodo524 -> nodo526;
+
+nodo523 -> nodo524;
+
+nodo522 -> nodo523;
+
+nodo521 -> nodo522;
+
+nodo520 -> nodo521;
+
+nodo519 -> nodo520;
+
+nodo518 -> nodo519;
+
+nodo506 -> nodo518;
+
+nodo482 -> nodo506;
+
+nodo327 -> nodo482;
+
+nodo3 -> nodo327;
+nodo328[label="{EO: 328|cost: -3.0|A: GoJ|Posicion:\nH}"]
+nodo529[label="{EO: 529|cost: -4.0|A: GoB|Posicion:\nJ}"]
+nodo532[label="{EO: 532|cost: -5.0|A: GoK|Posicion:\nB}"]
+nodo534[label="{EO: 534|cost: -6.0|A: GoL|Posicion:\nK}"]
+nodo536[label="{EO: 536|cost: -7.0|A: GoI|Posicion:\nL}"]
+
+nodo534 -> nodo536;
+nodo537[label="{EO: 537|cost: -7.0|A: GoM|Posicion:\nL}"]
+nodo538[label="{EO: 538|cost: -8.0|A: GoN|Posicion:\nM}"]
+
+nodo537 -> nodo538;
+
+nodo534 -> nodo537;
+
+nodo532 -> nodo534;
+nodo535[label="{EO: 535|cost: -6.0|A: GoN|Posicion:\nK}"]
+nodo539[label="{EO: 539|cost: -7.0|A: GoM|Posicion:\nN}"]
+nodo540[label="{EO: 540|cost: -8.0|A: GoL|Posicion:\nM}"]
+nodo541[label="{EO: 541|cost: -9.0|A: GoI|Posicion:\nL}"]
+
+nodo540 -> nodo541;
+
+nodo539 -> nodo540;
+
+nodo535 -> nodo539;
+
+nodo532 -> nodo535;
+
+nodo529 -> nodo532;
+nodo533[label="{EO: 533|cost: -5.0|A: GoO|Posicion:\nB}"]
+nodo542[label="{EO: 542|cost: -6.0|A: GoP|Posicion:\nO}"]
+nodo543[label="{EO: 543|cost: -7.0|A: GoQ|Posicion:\nP}"]
+nodo544[label="{EO: 544|cost: -8.0|A: GoF|Posicion:\nQ}"]
+nodo546[label="{EO: 546|cost: -9.0|A: GoG|Posicion:\nF}"]
+
+nodo544 -> nodo546;
+
+nodo543 -> nodo544;
+nodo545[label="{EO: 545|cost: -8.0|A: GoG|Posicion:\nQ}"]
+nodo547[label="{EO: 547|cost: -9.0|A: GoF|Posicion:\nG}"]
+
+nodo545 -> nodo547;
+
+nodo543 -> nodo545;
+
+nodo542 -> nodo543;
+
+nodo533 -> nodo542;
+
+nodo529 -> nodo533;
+
+nodo328 -> nodo529;
+nodo530[label="{EO: 530|cost: -4.0|A: GoI|Posicion:\nJ}"]
+nodo548[label="{EO: 548|cost: -5.0|A: GoL|Posicion:\nI}"]
+nodo549[label="{EO: 549|cost: -6.0|A: GoK|Posicion:\nL}"]
+nodo551[label="{EO: 551|cost: -7.0|A: GoN|Posicion:\nK}"]
+nodo552[label="{EO: 552|cost: -8.0|A: GoM|Posicion:\nN}"]
+
+nodo551 -> nodo552;
+
+nodo549 -> nodo551;
+
+nodo548 -> nodo549;
+nodo550[label="{EO: 550|cost: -6.0|A: GoM|Posicion:\nL}"]
+nodo553[label="{EO: 553|cost: -7.0|A: GoN|Posicion:\nM}"]
+nodo554[label="{EO: 554|cost: -8.0|A: GoK|Posicion:\nN}"]
+
+nodo553 -> nodo554;
+
+nodo550 -> nodo553;
+
+nodo548 -> nodo550;
+
+nodo530 -> nodo548;
+
+nodo328 -> nodo530;
+nodo531[label="{EO: 531|cost: -4.0|A: GoK|Posicion:\nJ}"]
+nodo555[label="{EO: 555|cost: -5.0|A: GoL|Posicion:\nK}"]
+nodo557[label="{EO: 557|cost: -6.0|A: GoI|Posicion:\nL}"]
+
+nodo555 -> nodo557;
+nodo558[label="{EO: 558|cost: -6.0|A: GoM|Posicion:\nL}"]
+nodo559[label="{EO: 559|cost: -7.0|A: GoN|Posicion:\nM}"]
+
+nodo558 -> nodo559;
+
+nodo555 -> nodo558;
+
+nodo531 -> nodo555;
+nodo556[label="{EO: 556|cost: -5.0|A: GoN|Posicion:\nK}"]
+nodo560[label="{EO: 560|cost: -6.0|A: GoM|Posicion:\nN}"]
+nodo561[label="{EO: 561|cost: -7.0|A: GoL|Posicion:\nM}"]
+nodo562[label="{EO: 562|cost: -8.0|A: GoI|Posicion:\nL}"]
+
+nodo561 -> nodo562;
+
+nodo560 -> nodo561;
+
+nodo556 -> nodo560;
+
+nodo531 -> nodo556;
+
+nodo328 -> nodo531;
+
+nodo3 -> nodo328;
+
+nodo1 -> nodo3;
+nodo4[label="{EO: 4|cost: -2.0|A: GoI|Posicion:\nE}"]
+nodo563[label="{EO: 563|cost: -3.0|A: GoH|Posicion:\nI}"]
+nodo566[label="{EO: 566|cost: -4.0|A: GoF|Posicion:\nH}"]
+nodo568[label="{EO: 568|cost: -5.0|A: GoG|Posicion:\nF}"]
+nodo570[label="{EO: 570|cost: -6.0|A: GoQ|Posicion:\nG}"]
+nodo571[label="{EO: 571|cost: -7.0|A: GoB|Posicion:\nQ}"]
+nodo573[label="{EO: 573|cost: -8.0|A: GoJ|Posicion:\nB}"]
+nodo576[label="{EO: 576|cost: -9.0|A: GoK|Posicion:\nJ}"]
+nodo577[label="{EO: 577|cost: -10.0|A: GoL|Posicion:\nK}"]
+nodo579[label="{EO: 579|cost: -11.0|A: GoM|Posicion:\nL}"]
+nodo580[label="{EO: 580|cost: -12.0|A: GoN|Posicion:\nM}"]
+
+nodo579 -> nodo580;
+
+nodo577 -> nodo579;
+
+nodo576 -> nodo577;
+nodo578[label="{EO: 578|cost: -10.0|A: GoN|Posicion:\nK}"]
+nodo581[label="{EO: 581|cost: -11.0|A: GoM|Posicion:\nN}"]
+nodo582[label="{EO: 582|cost: -12.0|A: GoL|Posicion:\nM}"]
+
+nodo581 -> nodo582;
+
+nodo578 -> nodo581;
+
+nodo576 -> nodo578;
+
+nodo573 -> nodo576;
+
+nodo571 -> nodo573;
+nodo574[label="{EO: 574|cost: -8.0|A: GoK|Posicion:\nB}"]
+nodo583[label="{EO: 583|cost: -9.0|A: GoJ|Posicion:\nK}"]
+
+nodo574 -> nodo583;
+nodo584[label="{EO: 584|cost: -9.0|A: GoL|Posicion:\nK}"]
+nodo586[label="{EO: 586|cost: -10.0|A: GoM|Posicion:\nL}"]
+nodo587[label="{EO: 587|cost: -11.0|A: GoN|Posicion:\nM}"]
+
+nodo586 -> nodo587;
+
+nodo584 -> nodo586;
+
+nodo574 -> nodo584;
+nodo585[label="{EO: 585|cost: -9.0|A: GoN|Posicion:\nK}"]
+nodo588[label="{EO: 588|cost: -10.0|A: GoM|Posicion:\nN}"]
+nodo589[label="{EO: 589|cost: -11.0|A: GoL|Posicion:\nM}"]
+
+nodo588 -> nodo589;
+
+nodo585 -> nodo588;
+
+nodo574 -> nodo585;
+
+nodo571 -> nodo574;
+nodo575[label="{EO: 575|cost: -8.0|A: GoO|Posicion:\nB}"]
+nodo590[label="{EO: 590|cost: -9.0|A: GoP|Posicion:\nO}"]
+
+nodo575 -> nodo590;
+
+nodo571 -> nodo575;
+
+nodo570 -> nodo571;
+nodo572[label="{EO: 572|cost: -7.0|A: GoP|Posicion:\nQ}"]
+nodo591[label="{EO: 591|cost: -8.0|A: GoO|Posicion:\nP}"]
+nodo592[label="{EO: 592|cost: -9.0|A: GoB|Posicion:\nO}"]
+nodo593[label="{EO: 593|cost: -10.0|A: GoJ|Posicion:\nB}"]
+nodo595[label="{EO: 595|cost: -11.0|A: GoK|Posicion:\nJ}"]
+nodo596[label="{EO: 596|cost: -12.0|A: GoL|Posicion:\nK}"]
+nodo598[label="{EO: 598|cost: -13.0|A: GoM|Posicion:\nL}"]
+nodo599[label="{EO: 599|cost: -14.0|A: GoN|Posicion:\nM}"]
+
+nodo598 -> nodo599;
+
+nodo596 -> nodo598;
+
+nodo595 -> nodo596;
+nodo597[label="{EO: 597|cost: -12.0|A: GoN|Posicion:\nK}"]
+nodo600[label="{EO: 600|cost: -13.0|A: GoM|Posicion:\nN}"]
+nodo601[label="{EO: 601|cost: -14.0|A: GoL|Posicion:\nM}"]
+
+nodo600 -> nodo601;
+
+nodo597 -> nodo600;
+
+nodo595 -> nodo597;
+
+nodo593 -> nodo595;
+
+nodo592 -> nodo593;
+nodo594[label="{EO: 594|cost: -10.0|A: GoK|Posicion:\nB}"]
+nodo602[label="{EO: 602|cost: -11.0|A: GoJ|Posicion:\nK}"]
+
+nodo594 -> nodo602;
+nodo603[label="{EO: 603|cost: -11.0|A: GoL|Posicion:\nK}"]
+nodo605[label="{EO: 605|cost: -12.0|A: GoM|Posicion:\nL}"]
+nodo606[label="{EO: 606|cost: -13.0|A: GoN|Posicion:\nM}"]
+
+nodo605 -> nodo606;
+
+nodo603 -> nodo605;
+
+nodo594 -> nodo603;
+nodo604[label="{EO: 604|cost: -11.0|A: GoN|Posicion:\nK}"]
+nodo607[label="{EO: 607|cost: -12.0|A: GoM|Posicion:\nN}"]
+nodo608[label="{EO: 608|cost: -13.0|A: GoL|Posicion:\nM}"]
+
+nodo607 -> nodo608;
+
+nodo604 -> nodo607;
+
+nodo594 -> nodo604;
+
+nodo592 -> nodo594;
+
+nodo591 -> nodo592;
+
+nodo572 -> nodo591;
+
+nodo570 -> nodo572;
+
+nodo568 -> nodo570;
+
+nodo566 -> nodo568;
+nodo569[label="{EO: 569|cost: -5.0|A: GoQ|Posicion:\nF}"]
+nodo609[label="{EO: 609|cost: -6.0|A: GoB|Posicion:\nQ}"]
+nodo612[label="{EO: 612|cost: -7.0|A: GoJ|Posicion:\nB}"]
+nodo615[label="{EO: 615|cost: -8.0|A: GoK|Posicion:\nJ}"]
+nodo616[label="{EO: 616|cost: -9.0|A: GoL|Posicion:\nK}"]
+nodo618[label="{EO: 618|cost: -10.0|A: GoM|Posicion:\nL}"]
+nodo619[label="{EO: 619|cost: -11.0|A: GoN|Posicion:\nM}"]
+
+nodo618 -> nodo619;
+
+nodo616 -> nodo618;
+
+nodo615 -> nodo616;
+nodo617[label="{EO: 617|cost: -9.0|A: GoN|Posicion:\nK}"]
+nodo620[label="{EO: 620|cost: -10.0|A: GoM|Posicion:\nN}"]
+nodo621[label="{EO: 621|cost: -11.0|A: GoL|Posicion:\nM}"]
+
+nodo620 -> nodo621;
+
+nodo617 -> nodo620;
+
+nodo615 -> nodo617;
+
+nodo612 -> nodo615;
+
+nodo609 -> nodo612;
+nodo613[label="{EO: 613|cost: -7.0|A: GoK|Posicion:\nB}"]
+nodo622[label="{EO: 622|cost: -8.0|A: GoJ|Posicion:\nK}"]
+
+nodo613 -> nodo622;
+nodo623[label="{EO: 623|cost: -8.0|A: GoL|Posicion:\nK}"]
+nodo625[label="{EO: 625|cost: -9.0|A: GoM|Posicion:\nL}"]
+nodo626[label="{EO: 626|cost: -10.0|A: GoN|Posicion:\nM}"]
+
+nodo625 -> nodo626;
+
+nodo623 -> nodo625;
+
+nodo613 -> nodo623;
+nodo624[label="{EO: 624|cost: -8.0|A: GoN|Posicion:\nK}"]
+nodo627[label="{EO: 627|cost: -9.0|A: GoM|Posicion:\nN}"]
+nodo628[label="{EO: 628|cost: -10.0|A: GoL|Posicion:\nM}"]
+
+nodo627 -> nodo628;
+
+nodo624 -> nodo627;
+
+nodo613 -> nodo624;
+
+nodo609 -> nodo613;
+nodo614[label="{EO: 614|cost: -7.0|A: GoO|Posicion:\nB}"]
+nodo629[label="{EO: 629|cost: -8.0|A: GoP|Posicion:\nO}"]
+
+nodo614 -> nodo629;
+
+nodo609 -> nodo614;
+
+nodo569 -> nodo609;
+nodo610[label="{EO: 610|cost: -6.0|A: GoG|Posicion:\nQ}"]
+
+nodo569 -> nodo610;
+nodo611[label="{EO: 611|cost: -6.0|A: GoP|Posicion:\nQ}"]
+nodo630[label="{EO: 630|cost: -7.0|A: GoO|Posicion:\nP}"]
+nodo631[label="{EO: 631|cost: -8.0|A: GoB|Posicion:\nO}"]
+nodo632[label="{EO: 632|cost: -9.0|A: GoJ|Posicion:\nB}"]
+nodo634[label="{EO: 634|cost: -10.0|A: GoK|Posicion:\nJ}"]
+nodo635[label="{EO: 635|cost: -11.0|A: GoL|Posicion:\nK}"]
+nodo637[label="{EO: 637|cost: -12.0|A: GoM|Posicion:\nL}"]
+nodo638[label="{EO: 638|cost: -13.0|A: GoN|Posicion:\nM}"]
+
+nodo637 -> nodo638;
+
+nodo635 -> nodo637;
+
+nodo634 -> nodo635;
+nodo636[label="{EO: 636|cost: -11.0|A: GoN|Posicion:\nK}"]
+nodo639[label="{EO: 639|cost: -12.0|A: GoM|Posicion:\nN}"]
+nodo640[label="{EO: 640|cost: -13.0|A: GoL|Posicion:\nM}"]
+
+nodo639 -> nodo640;
+
+nodo636 -> nodo639;
+
+nodo634 -> nodo636;
+
+nodo632 -> nodo634;
+
+nodo631 -> nodo632;
+nodo633[label="{EO: 633|cost: -9.0|A: GoK|Posicion:\nB}"]
+nodo641[label="{EO: 641|cost: -10.0|A: GoJ|Posicion:\nK}"]
+
+nodo633 -> nodo641;
+nodo642[label="{EO: 642|cost: -10.0|A: GoL|Posicion:\nK}"]
+nodo644[label="{EO: 644|cost: -11.0|A: GoM|Posicion:\nL}"]
+nodo645[label="{EO: 645|cost: -12.0|A: GoN|Posicion:\nM}"]
+
+nodo644 -> nodo645;
+
+nodo642 -> nodo644;
+
+nodo633 -> nodo642;
+nodo643[label="{EO: 643|cost: -10.0|A: GoN|Posicion:\nK}"]
+nodo646[label="{EO: 646|cost: -11.0|A: GoM|Posicion:\nN}"]
+nodo647[label="{EO: 647|cost: -12.0|A: GoL|Posicion:\nM}"]
+
+nodo646 -> nodo647;
+
+nodo643 -> nodo646;
+
+nodo633 -> nodo643;
+
+nodo631 -> nodo633;
+
+nodo630 -> nodo631;
+
+nodo611 -> nodo630;
+
+nodo569 -> nodo611;
+
+nodo566 -> nodo569;
+
+nodo563 -> nodo566;
+nodo567[label="{EO: 567|cost: -4.0|A: GoJ|Posicion:\nH}"]
+nodo648[label="{EO: 648|cost: -5.0|A: GoB|Posicion:\nJ}"]
+nodo650[label="{EO: 650|cost: -6.0|A: GoK|Posicion:\nB}"]
+nodo652[label="{EO: 652|cost: -7.0|A: GoL|Posicion:\nK}"]
+nodo654[label="{EO: 654|cost: -8.0|A: GoM|Posicion:\nL}"]
+nodo655[label="{EO: 655|cost: -9.0|A: GoN|Posicion:\nM}"]
+
+nodo654 -> nodo655;
+
+nodo652 -> nodo654;
+
+nodo650 -> nodo652;
+nodo653[label="{EO: 653|cost: -7.0|A: GoN|Posicion:\nK}"]
+nodo656[label="{EO: 656|cost: -8.0|A: GoM|Posicion:\nN}"]
+nodo657[label="{EO: 657|cost: -9.0|A: GoL|Posicion:\nM}"]
+
+nodo656 -> nodo657;
+
+nodo653 -> nodo656;
+
+nodo650 -> nodo653;
+
+nodo648 -> nodo650;
+nodo651[label="{EO: 651|cost: -6.0|A: GoO|Posicion:\nB}"]
+nodo658[label="{EO: 658|cost: -7.0|A: GoP|Posicion:\nO}"]
+nodo659[label="{EO: 659|cost: -8.0|A: GoQ|Posicion:\nP}"]
+nodo660[label="{EO: 660|cost: -9.0|A: GoF|Posicion:\nQ}"]
+nodo662[label="{EO: 662|cost: -10.0|A: GoG|Posicion:\nF}"]
+
+nodo660 -> nodo662;
+
+nodo659 -> nodo660;
+nodo661[label="{EO: 661|cost: -9.0|A: GoG|Posicion:\nQ}"]
+nodo663[label="{EO: 663|cost: -10.0|A: GoF|Posicion:\nG}"]
+
+nodo661 -> nodo663;
+
+nodo659 -> nodo661;
+
+nodo658 -> nodo659;
+
+nodo651 -> nodo658;
+
+nodo648 -> nodo651;
+
+nodo567 -> nodo648;
+nodo649[label="{EO: 649|cost: -5.0|A: GoK|Posicion:\nJ}"]
+nodo664[label="{EO: 664|cost: -6.0|A: GoL|Posicion:\nK}"]
+nodo666[label="{EO: 666|cost: -7.0|A: GoM|Posicion:\nL}"]
+nodo667[label="{EO: 667|cost: -8.0|A: GoN|Posicion:\nM}"]
+
+nodo666 -> nodo667;
+
+nodo664 -> nodo666;
+
+nodo649 -> nodo664;
+nodo665[label="{EO: 665|cost: -6.0|A: GoN|Posicion:\nK}"]
+nodo668[label="{EO: 668|cost: -7.0|A: GoM|Posicion:\nN}"]
+nodo669[label="{EO: 669|cost: -8.0|A: GoL|Posicion:\nM}"]
+
+nodo668 -> nodo669;
+
+nodo665 -> nodo668;
+
+nodo649 -> nodo665;
+
+nodo567 -> nodo649;
+
+nodo563 -> nodo567;
+
+nodo4 -> nodo563;
+nodo564[label="{EO: 564|cost: -3.0|A: GoJ|Posicion:\nI}"]
+nodo670[label="{EO: 670|cost: -4.0|A: GoB|Posicion:\nJ}"]
+nodo673[label="{EO: 673|cost: -5.0|A: GoK|Posicion:\nB}"]
+nodo675[label="{EO: 675|cost: -6.0|A: GoL|Posicion:\nK}"]
+nodo677[label="{EO: 677|cost: -7.0|A: GoM|Posicion:\nL}"]
+nodo678[label="{EO: 678|cost: -8.0|A: GoN|Posicion:\nM}"]
+
+nodo677 -> nodo678;
+
+nodo675 -> nodo677;
+
+nodo673 -> nodo675;
+nodo676[label="{EO: 676|cost: -6.0|A: GoN|Posicion:\nK}"]
+nodo679[label="{EO: 679|cost: -7.0|A: GoM|Posicion:\nN}"]
+nodo680[label="{EO: 680|cost: -8.0|A: GoL|Posicion:\nM}"]
+
+nodo679 -> nodo680;
+
+nodo676 -> nodo679;
+
+nodo673 -> nodo676;
+
+nodo670 -> nodo673;
+nodo674[label="{EO: 674|cost: -5.0|A: GoO|Posicion:\nB}"]
+nodo681[label="{EO: 681|cost: -6.0|A: GoP|Posicion:\nO}"]
+nodo682[label="{EO: 682|cost: -7.0|A: GoQ|Posicion:\nP}"]
+nodo683[label="{EO: 683|cost: -8.0|A: GoF|Posicion:\nQ}"]
+nodo685[label="{EO: 685|cost: -9.0|A: GoG|Posicion:\nF}"]
+
+nodo683 -> nodo685;
+nodo686[label="{EO: 686|cost: -9.0|A: GoH|Posicion:\nF}"]
+
+nodo683 -> nodo686;
+
+nodo682 -> nodo683;
+nodo684[label="{EO: 684|cost: -8.0|A: GoG|Posicion:\nQ}"]
+nodo687[label="{EO: 687|cost: -9.0|A: GoF|Posicion:\nG}"]
+nodo688[label="{EO: 688|cost: -10.0|A: GoH|Posicion:\nF}"]
+
+nodo687 -> nodo688;
+
+nodo684 -> nodo687;
+
+nodo682 -> nodo684;
+
+nodo681 -> nodo682;
+
+nodo674 -> nodo681;
+
+nodo670 -> nodo674;
+
+nodo564 -> nodo670;
+nodo671[label="{EO: 671|cost: -4.0|A: GoH|Posicion:\nJ}"]
+nodo689[label="{EO: 689|cost: -5.0|A: GoF|Posicion:\nH}"]
+nodo690[label="{EO: 690|cost: -6.0|A: GoG|Posicion:\nF}"]
+nodo692[label="{EO: 692|cost: -7.0|A: GoQ|Posicion:\nG}"]
+nodo693[label="{EO: 693|cost: -8.0|A: GoB|Posicion:\nQ}"]
+nodo695[label="{EO: 695|cost: -9.0|A: GoK|Posicion:\nB}"]
+nodo697[label="{EO: 697|cost: -10.0|A: GoL|Posicion:\nK}"]
+nodo699[label="{EO: 699|cost: -11.0|A: GoM|Posicion:\nL}"]
+nodo700[label="{EO: 700|cost: -12.0|A: GoN|Posicion:\nM}"]
+
+nodo699 -> nodo700;
+
+nodo697 -> nodo699;
+
+nodo695 -> nodo697;
+nodo698[label="{EO: 698|cost: -10.0|A: GoN|Posicion:\nK}"]
+nodo701[label="{EO: 701|cost: -11.0|A: GoM|Posicion:\nN}"]
+nodo702[label="{EO: 702|cost: -12.0|A: GoL|Posicion:\nM}"]
+
+nodo701 -> nodo702;
+
+nodo698 -> nodo701;
+
+nodo695 -> nodo698;
+
+nodo693 -> nodo695;
+nodo696[label="{EO: 696|cost: -9.0|A: GoO|Posicion:\nB}"]
+nodo703[label="{EO: 703|cost: -10.0|A: GoP|Posicion:\nO}"]
+
+nodo696 -> nodo703;
+
+nodo693 -> nodo696;
+
+nodo692 -> nodo693;
+nodo694[label="{EO: 694|cost: -8.0|A: GoP|Posicion:\nQ}"]
+nodo704[label="{EO: 704|cost: -9.0|A: GoO|Posicion:\nP}"]
+nodo705[label="{EO: 705|cost: -10.0|A: GoB|Posicion:\nO}"]
+nodo706[label="{EO: 706|cost: -11.0|A: GoK|Posicion:\nB}"]
+nodo707[label="{EO: 707|cost: -12.0|A: GoL|Posicion:\nK}"]
+nodo709[label="{EO: 709|cost: -13.0|A: GoM|Posicion:\nL}"]
+nodo710[label="{EO: 710|cost: -14.0|A: GoN|Posicion:\nM}"]
+
+nodo709 -> nodo710;
+
+nodo707 -> nodo709;
+
+nodo706 -> nodo707;
+nodo708[label="{EO: 708|cost: -12.0|A: GoN|Posicion:\nK}"]
+nodo711[label="{EO: 711|cost: -13.0|A: GoM|Posicion:\nN}"]
+nodo712[label="{EO: 712|cost: -14.0|A: GoL|Posicion:\nM}"]
+
+nodo711 -> nodo712;
+
+nodo708 -> nodo711;
+
+nodo706 -> nodo708;
+
+nodo705 -> nodo706;
+
+nodo704 -> nodo705;
+
+nodo694 -> nodo704;
+
+nodo692 -> nodo694;
+
+nodo690 -> nodo692;
+
+nodo689 -> nodo690;
+nodo691[label="{EO: 691|cost: -6.0|A: GoQ|Posicion:\nF}"]
+nodo713[label="{EO: 713|cost: -7.0|A: GoB|Posicion:\nQ}"]
+nodo716[label="{EO: 716|cost: -8.0|A: GoK|Posicion:\nB}"]
+nodo718[label="{EO: 718|cost: -9.0|A: GoL|Posicion:\nK}"]
+nodo720[label="{EO: 720|cost: -10.0|A: GoM|Posicion:\nL}"]
+nodo721[label="{EO: 721|cost: -11.0|A: GoN|Posicion:\nM}"]
+
+nodo720 -> nodo721;
+
+nodo718 -> nodo720;
+
+nodo716 -> nodo718;
+nodo719[label="{EO: 719|cost: -9.0|A: GoN|Posicion:\nK}"]
+nodo722[label="{EO: 722|cost: -10.0|A: GoM|Posicion:\nN}"]
+nodo723[label="{EO: 723|cost: -11.0|A: GoL|Posicion:\nM}"]
+
+nodo722 -> nodo723;
+
+nodo719 -> nodo722;
+
+nodo716 -> nodo719;
+
+nodo713 -> nodo716;
+nodo717[label="{EO: 717|cost: -8.0|A: GoO|Posicion:\nB}"]
+nodo724[label="{EO: 724|cost: -9.0|A: GoP|Posicion:\nO}"]
+
+nodo717 -> nodo724;
+
+nodo713 -> nodo717;
+
+nodo691 -> nodo713;
+nodo714[label="{EO: 714|cost: -7.0|A: GoG|Posicion:\nQ}"]
+
+nodo691 -> nodo714;
+nodo715[label="{EO: 715|cost: -7.0|A: GoP|Posicion:\nQ}"]
+nodo725[label="{EO: 725|cost: -8.0|A: GoO|Posicion:\nP}"]
+nodo726[label="{EO: 726|cost: -9.0|A: GoB|Posicion:\nO}"]
+nodo727[label="{EO: 727|cost: -10.0|A: GoK|Posicion:\nB}"]
+nodo728[label="{EO: 728|cost: -11.0|A: GoL|Posicion:\nK}"]
+nodo730[label="{EO: 730|cost: -12.0|A: GoM|Posicion:\nL}"]
+nodo731[label="{EO: 731|cost: -13.0|A: GoN|Posicion:\nM}"]
+
+nodo730 -> nodo731;
+
+nodo728 -> nodo730;
+
+nodo727 -> nodo728;
+nodo729[label="{EO: 729|cost: -11.0|A: GoN|Posicion:\nK}"]
+nodo732[label="{EO: 732|cost: -12.0|A: GoM|Posicion:\nN}"]
+nodo733[label="{EO: 733|cost: -13.0|A: GoL|Posicion:\nM}"]
+
+nodo732 -> nodo733;
+
+nodo729 -> nodo732;
+
+nodo727 -> nodo729;
+
+nodo726 -> nodo727;
+
+nodo725 -> nodo726;
+
+nodo715 -> nodo725;
+
+nodo691 -> nodo715;
+
+nodo689 -> nodo691;
+
+nodo671 -> nodo689;
+
+nodo564 -> nodo671;
+nodo672[label="{EO: 672|cost: -4.0|A: GoK|Posicion:\nJ}"]
+nodo734[label="{EO: 734|cost: -5.0|A: GoL|Posicion:\nK}"]
+nodo736[label="{EO: 736|cost: -6.0|A: GoM|Posicion:\nL}"]
+nodo737[label="{EO: 737|cost: -7.0|A: GoN|Posicion:\nM}"]
+
+nodo736 -> nodo737;
+
+nodo734 -> nodo736;
+
+nodo672 -> nodo734;
+nodo735[label="{EO: 735|cost: -5.0|A: GoN|Posicion:\nK}"]
+nodo738[label="{EO: 738|cost: -6.0|A: GoM|Posicion:\nN}"]
+nodo739[label="{EO: 739|cost: -7.0|A: GoL|Posicion:\nM}"]
+
+nodo738 -> nodo739;
+
+nodo735 -> nodo738;
+
+nodo672 -> nodo735;
+
+nodo564 -> nodo672;
+
+nodo4 -> nodo564;
+nodo565[label="{EO: 565|cost: -3.0|A: GoL|Posicion:\nI}"]
+nodo740[label="{EO: 740|cost: -4.0|A: GoK|Posicion:\nL}"]
+nodo742[label="{EO: 742|cost: -5.0|A: GoJ|Posicion:\nK}"]
+nodo744[label="{EO: 744|cost: -6.0|A: GoB|Posicion:\nJ}"]
+nodo746[label="{EO: 746|cost: -7.0|A: GoO|Posicion:\nB}"]
+nodo747[label="{EO: 747|cost: -8.0|A: GoP|Posicion:\nO}"]
+nodo748[label="{EO: 748|cost: -9.0|A: GoQ|Posicion:\nP}"]
+nodo749[label="{EO: 749|cost: -10.0|A: GoF|Posicion:\nQ}"]
+nodo751[label="{EO: 751|cost: -11.0|A: GoG|Posicion:\nF}"]
+
+nodo749 -> nodo751;
+nodo752[label="{EO: 752|cost: -11.0|A: GoH|Posicion:\nF}"]
+
+nodo749 -> nodo752;
+
+nodo748 -> nodo749;
+nodo750[label="{EO: 750|cost: -10.0|A: GoG|Posicion:\nQ}"]
+nodo753[label="{EO: 753|cost: -11.0|A: GoF|Posicion:\nG}"]
+nodo754[label="{EO: 754|cost: -12.0|A: GoH|Posicion:\nF}"]
+
+nodo753 -> nodo754;
+
+nodo750 -> nodo753;
+
+nodo748 -> nodo750;
+
+nodo747 -> nodo748;
+
+nodo746 -> nodo747;
+
+nodo744 -> nodo746;
+
+nodo742 -> nodo744;
+nodo745[label="{EO: 745|cost: -6.0|A: GoH|Posicion:\nJ}"]
+nodo755[label="{EO: 755|cost: -7.0|A: GoF|Posicion:\nH}"]
+nodo756[label="{EO: 756|cost: -8.0|A: GoG|Posicion:\nF}"]
+nodo758[label="{EO: 758|cost: -9.0|A: GoQ|Posicion:\nG}"]
+nodo759[label="{EO: 759|cost: -10.0|A: GoB|Posicion:\nQ}"]
+nodo761[label="{EO: 761|cost: -11.0|A: GoO|Posicion:\nB}"]
+nodo762[label="{EO: 762|cost: -12.0|A: GoP|Posicion:\nO}"]
+
+nodo761 -> nodo762;
+
+nodo759 -> nodo761;
+
+nodo758 -> nodo759;
+nodo760[label="{EO: 760|cost: -10.0|A: GoP|Posicion:\nQ}"]
+nodo763[label="{EO: 763|cost: -11.0|A: GoO|Posicion:\nP}"]
+nodo764[label="{EO: 764|cost: -12.0|A: GoB|Posicion:\nO}"]
+
+nodo763 -> nodo764;
+
+nodo760 -> nodo763;
+
+nodo758 -> nodo760;
+
+nodo756 -> nodo758;
+
+nodo755 -> nodo756;
+nodo757[label="{EO: 757|cost: -8.0|A: GoQ|Posicion:\nF}"]
+nodo765[label="{EO: 765|cost: -9.0|A: GoB|Posicion:\nQ}"]
+nodo768[label="{EO: 768|cost: -10.0|A: GoO|Posicion:\nB}"]
+nodo769[label="{EO: 769|cost: -11.0|A: GoP|Posicion:\nO}"]
+
+nodo768 -> nodo769;
+
+nodo765 -> nodo768;
+
+nodo757 -> nodo765;
+nodo766[label="{EO: 766|cost: -9.0|A: GoG|Posicion:\nQ}"]
+
+nodo757 -> nodo766;
+nodo767[label="{EO: 767|cost: -9.0|A: GoP|Posicion:\nQ}"]
+nodo770[label="{EO: 770|cost: -10.0|A: GoO|Posicion:\nP}"]
+nodo771[label="{EO: 771|cost: -11.0|A: GoB|Posicion:\nO}"]
+
+nodo770 -> nodo771;
+
+nodo767 -> nodo770;
+
+nodo757 -> nodo767;
+
+nodo755 -> nodo757;
+
+nodo745 -> nodo755;
+
+nodo742 -> nodo745;
+
+nodo740 -> nodo742;
+nodo743[label="{EO: 743|cost: -5.0|A: GoN|Posicion:\nK}"]
+nodo772[label="{EO: 772|cost: -6.0|A: GoM|Posicion:\nN}"]
+
+nodo743 -> nodo772;
+
+nodo740 -> nodo743;
+
+nodo565 -> nodo740;
+nodo741[label="{EO: 741|cost: -4.0|A: GoM|Posicion:\nL}"]
+nodo773[label="{EO: 773|cost: -5.0|A: GoN|Posicion:\nM}"]
+nodo774[label="{EO: 774|cost: -6.0|A: GoK|Posicion:\nN}"]
+nodo775[label="{EO: 775|cost: -7.0|A: GoJ|Posicion:\nK}"]
+nodo776[label="{EO: 776|cost: -8.0|A: GoB|Posicion:\nJ}"]
+nodo778[label="{EO: 778|cost: -9.0|A: GoO|Posicion:\nB}"]
+nodo779[label="{EO: 779|cost: -10.0|A: GoP|Posicion:\nO}"]
+nodo780[label="{EO: 780|cost: -11.0|A: GoQ|Posicion:\nP}"]
+nodo781[label="{EO: 781|cost: -12.0|A: GoF|Posicion:\nQ}"]
+nodo783[label="{EO: 783|cost: -13.0|A: GoG|Posicion:\nF}"]
+
+nodo781 -> nodo783;
+nodo784[label="{EO: 784|cost: -13.0|A: GoH|Posicion:\nF}"]
+
+nodo781 -> nodo784;
+
+nodo780 -> nodo781;
+nodo782[label="{EO: 782|cost: -12.0|A: GoG|Posicion:\nQ}"]
+nodo785[label="{EO: 785|cost: -13.0|A: GoF|Posicion:\nG}"]
+nodo786[label="{EO: 786|cost: -14.0|A: GoH|Posicion:\nF}"]
+
+nodo785 -> nodo786;
+
+nodo782 -> nodo785;
+
+nodo780 -> nodo782;
+
+nodo779 -> nodo780;
+
+nodo778 -> nodo779;
+
+nodo776 -> nodo778;
+
+nodo775 -> nodo776;
+nodo777[label="{EO: 777|cost: -8.0|A: GoH|Posicion:\nJ}"]
+nodo787[label="{EO: 787|cost: -9.0|A: GoF|Posicion:\nH}"]
+nodo788[label="{EO: 788|cost: -10.0|A: GoG|Posicion:\nF}"]
+nodo790[label="{EO: 790|cost: -11.0|A: GoQ|Posicion:\nG}"]
+nodo791[label="{EO: 791|cost: -12.0|A: GoB|Posicion:\nQ}"]
+
+nodo790 -> nodo791;
+nodo792[label="{EO: 792|cost: -12.0|A: GoP|Posicion:\nQ}"]
+
+nodo790 -> nodo792;
+
+nodo788 -> nodo790;
+
+nodo787 -> nodo788;
+nodo789[label="{EO: 789|cost: -10.0|A: GoQ|Posicion:\nF}"]
+
+nodo787 -> nodo789;
+
+nodo777 -> nodo787;
+
+nodo775 -> nodo777;
+
+nodo774 -> nodo775;
+
+nodo773 -> nodo774;
+
+nodo741 -> nodo773;
+
+nodo565 -> nodo741;
+
+nodo4 -> nodo565;
+
+nodo1 -> nodo4;
 
 nodo0 -> nodo1;
-nodo2[label="{EO: 2|cost: 1.0|A: GoF}"]
-
-nodo0 -> nodo2;
-nodo3[label="{EO: 3|cost: 1.0|A: GoP}"]
-
-nodo0 -> nodo3;
 
 
 }

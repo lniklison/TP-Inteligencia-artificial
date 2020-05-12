@@ -19,15 +19,33 @@ package frsf.cidisi.faia.examples.search.robot;
 
 import frsf.cidisi.faia.agent.search.GoalTest;
 import frsf.cidisi.faia.state.AgentState;
+import java.util.ArrayList;
+import javax.swing.text.Position;
 
 public class RobotGoal extends GoalTest {
 
     @Override
     public boolean isGoalState(AgentState agentState) {
         // Agent reach the goal if it is in B
-        if (((RobotAgentState) agentState).getPosition().equals(RobotAgentState.B)) {
+        String posicionActual = ((RobotAgentState) agentState).getPosition();
+        ((RobotAgentState) agentState).removePositionVisited(posicionActual);
+        
+        ArrayList<String> visitedPositions = ((RobotAgentState) agentState).getVisitedPositions();
+        ArrayList<String> positionsToVisit = ((RobotAgentState) agentState).getPositionsToVisit();
+        
+//        System.out.println("#######################################");
+//        System.out.println("Posicion actual: "+posicionActual);
+//        System.out.println("Posiciones visitadas: "+visitedPositions.toString());
+//        System.out.println("Posiciones por visitar: "+positionsToVisit.toString());
+        
+        if (posicionActual.equals(RobotAgentState.B) && positionsToVisit.size()==0) {
+            System.out.println("Posicion actual: "+posicionActual);
+            System.out.println("Posiciones visitadas: "+visitedPositions.toString());
             return true;
         }
         return false;
+        
+//        return visitedPositions.containsAll(positionsToVisit);
+        
     }
 }

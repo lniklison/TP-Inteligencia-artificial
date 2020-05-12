@@ -73,8 +73,8 @@ public class RobotAgent extends SearchBasedAgent {
     @Override
     public Action selectAction() {
         // Breath first strategy
-        BreathFirstSearch searchStrategy = new BreathFirstSearch();
-//        DepthFirstSearch searchStrategy = new DepthFirstSearch();
+//        BreathFirstSearch searchStrategy = new BreathFirstSearch();
+        DepthFirstSearch searchStrategy = new DepthFirstSearch();
 
         Search searchSolver = new Search(searchStrategy);
 

@@ -43,6 +43,13 @@ public class RobotAgentState extends SearchBasedAgentState {
     public static final String O = "O";
     public static final String P = "P";
     public static final String Q = "Q";
+    
+    private ArrayList<String> positionsToVisit = new ArrayList<String>(){
+            {
+                add(RobotAgentState.M);
+                add(RobotAgentState.G);
+            }
+        };
 
     /**
      * Actual agent position
@@ -66,6 +73,8 @@ public class RobotAgentState extends SearchBasedAgentState {
         newState.setPosition(position);
         ArrayList<String> visitedPosition = (ArrayList<String>) visitedPositions.clone();
         newState.setVisitedPositions(visitedPosition);
+        ArrayList<String> positions = (ArrayList<String>) positionsToVisit.clone();
+        newState.setPositionsToVisit(positions);
         return newState;
     }
 
@@ -151,5 +160,19 @@ public class RobotAgentState extends SearchBasedAgentState {
 
     public void setVisitedPositions(ArrayList<String> visitedPositions) {
         this.visitedPositions = visitedPositions;
+    }
+    
+    public ArrayList<String> getPositionsToVisit(){
+        return this.positionsToVisit;
+    }
+    
+    public void setPositionsToVisit(ArrayList<String> positions){
+        this.positionsToVisit = positions;
+    }
+    
+    public void removePositionVisited(String position){
+        if(this.positionsToVisit.contains(position)){
+            this.positionsToVisit.remove(position);
+        }
     }
 }
