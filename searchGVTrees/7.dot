@@ -1,24 +1,24 @@
 digraph g {
 node [shape = Mrecord];
 nodo0[label="{EO: 0|cost: 0.0|A: null}"]
-nodo1[label="{EO: 1|cost: -1.0|A: GoK}"]
-nodo2[label="{EO: 2|cost: -2.0|A: GoJ|Posicion:\nK}"]
-nodo3[label="{EO: 3|cost: -3.0|A: GoB|Posicion:\nJ}"]
-nodo5[label="{EO: 5|cost: -4.0|A: GoO|Posicion:\nB}"]
-nodo6[label="{EO: 6|cost: -5.0|A: GoP|Posicion:\nO}"]
-nodo7[label="{EO: 7|cost: -6.0|A: GoQ|Posicion:\nP}"]
-nodo8[label="{EO: 8|cost: -7.0|A: GoF|Posicion:\nQ}"]
-nodo10[label="{EO: 10|cost: -8.0|A: GoG|Posicion:\nF}"]
+nodo1[label="{EO: 1|cost: -1.0|A: Go11}"]
+nodo2[label="{EO: 2|cost: -2.0|A: Go10|Posicion:\n11}"]
+nodo3[label="{EO: 3|cost: -3.0|A: Go2|Posicion:\n10}"]
+nodo5[label="{EO: 5|cost: -4.0|A: Go15|Posicion:\n2}"]
+nodo6[label="{EO: 6|cost: -5.0|A: Go16|Posicion:\n15}"]
+nodo7[label="{EO: 7|cost: -6.0|A: Go17|Posicion:\n16}"]
+nodo8[label="{EO: 8|cost: -7.0|A: Go6|Posicion:\n17}"]
+nodo10[label="{EO: 10|cost: -8.0|A: Go7|Posicion:\n6}"]
 
 nodo8 -> nodo10;
-nodo11[label="{EO: 11|cost: -8.0|A: GoH|Posicion:\nF}"]
+nodo11[label="{EO: 11|cost: -8.0|A: Go8|Posicion:\n6}"]
 
 nodo8 -> nodo11;
 
 nodo7 -> nodo8;
-nodo9[label="{EO: 9|cost: -7.0|A: GoG|Posicion:\nQ}"]
-nodo12[label="{EO: 12|cost: -8.0|A: GoF|Posicion:\nG}"]
-nodo13[label="{EO: 13|cost: -9.0|A: GoH|Posicion:\nF}"]
+nodo9[label="{EO: 9|cost: -7.0|A: Go7|Posicion:\n17}"]
+nodo12[label="{EO: 12|cost: -8.0|A: Go6|Posicion:\n7}"]
+nodo13[label="{EO: 13|cost: -9.0|A: Go8|Posicion:\n6}"]
 
 nodo12 -> nodo13;
 
@@ -33,21 +33,21 @@ nodo5 -> nodo6;
 nodo3 -> nodo5;
 
 nodo2 -> nodo3;
-nodo4[label="{EO: 4|cost: -3.0|A: GoH|Posicion:\nJ}"]
-nodo14[label="{EO: 14|cost: -4.0|A: GoF|Posicion:\nH}"]
-nodo15[label="{EO: 15|cost: -5.0|A: GoG|Posicion:\nF}"]
-nodo17[label="{EO: 17|cost: -6.0|A: GoQ|Posicion:\nG}"]
-nodo18[label="{EO: 18|cost: -7.0|A: GoB|Posicion:\nQ}"]
+nodo4[label="{EO: 4|cost: -3.0|A: Go8|Posicion:\n10}"]
+nodo14[label="{EO: 14|cost: -4.0|A: Go6|Posicion:\n8}"]
+nodo15[label="{EO: 15|cost: -5.0|A: Go7|Posicion:\n6}"]
+nodo17[label="{EO: 17|cost: -6.0|A: Go17|Posicion:\n7}"]
+nodo18[label="{EO: 18|cost: -7.0|A: Go2|Posicion:\n17}"]
 
 nodo17 -> nodo18;
-nodo19[label="{EO: 19|cost: -7.0|A: GoP|Posicion:\nQ}"]
+nodo19[label="{EO: 19|cost: -7.0|A: Go16|Posicion:\n17}"]
 
 nodo17 -> nodo19;
 
 nodo15 -> nodo17;
 
 nodo14 -> nodo15;
-nodo16[label="{EO: 16|cost: -5.0|A: GoQ|Posicion:\nF}"]
+nodo16[label="{EO: 16|cost: -5.0|A: Go17|Posicion:\n6}"]
 
 nodo14 -> nodo16;
 

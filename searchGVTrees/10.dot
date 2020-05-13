@@ -1,20 +1,20 @@
 digraph g {
 node [shape = Mrecord];
 nodo0[label="{EO: 0|cost: 0.0|A: null}"]
-nodo1[label="{EO: 1|cost: -1.0|A: GoF}"]
-nodo2[label="{EO: 2|cost: -2.0|A: GoG|Posicion:\nF}"]
-nodo4[label="{EO: 4|cost: -3.0|A: GoQ|Posicion:\nG}"]
-nodo5[label="{EO: 5|cost: -4.0|A: GoB|Posicion:\nQ}"]
+nodo1[label="{EO: 1|cost: -1.0|A: Go6}"]
+nodo2[label="{EO: 2|cost: -2.0|A: Go7|Posicion:\n6}"]
+nodo4[label="{EO: 4|cost: -3.0|A: Go17|Posicion:\n7}"]
+nodo5[label="{EO: 5|cost: -4.0|A: Go2|Posicion:\n17}"]
 
 nodo4 -> nodo5;
-nodo6[label="{EO: 6|cost: -4.0|A: GoP|Posicion:\nQ}"]
+nodo6[label="{EO: 6|cost: -4.0|A: Go16|Posicion:\n17}"]
 
 nodo4 -> nodo6;
 
 nodo2 -> nodo4;
 
 nodo1 -> nodo2;
-nodo3[label="{EO: 3|cost: -2.0|A: GoQ|Posicion:\nF}"]
+nodo3[label="{EO: 3|cost: -2.0|A: Go17|Posicion:\n6}"]
 
 nodo1 -> nodo3;
 

@@ -26,25 +26,25 @@ import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 
 public class RobotAgentState extends SearchBasedAgentState {
 
-    public static final String A = "A";
-    public static final String B = "B";
-    public static final String C = "C";
-    public static final String D = "D";
-    public static final String E = "E";
-    public static final String F = "F";
-    public static final String G = "G";
-    public static final String H = "H";
-    public static final String I = "I";
-    public static final String J = "J";
-    public static final String K = "K";
-    public static final String L = "L";
-    public static final String M = "M";
-    public static final String N = "N";
-    public static final String O = "O";
-    public static final String P = "P";
-    public static final String Q = "Q";
+    public static final Integer A = 1;
+    public static final Integer B = 2;
+    public static final Integer C = 3;
+    public static final Integer D = 4;
+    public static final Integer E = 5;
+    public static final Integer F = 6;
+    public static final Integer G = 7;
+    public static final Integer H = 8;
+    public static final Integer I = 9;
+    public static final Integer J = 10;
+    public static final Integer K = 11;
+    public static final Integer L = 12;
+    public static final Integer M = 13;
+    public static final Integer N = 14;
+    public static final Integer O = 15;
+    public static final Integer P = 16;
+    public static final Integer Q = 17;
     
-    private ArrayList<String> positionsToVisit = new ArrayList<String>(){
+    private ArrayList<Integer> positionsToVisit = new ArrayList<Integer>(){
             {
                 add(RobotAgentState.M);
                 add(RobotAgentState.G);
@@ -54,14 +54,14 @@ public class RobotAgentState extends SearchBasedAgentState {
     /**
      * Actual agent position
      */
-    String position;
+    Integer position;
 
     /**
      * This map has a point of the world (A, B, C, ...) as key, and a collection
      * of successors of that point.
      */
-    private HashMap<String, Collection<String>> knownMap;
-    private ArrayList<String> visitedPositions;
+    private HashMap<Integer, Collection<Integer>> knownMap;
+    private ArrayList<Integer> visitedPositions;
 
     public RobotAgentState() {
         this.initState();
@@ -71,9 +71,9 @@ public class RobotAgentState extends SearchBasedAgentState {
     public RobotAgentState clone() {
         RobotAgentState newState = new RobotAgentState();
         newState.setPosition(position);
-        ArrayList<String> visitedPosition = (ArrayList<String>) visitedPositions.clone();
+        ArrayList<Integer> visitedPosition = (ArrayList<Integer>) visitedPositions.clone();
         newState.setVisitedPositions(visitedPosition);
-        ArrayList<String> positions = (ArrayList<String>) positionsToVisit.clone();
+        ArrayList<Integer> positions = (ArrayList<Integer>) positionsToVisit.clone();
         newState.setPositionsToVisit(positions);
         return newState;
     }
@@ -86,7 +86,7 @@ public class RobotAgentState extends SearchBasedAgentState {
          * In this matrix the first element of each row represents a position
          * in the map and the seccessors of that position.
          */
-        String[][] positions = new String[][]{
+        Integer[][] positions = new Integer[][]{
             {A, C, G},
             {B, J, K, O},
             {C, D, G},
@@ -106,9 +106,9 @@ public class RobotAgentState extends SearchBasedAgentState {
             {Q, B, F, G, P}
         };
 
-        knownMap = new HashMap<String, Collection<String>>();
+        knownMap = new HashMap<Integer, Collection<Integer>>();
         for (int i = 0; i < positions.length; i++) {
-            ArrayList<String> successors = new ArrayList<String>();
+            ArrayList<Integer> successors = new ArrayList<Integer>();
             for (int j = 1; j < positions[i].length; j++) {
                 successors.add(positions[i][j]);
             }
@@ -116,13 +116,17 @@ public class RobotAgentState extends SearchBasedAgentState {
 
         }
 
-        visitedPositions = new ArrayList<String>();
+        visitedPositions = new ArrayList<Integer>();
 
     }
 
     @Override
     public void updateState(Perception p) {
         visitedPositions.add(position);
+        System.out.println("Posicion actual: "+position);
+        System.out.println("Posiciones por visitar: "+positionsToVisit.toString());
+        System.out.println("Posiciones visitadas: "+visitedPositions.toString());
+//        this.removePositionToVisit(position);
     }
 
     @Override
@@ -142,35 +146,35 @@ public class RobotAgentState extends SearchBasedAgentState {
         return position.equals(((RobotAgentState) obj).getPosition());
     }
 
-    public String getPosition() {
+    public Integer getPosition() {
         return position;
     }
 
-    public void setPosition(String position) {
+    public void setPosition(Integer position) {
         this.position = position;
     }
 
-    public Collection<String> getSuccessors() {
+    public Collection<Integer> getSuccessors() {
         return knownMap.get(position);
     }
 
-    public ArrayList<String> getVisitedPositions() {
+    public ArrayList<Integer> getVisitedPositions() {
         return visitedPositions;
     }
 
-    public void setVisitedPositions(ArrayList<String> visitedPositions) {
+    public void setVisitedPositions(ArrayList<Integer> visitedPositions) {
         this.visitedPositions = visitedPositions;
     }
     
-    public ArrayList<String> getPositionsToVisit(){
+    public ArrayList<Integer> getPositionsToVisit(){
         return this.positionsToVisit;
     }
     
-    public void setPositionsToVisit(ArrayList<String> positions){
+    public void setPositionsToVisit(ArrayList<Integer> positions){
         this.positionsToVisit = positions;
     }
     
-    public void removePositionVisited(String position){
+    public void removePositionToVisit(Integer position){
         if(this.positionsToVisit.contains(position)){
             this.positionsToVisit.remove(position);
         }

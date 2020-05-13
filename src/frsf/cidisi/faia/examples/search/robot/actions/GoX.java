@@ -26,9 +26,9 @@ import frsf.cidisi.faia.state.AgentState;
 import frsf.cidisi.faia.state.EnvironmentState;
 
 public class GoX extends SearchAction {
-    private String nodo = "";
+    private Integer nodo = 0;
     
-    public GoX(String x){
+    public GoX(Integer x){
         this.nodo = x;
     }
 
@@ -43,7 +43,7 @@ public class GoX extends SearchAction {
         if (agentState.getVisitedPositions().contains(this.nodo)) {
             return null;
         }
-        ArrayList<String> successors = new ArrayList<String>();
+        ArrayList<Integer> successors = new ArrayList<Integer>();
         successors.addAll(agentState.getSuccessors());
         if (successors != null) {
             int index = successors.indexOf(this.nodo);

@@ -27,11 +27,11 @@ public class RobotGoal extends GoalTest {
     @Override
     public boolean isGoalState(AgentState agentState) {
         // Agent reach the goal if it is in B
-        String posicionActual = ((RobotAgentState) agentState).getPosition();
-        ((RobotAgentState) agentState).removePositionVisited(posicionActual);
+        Integer posicionActual = ((RobotAgentState) agentState).getPosition();
+        ((RobotAgentState) agentState).removePositionToVisit(posicionActual);
         
-        ArrayList<String> visitedPositions = ((RobotAgentState) agentState).getVisitedPositions();
-        ArrayList<String> positionsToVisit = ((RobotAgentState) agentState).getPositionsToVisit();
+        ArrayList<Integer> visitedPositions = ((RobotAgentState) agentState).getVisitedPositions();
+        ArrayList<Integer> positionsToVisit = ((RobotAgentState) agentState).getPositionsToVisit();
         
 //        System.out.println("#######################################");
 //        System.out.println("Posicion actual: "+posicionActual);
@@ -39,8 +39,8 @@ public class RobotGoal extends GoalTest {
 //        System.out.println("Posiciones por visitar: "+positionsToVisit.toString());
         
         if (posicionActual.equals(RobotAgentState.B) && positionsToVisit.size()==0) {
-            System.out.println("Posicion actual: "+posicionActual);
-            System.out.println("Posiciones visitadas: "+visitedPositions.toString());
+//            System.out.println("Posicion actual: "+posicionActual);
+//            System.out.println("Posiciones visitadas: "+visitedPositions.toString());
             return true;
         }
         return false;
