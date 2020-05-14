@@ -15,14 +15,14 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package frsf.cidisi.faia.examples.search.robot;
+package tp.inteligencia.artificial;
 
 import frsf.cidisi.faia.agent.Agent;
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.environment.Environment;
 import java.util.ArrayList;
 
-public class RobotPerception extends Perception {
+public class AC19Perception extends Perception {
 
     public static int UNKNOWN_PERCEPTION = -1;
     public static int EMPTY_PERCEPTION = 0;
@@ -37,12 +37,12 @@ public class RobotPerception extends Perception {
     
     private ArrayList<Integer> posicionesEnfermos;
 
-    public RobotPerception() {
+    public AC19Perception() {
         energy = 50;
         posicionesEnfermos = new ArrayList<Integer>();
     }
 
-    public RobotPerception(Agent agent, Environment environment) {
+    public AC19Perception(Agent agent, Environment environment) {
         super(agent, environment);
     }
 
@@ -51,9 +51,9 @@ public class RobotPerception extends Perception {
      */
     @Override
     public void initPerception(Agent agent, Environment environment) {
-        RobotAgent RobotAgent = (RobotAgent) agent;
-        RobotEnvironment robotEnvironment = (RobotEnvironment) environment;
-        RobotEnvironmentState environmentState =
+        AndroideC19 RobotAgent = (AndroideC19) agent;
+        AC19Environment robotEnvironment = (AC19Environment) environment;
+        AC19EnvironmentState environmentState =
                 robotEnvironment.getEnvironmentState();
 
 //        int row = environmentState.getAgentPosition()[0];

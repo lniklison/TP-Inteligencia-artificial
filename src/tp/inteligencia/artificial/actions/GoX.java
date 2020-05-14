@@ -15,14 +15,14 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package frsf.cidisi.faia.examples.search.robot.actions;
+package tp.inteligencia.artificial.actions;
 
-import frsf.cidisi.faia.examples.search.robot.RobotAgentState;
+import tp.inteligencia.artificial.AndroideC19State;
 import java.util.ArrayList;
 
 import frsf.cidisi.faia.agent.search.SearchAction;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
-import frsf.cidisi.faia.examples.search.robot.RobotEnvironmentState;
+import tp.inteligencia.artificial.AC19EnvironmentState;
 import frsf.cidisi.faia.state.AgentState;
 import frsf.cidisi.faia.state.EnvironmentState;
 
@@ -39,7 +39,7 @@ public class GoX extends SearchAction {
      */
     @Override
     public SearchBasedAgentState execute(SearchBasedAgentState s) {
-        RobotAgentState agentState = (RobotAgentState) s;
+        AndroideC19State agentState = (AndroideC19State) s;
 
         if (agentState.getVisitedPositions().contains(this.nodo)) {
             return null;
@@ -65,7 +65,7 @@ public class GoX extends SearchAction {
     @Override
     public EnvironmentState execute(AgentState ast, EnvironmentState est) {
         
-        RobotEnvironmentState res = (RobotEnvironmentState) est;
+        AC19EnvironmentState res = (AC19EnvironmentState) est;
                 
         res.removePositionEnfermo(this.nodo);
         

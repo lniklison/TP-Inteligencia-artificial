@@ -15,9 +15,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package frsf.cidisi.faia.examples.search.robot;
+package tp.inteligencia.artificial;
 
-import frsf.cidisi.faia.examples.search.robot.actions.*;
+import tp.inteligencia.artificial.actions.GoX;
 import java.util.Vector;
 
 import frsf.cidisi.faia.agent.search.Problem;
@@ -31,21 +31,21 @@ import frsf.cidisi.faia.solver.search.Search;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class RobotAgent extends SearchBasedAgent {
+public class AndroideC19 extends SearchBasedAgent {
 
-    public RobotAgent() {
+    public AndroideC19() {
         // Robot agent goal
-        RobotGoal goal = new RobotGoal();
+        AC19Goal goal = new AC19Goal();
 
         // Robot agent state
-        RobotAgentState agentState = new RobotAgentState();
+        AndroideC19State agentState = new AndroideC19State();
         this.setAgentState(agentState);
 
         // Robot agent actions
         Vector<SearchAction> actions = new Vector<SearchAction>();
         
-        for(int i = 0; i<RobotEnvironmentState.POSITIONS.length; i++){
-            actions.addElement(new GoX(RobotEnvironmentState.POSITIONS[i][0]));
+        for(int i = 0; i<AC19EnvironmentState.POSITIONS.length; i++){
+            actions.addElement(new GoX(AC19EnvironmentState.POSITIONS[i][0]));
         }
         System.out.println("Acciones: "+actions.toString());        
 //        actions.addElement(new GoB());
@@ -89,7 +89,7 @@ public class RobotAgent extends SearchBasedAgent {
         try {
             selectedAction = this.getSolver().solve(new Object[]{this.getProblem()});
         } catch (Exception ex) {
-            Logger.getLogger(RobotAgent.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(AndroideC19.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         // Return the selected action

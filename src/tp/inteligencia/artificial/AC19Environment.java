@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package frsf.cidisi.faia.examples.search.robot;
+package tp.inteligencia.artificial;
 
 import frsf.cidisi.faia.agent.Action;
 import frsf.cidisi.faia.agent.Agent;
@@ -23,17 +23,17 @@ import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.environment.Environment;
 import java.util.ArrayList;
 
-public class RobotEnvironment extends Environment {
+public class AC19Environment extends Environment {
 
-    public RobotEnvironment() {
+    public AC19Environment() {
         // Create the environment state
-        this.environmentState = new RobotEnvironmentState();
+        this.environmentState = new AC19EnvironmentState();
     }
    
     @Override
     public Perception getPercept() {
         
-        RobotPerception robotPerception = new RobotPerception();
+        AC19Perception robotPerception = new AC19Perception();
         
         ArrayList<Integer> posicionesEnfermos = this.getEnvironmentState().getPosicionesEnfermos();
         
@@ -48,7 +48,7 @@ public class RobotEnvironment extends Environment {
     }
     
     @Override
-    public RobotEnvironmentState getEnvironmentState() {
-        return (RobotEnvironmentState) super.getEnvironmentState();
+    public AC19EnvironmentState getEnvironmentState() {
+        return (AC19EnvironmentState) super.getEnvironmentState();
     }
 }

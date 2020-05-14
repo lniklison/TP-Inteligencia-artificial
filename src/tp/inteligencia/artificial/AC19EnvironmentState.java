@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package frsf.cidisi.faia.examples.search.robot;
+package tp.inteligencia.artificial;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -23,7 +23,7 @@ import java.util.HashMap;
 
 import frsf.cidisi.faia.state.EnvironmentState;
 
-public class RobotEnvironmentState extends EnvironmentState {
+public class AC19EnvironmentState extends EnvironmentState {
 
     public static final Integer N1  = 1;
     public static final Integer N2  = 2;
@@ -70,7 +70,7 @@ public class RobotEnvironmentState extends EnvironmentState {
     };
 
     private ArrayList<Integer> posicionesEnfermos;
-    public RobotEnvironmentState() {
+    public AC19EnvironmentState() {
         map = new HashMap<Integer, Collection<Integer>>();
         posicionesEnfermos = new ArrayList<Integer>();
         this.initState();
@@ -78,7 +78,7 @@ public class RobotEnvironmentState extends EnvironmentState {
 
     @Override
     public Object clone() {
-        RobotEnvironmentState newState = new RobotEnvironmentState();
+        AC19EnvironmentState newState = new AC19EnvironmentState();
         newState.setMap((HashMap<Integer, Collection<Integer>>)map.clone());
         newState.setPocicionesEnfermos((ArrayList<Integer>)posicionesEnfermos.clone());
         return newState;

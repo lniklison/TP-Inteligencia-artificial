@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package frsf.cidisi.faia.examples.search.robot;
+package tp.inteligencia.artificial;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -24,7 +24,7 @@ import java.util.HashMap;
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 
-public class RobotAgentState extends SearchBasedAgentState {
+public class AndroideC19State extends SearchBasedAgentState {
 
     public static final Integer A = 1;
     public static final Integer B = 2;
@@ -58,13 +58,13 @@ public class RobotAgentState extends SearchBasedAgentState {
     private HashMap<Integer, Collection<Integer>> knownMap;
     private ArrayList<Integer> visitedPositions;
 
-    public RobotAgentState() {
+    public AndroideC19State() {
         this.initState();
     }
 
     @Override
-    public RobotAgentState clone() {
-        RobotAgentState newState = new RobotAgentState();
+    public AndroideC19State clone() {
+        AndroideC19State newState = new AndroideC19State();
         newState.setPosition(position);
         ArrayList<Integer> visitedPosition = (ArrayList<Integer>) visitedPositions.clone();
         newState.setVisitedPositions(visitedPosition);
@@ -118,7 +118,7 @@ public class RobotAgentState extends SearchBasedAgentState {
 
     @Override
     public void updateState(Perception p) {
-        RobotPerception rp = (RobotPerception) p;
+        AC19Perception rp = (AC19Perception) p;
         visitedPositions.add(position);
         this.pocicionesEnfermos = rp.getPocicionesEnfermos();
         System.out.println("Posicion actual: "+position);
@@ -138,10 +138,10 @@ public class RobotAgentState extends SearchBasedAgentState {
     @Override
     public boolean equals(Object obj) {
 
-        if (!(obj instanceof RobotAgentState)) {
+        if (!(obj instanceof AndroideC19State)) {
             return false;
         }
-        return position.equals(((RobotAgentState) obj).getPosition());
+        return position.equals(((AndroideC19State) obj).getPosition());
     }
 
     public Integer getPosition() {

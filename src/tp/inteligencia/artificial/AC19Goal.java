@@ -15,30 +15,30 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package frsf.cidisi.faia.examples.search.robot;
+package tp.inteligencia.artificial;
 
 import frsf.cidisi.faia.agent.search.GoalTest;
 import frsf.cidisi.faia.state.AgentState;
 import java.util.ArrayList;
 import javax.swing.text.Position;
 
-public class RobotGoal extends GoalTest {
+public class AC19Goal extends GoalTest {
 
     @Override
     public boolean isGoalState(AgentState agentState) {
         // Agent reach the goal if it is in B
-        Integer posicionActual = ((RobotAgentState) agentState).getPosition();
+        Integer posicionActual = ((AndroideC19State) agentState).getPosition();
 //        ((RobotAgentState) agentState).removePositionToVisit(posicionActual);
         
-        ArrayList<Integer> visitedPositions = ((RobotAgentState) agentState).getVisitedPositions();
-        ArrayList<Integer> positionsToVisit = ((RobotAgentState) agentState).getPocicionesEnfermos();
+        ArrayList<Integer> visitedPositions = ((AndroideC19State) agentState).getVisitedPositions();
+        ArrayList<Integer> positionsToVisit = ((AndroideC19State) agentState).getPocicionesEnfermos();
         
 //        System.out.println("#######################################");
 //        System.out.println("Posicion actual: "+posicionActual);
 //        System.out.println("Posiciones visitadas: "+visitedPositions.toString());
 //        System.out.println("Posiciones por visitar: "+positionsToVisit.toString());
         
-        if (posicionActual.equals(RobotAgentState.B) && positionsToVisit.size()==0) {
+        if (posicionActual.equals(AndroideC19State.B) && positionsToVisit.size()==0) {
 //            System.out.println("Posicion actual: "+posicionActual);
 //            System.out.println("Posiciones visitadas: "+visitedPositions.toString());
             return true;

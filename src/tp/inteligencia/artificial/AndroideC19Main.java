@@ -15,17 +15,17 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package frsf.cidisi.faia.examples.search.robot;
+package tp.inteligencia.artificial;
 
 import frsf.cidisi.faia.exceptions.PrologConnectorException;
 import frsf.cidisi.faia.simulator.SearchBasedAgentSimulator;
 
-public class RobotMain {
+public class AndroideC19Main {
 
     public static void main(String[] args) throws PrologConnectorException {
-        RobotAgent agent = new RobotAgent();
+        AndroideC19 agent = new AndroideC19();
 
-        RobotEnvironment environment = new RobotEnvironment();
+        AC19Environment environment = new AC19Environment();
 
         SearchBasedAgentSimulator simulator =
                 new SearchBasedAgentSimulator(environment, agent);
