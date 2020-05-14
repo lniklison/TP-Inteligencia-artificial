@@ -20,6 +20,7 @@ package frsf.cidisi.faia.examples.search.robot;
 import frsf.cidisi.faia.agent.Agent;
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.environment.Environment;
+import java.util.ArrayList;
 
 public class RobotPerception extends Perception {
 
@@ -33,9 +34,12 @@ public class RobotPerception extends Perception {
     private int rightSensor;
     private int bottomSensor;
     private int energy;
+    
+    private ArrayList<Integer> posicionesEnfermos;
 
     public RobotPerception() {
         energy = 50;
+        posicionesEnfermos = new ArrayList<Integer>();
     }
 
     public RobotPerception(Agent agent, Environment environment) {
@@ -109,14 +113,16 @@ public class RobotPerception extends Perception {
 
         str.append("Energy: " + this.energy);
         str.append("; ");
-        str.append("Left Sensor: " + this.leftSensor);
-        str.append("; ");
-        str.append("Up Sensor: " + this.topSensor);
-        str.append("; ");
-        str.append("Right Sensor: " + this.rightSensor);
-        str.append("; ");
-        str.append("Down Sensor: " + this.bottomSensor);
+        str.append("Enfermos: " + this.posicionesEnfermos.toString());
 
         return str.toString();
+    }
+
+    public void setPocicionesEnfermos(ArrayList<Integer> posicionesEnfermos) {
+        this.posicionesEnfermos = posicionesEnfermos;
+    }
+    
+    public ArrayList<Integer> getPocicionesEnfermos() {
+        return this.posicionesEnfermos;
     }
 }

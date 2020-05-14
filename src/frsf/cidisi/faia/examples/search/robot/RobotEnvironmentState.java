@@ -73,11 +73,15 @@ public class RobotEnvironmentState extends EnvironmentState {
     public RobotEnvironmentState() {
         map = new HashMap<Integer, Collection<Integer>>();
         posicionesEnfermos = new ArrayList<Integer>();
+        this.initState();
     }
 
     @Override
     public Object clone() {
-        return map.clone();
+        RobotEnvironmentState newState = new RobotEnvironmentState();
+        newState.setMap((HashMap<Integer, Collection<Integer>>)map.clone());
+        newState.setPocicionesEnfermos((ArrayList<Integer>)posicionesEnfermos.clone());
+        return newState;
     }
 
     @Override
@@ -133,5 +137,19 @@ public class RobotEnvironmentState extends EnvironmentState {
     
     public ArrayList<Integer> getPosicionesEnfermos(){
         return this.posicionesEnfermos;
+    }
+    
+    public void setMap(HashMap<Integer, Collection<Integer>> map){
+        this.map = map;
+    }
+    
+    public void setPocicionesEnfermos(ArrayList<Integer> pociciones){
+        this.posicionesEnfermos = pociciones;
+    }
+    
+    public void removePositionEnfermo(Integer position){
+        if(this.posicionesEnfermos.contains(position)){
+            this.posicionesEnfermos.remove(position);
+        }
     }
 }

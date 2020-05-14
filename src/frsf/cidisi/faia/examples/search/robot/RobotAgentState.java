@@ -44,12 +44,7 @@ public class RobotAgentState extends SearchBasedAgentState {
     public static final Integer P = 16;
     public static final Integer Q = 17;
     
-    private ArrayList<Integer> positionsToVisit = new ArrayList<Integer>(){
-            {
-                add(RobotAgentState.M);
-                add(RobotAgentState.G);
-            }
-        };
+    private ArrayList<Integer> pocicionesEnfermos;
 
     /**
      * Actual agent position
@@ -73,8 +68,8 @@ public class RobotAgentState extends SearchBasedAgentState {
         newState.setPosition(position);
         ArrayList<Integer> visitedPosition = (ArrayList<Integer>) visitedPositions.clone();
         newState.setVisitedPositions(visitedPosition);
-        ArrayList<Integer> positions = (ArrayList<Integer>) positionsToVisit.clone();
-        newState.setPositionsToVisit(positions);
+        ArrayList<Integer> positions = (ArrayList<Integer>) pocicionesEnfermos.clone();
+        newState.setPocicionesEnfermos(positions);
         return newState;
     }
 
@@ -117,14 +112,17 @@ public class RobotAgentState extends SearchBasedAgentState {
         }
 
         visitedPositions = new ArrayList<Integer>();
+        pocicionesEnfermos = new ArrayList<Integer>();
 
     }
 
     @Override
     public void updateState(Perception p) {
+        RobotPerception rp = (RobotPerception) p;
         visitedPositions.add(position);
+        this.pocicionesEnfermos = rp.getPocicionesEnfermos();
         System.out.println("Posicion actual: "+position);
-        System.out.println("Posiciones por visitar: "+positionsToVisit.toString());
+        System.out.println("Posiciones por visitar: "+pocicionesEnfermos.toString());
         System.out.println("Posiciones visitadas: "+visitedPositions.toString());
 //        this.removePositionToVisit(position);
     }
@@ -166,17 +164,17 @@ public class RobotAgentState extends SearchBasedAgentState {
         this.visitedPositions = visitedPositions;
     }
     
-    public ArrayList<Integer> getPositionsToVisit(){
-        return this.positionsToVisit;
+    public ArrayList<Integer> getPocicionesEnfermos(){
+        return this.pocicionesEnfermos;
     }
     
-    public void setPositionsToVisit(ArrayList<Integer> positions){
-        this.positionsToVisit = positions;
+    public void setPocicionesEnfermos(ArrayList<Integer> positions){
+        this.pocicionesEnfermos = positions;
     }
     
-    public void removePositionToVisit(Integer position){
-        if(this.positionsToVisit.contains(position)){
-            this.positionsToVisit.remove(position);
+    public void removePositionEnfermo(Integer position){
+        if(this.pocicionesEnfermos.contains(position)){
+            this.pocicionesEnfermos.remove(position);
         }
     }
 }

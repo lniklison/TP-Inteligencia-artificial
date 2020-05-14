@@ -22,6 +22,7 @@ import java.util.ArrayList;
 
 import frsf.cidisi.faia.agent.search.SearchAction;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
+import frsf.cidisi.faia.examples.search.robot.RobotEnvironmentState;
 import frsf.cidisi.faia.state.AgentState;
 import frsf.cidisi.faia.state.EnvironmentState;
 
@@ -49,7 +50,7 @@ public class GoX extends SearchAction {
             int index = successors.indexOf(this.nodo);
             if (index >= 0) {
                 agentState.setPosition(this.nodo);
-
+                agentState.removePositionEnfermo(this.nodo);
                 return agentState;
             }
 
@@ -63,9 +64,14 @@ public class GoX extends SearchAction {
      */
     @Override
     public EnvironmentState execute(AgentState ast, EnvironmentState est) {
+        
+        RobotEnvironmentState res = (RobotEnvironmentState) est;
+                
+        res.removePositionEnfermo(this.nodo);
+        
         this.execute((SearchBasedAgentState) ast);
-
-        return null;
+        
+        return res;
     }
 
     @Override

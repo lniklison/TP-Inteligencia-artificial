@@ -28,10 +28,10 @@ public class RobotGoal extends GoalTest {
     public boolean isGoalState(AgentState agentState) {
         // Agent reach the goal if it is in B
         Integer posicionActual = ((RobotAgentState) agentState).getPosition();
-        ((RobotAgentState) agentState).removePositionToVisit(posicionActual);
+//        ((RobotAgentState) agentState).removePositionToVisit(posicionActual);
         
         ArrayList<Integer> visitedPositions = ((RobotAgentState) agentState).getVisitedPositions();
-        ArrayList<Integer> positionsToVisit = ((RobotAgentState) agentState).getPositionsToVisit();
+        ArrayList<Integer> positionsToVisit = ((RobotAgentState) agentState).getPocicionesEnfermos();
         
 //        System.out.println("#######################################");
 //        System.out.println("Posicion actual: "+posicionActual);

@@ -35,9 +35,11 @@ public class RobotEnvironment extends Environment {
         
         RobotPerception robotPerception = new RobotPerception();
         
-        //ArrayList<Integer> posicionesEnfermos = this.getEnvironmentState().getPosicionesEnfermos();
+        ArrayList<Integer> posicionesEnfermos = this.getEnvironmentState().getPosicionesEnfermos();
         
-        return null;
+        robotPerception.setPocicionesEnfermos(posicionesEnfermos);
+        
+        return robotPerception;
     }
 
     @Override
