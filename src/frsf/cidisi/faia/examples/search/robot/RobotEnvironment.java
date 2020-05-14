@@ -21,6 +21,7 @@ import frsf.cidisi.faia.agent.Action;
 import frsf.cidisi.faia.agent.Agent;
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.environment.Environment;
+import java.util.ArrayList;
 
 public class RobotEnvironment extends Environment {
 
@@ -28,11 +29,13 @@ public class RobotEnvironment extends Environment {
         // Create the environment state
         this.environmentState = new RobotEnvironmentState();
     }
-
+   
     @Override
     public Perception getPercept() {
         
+        RobotPerception robotPerception = new RobotPerception();
         
+        //ArrayList<Integer> posicionesEnfermos = this.getEnvironmentState().getPosicionesEnfermos();
         
         return null;
     }

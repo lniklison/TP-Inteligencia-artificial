@@ -69,10 +69,10 @@ public class RobotEnvironmentState extends EnvironmentState {
         {N17, N2, N6, N7, N16}
     };
 
-    private ArrayList<Integer> positionsToVisit;
+    private ArrayList<Integer> posicionesEnfermos;
     public RobotEnvironmentState() {
         map = new HashMap<Integer, Collection<Integer>>();
-        positionsToVisit = new ArrayList<Integer>();
+        posicionesEnfermos = new ArrayList<Integer>();
     }
 
     @Override
@@ -97,7 +97,7 @@ public class RobotEnvironmentState extends EnvironmentState {
 
         }
         
-        positionsToVisit = new ArrayList<Integer>(){
+        posicionesEnfermos = new ArrayList<Integer>(){
             {
                 add(N7);
                 add(N14);
@@ -129,5 +129,9 @@ public class RobotEnvironmentState extends EnvironmentState {
     public boolean equals(Object obj) {
         // Returns always true. This method is not used.
         return true;
+    }
+    
+    public ArrayList<Integer> getPosicionesEnfermos(){
+        return this.posicionesEnfermos;
     }
 }
