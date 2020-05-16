@@ -51,7 +51,7 @@ public class AC19EnvironmentState extends EnvironmentState {
     //private HashMap<Integer, Collection<Integer>> map;
     private HashMap<Integer, Collection<AC19NodoAlcanzable>> otroMap;
 
-    public static final Integer[][] POSITIONS = new Integer[][]{
+    private Integer[][] positions = new Integer[][]{
         {N1, N3, N7},
         {N2, N10, N11, N15},
         {N3, N4, N7},
@@ -96,17 +96,17 @@ public class AC19EnvironmentState extends EnvironmentState {
         //map = new HashMap<Integer, Collection<Integer>>();
         otroMap = new HashMap<Integer, Collection<AC19NodoAlcanzable>>();
         
-        for (int i = 0; i < POSITIONS.length; i++) {
+        for (int i = 0; i < positions.length; i++) {
             ArrayList<Integer> successors = new ArrayList<Integer>();
             ArrayList<AC19NodoAlcanzable> otrosSuccessors = new ArrayList<AC19NodoAlcanzable>();
             
-            for (int j = 1; j < POSITIONS[i].length; j++) {
-                int nodo = POSITIONS[i][j];
+            for (int j = 1; j < positions[i].length; j++) {
+                int nodo = positions[i][j];
                 successors.add(nodo);
                 otrosSuccessors.add(new AC19NodoAlcanzable(nodo, "CalleHacia"+nodo));
             }
-            //map.put(POSITIONS[i][0], successors);
-            otroMap.put(POSITIONS[i][0], otrosSuccessors);
+            //map.put(positions[i][0], successors);
+            otroMap.put(positions[i][0], otrosSuccessors);
 
         }
         
@@ -160,5 +160,13 @@ public class AC19EnvironmentState extends EnvironmentState {
         if(this.posicionesEnfermos.contains(position)){
             this.posicionesEnfermos.remove(position);
         }
+    }
+
+    public Integer[][] getPositions() {
+        return positions;
+    }
+
+    public void setPositions(Integer[][] positions) {
+        this.positions = positions;
     }
 }

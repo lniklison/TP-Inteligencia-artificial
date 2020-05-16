@@ -23,9 +23,11 @@ import frsf.cidisi.faia.simulator.SearchBasedAgentSimulator;
 public class AndroideC19Main {
 
     public static void main(String[] args) throws PrologConnectorException {
-        AndroideC19 agent = new AndroideC19();
+        
 
         AC19Environment environment = new AC19Environment();
+
+        AndroideC19 agent = new AndroideC19(environment.getEnvironmentState().getPositions());
 
         SearchBasedAgentSimulator simulator =
                 new SearchBasedAgentSimulator(environment, agent);
