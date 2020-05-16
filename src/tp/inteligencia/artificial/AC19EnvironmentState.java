@@ -22,6 +22,7 @@ import java.util.Collection;
 import java.util.HashMap;
 
 import frsf.cidisi.faia.state.EnvironmentState;
+import tp.inteligencia.artificial.model.AC19NodoAlcanzable;
 
 public class AC19EnvironmentState extends EnvironmentState {
 
@@ -47,7 +48,8 @@ public class AC19EnvironmentState extends EnvironmentState {
      * This map has a point of the world (A, B, C, ...) as key, and a collection
      * of successors of that point.
      */
-    private HashMap<Integer, Collection<Integer>> map;
+    //private HashMap<Integer, Collection<Integer>> map;
+    private HashMap<Integer, Collection<AC19NodoAlcanzable>> otroMap;
 
     public static final Integer[][] POSITIONS = new Integer[][]{
         {N1, N3, N7},
@@ -71,15 +73,16 @@ public class AC19EnvironmentState extends EnvironmentState {
 
     private ArrayList<Integer> posicionesEnfermos;
     public AC19EnvironmentState() {
-        map = new HashMap<Integer, Collection<Integer>>();
-        posicionesEnfermos = new ArrayList<Integer>();
+//        map = new HashMap<Integer, Collection<Integer>>();
+//        otroMap = new HashMap<Integer, Collection<AC19NodoAlcanzable>>();
+//        posicionesEnfermos = new ArrayList<Integer>();
         this.initState();
     }
 
     @Override
     public Object clone() {
         AC19EnvironmentState newState = new AC19EnvironmentState();
-        newState.setMap((HashMap<Integer, Collection<Integer>>)map.clone());
+        newState.setMap((HashMap<Integer, Collection<AC19NodoAlcanzable>>)otroMap.clone());
         newState.setPocicionesEnfermos((ArrayList<Integer>)posicionesEnfermos.clone());
         return newState;
     }
@@ -90,14 +93,20 @@ public class AC19EnvironmentState extends EnvironmentState {
          * In this matrix the first element of each row represents a position
          * in the map and the seccessors of that position.
          */
-        map = new HashMap<Integer, Collection<Integer>>();
+        //map = new HashMap<Integer, Collection<Integer>>();
+        otroMap = new HashMap<Integer, Collection<AC19NodoAlcanzable>>();
         
         for (int i = 0; i < POSITIONS.length; i++) {
             ArrayList<Integer> successors = new ArrayList<Integer>();
+            ArrayList<AC19NodoAlcanzable> otrosSuccessors = new ArrayList<AC19NodoAlcanzable>();
+            
             for (int j = 1; j < POSITIONS[i].length; j++) {
-                successors.add(POSITIONS[i][j]);
+                int nodo = POSITIONS[i][j];
+                successors.add(nodo);
+                otrosSuccessors.add(new AC19NodoAlcanzable(nodo, "CalleHacia"+nodo));
             }
-            map.put(POSITIONS[i][0], successors);
+            //map.put(POSITIONS[i][0], successors);
+            otroMap.put(POSITIONS[i][0], otrosSuccessors);
 
         }
         
@@ -114,12 +123,12 @@ public class AC19EnvironmentState extends EnvironmentState {
         String str = "";
 
         str = str + "[ \n";
-        for (Integer point : map.keySet()) {
+        for (Integer point : otroMap.keySet()) {
             str = str + "[ " + point + " --> ";
-            Collection<Integer> successors = map.get(point);
+            Collection<AC19NodoAlcanzable> successors = otroMap.get(point);
             if (successors != null) {
-                for (Integer successor : successors) {
-                    str = str + successor + " ";
+                for (AC19NodoAlcanzable successor : successors) {
+                    str = str + successor.toString() + " ";
                 }
             }
             str = str + " ]\n";
@@ -139,8 +148,8 @@ public class AC19EnvironmentState extends EnvironmentState {
         return this.posicionesEnfermos;
     }
     
-    public void setMap(HashMap<Integer, Collection<Integer>> map){
-        this.map = map;
+    public void setMap(HashMap<Integer, Collection<AC19NodoAlcanzable>> map){
+        this.otroMap = map;
     }
     
     public void setPocicionesEnfermos(ArrayList<Integer> pociciones){

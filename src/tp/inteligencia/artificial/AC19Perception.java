@@ -23,22 +23,10 @@ import frsf.cidisi.faia.environment.Environment;
 import java.util.ArrayList;
 
 public class AC19Perception extends Perception {
-
-    public static int UNKNOWN_PERCEPTION = -1;
-    public static int EMPTY_PERCEPTION = 0;
-    public static int ENEMY_PERCEPTION = 1;
-    public static int FOOD_PERCEPTION = 2;
-
-    private int leftSensor;
-    private int topSensor;
-    private int rightSensor;
-    private int bottomSensor;
-    private int energy;
     
     private ArrayList<Integer> posicionesEnfermos;
 
     public AC19Perception() {
-        energy = 50;
         posicionesEnfermos = new ArrayList<Integer>();
     }
 
@@ -56,63 +44,16 @@ public class AC19Perception extends Perception {
         AC19EnvironmentState environmentState =
                 robotEnvironment.getEnvironmentState();
 
-//        int row = environmentState.getAgentPosition()[0];
-//        int col = environmentState.getAgentPosition()[1];
-//
-//        this.setTopSensor(robotEnvironment.getTopCell(row, col));
-//        this.setLeftSensor(robotEnvironment.getLeftCell(row, col));
-//        this.setRightSensor(robotEnvironment.getRightCell(row, col));
-//        this.setBottomSensor(robotEnvironment.getBottomCell(row, col));
     }
 
     // The following methods are Robot-specific:
 
-    public int getLeftSensor() {
-        return leftSensor;
-    }
-
-    public void setLeftSensor(int leftSensor) {
-        this.leftSensor = leftSensor;
-    }
-
-    public int getTopSensor() {
-        return topSensor;
-    }
-
-    public void setTopSensor(int topSensor) {
-        this.topSensor = topSensor;
-    }
-
-    public int getRightSensor() {
-        return rightSensor;
-    }
-
-    public void setRightSensor(int rightSensor) {
-        this.rightSensor = rightSensor;
-    }
-
-    public int getBottomSensor() {
-        return bottomSensor;
-    }
-
-    public void setBottomSensor(int bottomSensor) {
-        this.bottomSensor = bottomSensor;
-    }
-
-    public int getEnergy() {
-        return energy;
-    }
-
-    public void setEnergy(int energy) {
-        this.energy = energy;
-    }
+   
 
     @Override
     public String toString() {
         StringBuffer str = new StringBuffer();
 
-        str.append("Energy: " + this.energy);
-        str.append("; ");
         str.append("Enfermos: " + this.posicionesEnfermos.toString());
 
         return str.toString();

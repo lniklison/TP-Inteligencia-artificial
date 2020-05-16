@@ -1,0 +1,157 @@
+N,n1,Piedras - Hernandarias
+N,n2,Piedras - Juan Castelli
+N,n3,Piedras - Estanislao Zeballos
+N,n4,Piedras - Obispo Boneo
+N,n5,Piedras - Espora
+N,n6,Piedras - Obispo Principe
+N,n7,Antonia Godoy - Obispo Principe
+N,n8,Antonia Godoy - Espora
+N,n9,Antonia Godoy - Obispo Boneo
+N,n10,Antonia Godoy - Estanislao Zeballos
+N,n11,Antonia Godoy - Juan Castelli
+N,n12,Antonia Godoy - Hernandarias
+N,n13,Juan Maciel - Obispo Principe
+N,n14,Patricio Cullen - Hernandarias
+N,n15,Patricio Cullen - Juan Castelli
+N,n16,Patricio Cullen - Estanislao Zeballos
+N,n17,Patricio Cullen - Obispo Boneo
+N,n18,Patricio Cullen - Espora
+N,n19,Patricio Cullen - Obispo Principe
+N,n20,Echague - Obispo Principe
+N,n21,Echague - Espora
+N,n22,Echague - Obispo Boneo
+N,n23,Echague - Estanislao Zeballos
+N,n24,Echague - Juan Castelli
+N,n25,Echague - Hernandarias
+N,n26,Talcahuano - Hernandarias
+N,n27,Talcahuano - Juan Castelli
+N,n28,Talcahuano - Estanislao Zeballos
+N,n29,Talcahuano - Obispo Boneo
+N,n30,Talcahuano - Espora
+N,n31,Talcahuano - Obispo Principe
+N,n32,Defensa - Obispo Principe
+N,n33,Defensa - Espora
+N,n34,Defensa - Obispo Boneo
+N,n35,Defensa - Estanislao Zeballos
+N,n36,Defensa - Juan Castelli
+N,n37,Defensa - Hernandarias
+C,1,n1,n2,Piedras
+C,1,n2,n1,Piedras
+C,1,n2,n3,Piedras
+C,1,n3,n2,Piedras
+C,1,n3,n4,Piedras
+C,1,n4,n3,Piedras
+C,1,n4,n5,Piedras
+C,1,n5,n4,Piedras
+C,1,n5,n6,Piedras
+C,1,n6,n5,Piedras
+C,1,n8,n5,Piedras
+C,1,n5,n8,Piedras
+C,1,n10,n3,Piedras
+C,1,n3,n10,Piedras
+C,1,n12,n1,Piedras
+C,1,n1,n12,Piedras
+C,1,n7,n8,Antonia Godoy
+C,1,n8,n7,Antonia Godoy
+C,1,n8,n9,Antonia Godoy
+C,1,n9,n8,Antonia Godoy
+C,1,n9,n10,Antonia Godoy
+C,1,n10,n9,Antonia Godoy
+C,1,n10,n11,Antonia Godoy
+C,1,n11,n10,Antonia Godoy
+C,1,n11,n12,Antonia Godoy
+C,1,n12,n11,Antonia Godoy
+C,1,n2,n11,Antonia Godoy
+C,1,n11,n2,Antonia Godoy
+C,1,n4,n9,Antonia Godoy
+C,1,n9,n4,Antonia Godoy
+C,1,n6,n7,Antonia Godoy
+C,1,n7,n6,Antonia Godoy
+C,1,n14,n12,Antonia Godoy
+C,1,n12,n14,Antonia Godoy
+C,1,n16,n10,Antonia Godoy
+C,1,n10,n16,Antonia Godoy
+C,1,n18,n8,Antonia Godoy
+C,1,n8,n18,Antonia Godoy
+C,1,n14,n15,Patricio Cullen
+C,1,n15,n14,Patricio Cullen
+C,1,n15,n16,Patricio Cullen
+C,1,n16,n15,Patricio Cullen
+C,1,n16,n17,Patricio Cullen
+C,1,n17,n16,Patricio Cullen
+C,1,n17,n18,Patricio Cullen
+C,1,n18,n17,Patricio Cullen
+C,1,n18,n19,Patricio Cullen
+C,1,n19,n18,Patricio Cullen
+C,1,n9,n17,Patricio Cullen
+C,1,n17,n9,Patricio Cullen
+C,1,n11,n15,Patricio Cullen
+C,1,n15,n11,Patricio Cullen
+C,1,n13,n19,Patricio Cullen
+C,1,n19,n13,Patricio Cullen
+C,1,n21,n18,Patricio Cullen
+C,1,n18,n21,Patricio Cullen
+C,1,n23,n16,Patricio Cullen
+C,1,n16,n23,Patricio Cullen
+C,1,n25,n14,Patricio Cullen
+C,1,n14,n25,Patricio Cullen
+C,1,n21,n20,Echague
+C,1,n20,n21,Echague
+C,1,n22,n21,Echague
+C,1,n21,n22,Echague
+C,1,n23,n22,Echague
+C,1,n22,n23,Echague
+C,1,n24,n23,Echague
+C,1,n23,n24,Echague
+C,1,n25,n24,Echague
+C,1,n24,n25,Echague
+C,1,n15,n24,Echague
+C,1,n24,n15,Echague
+C,1,n17,n22,Echague
+C,1,n22,n17,Echague
+C,1,n19,n20,Echague
+C,1,n20,n19,Echague
+C,1,n26,n25,Echague
+C,1,n25,n26,Echague
+C,1,n28,n23,Echague
+C,1,n23,n28,Echague
+C,1,n30,n21,Echague
+C,1,n21,n30,Echague
+C,1,n26,n27,Talcahuano
+C,1,n27,n26,Talcahuano
+C,1,n27,n28,Talcahuano
+C,1,n28,n27,Talcahuano
+C,1,n28,n29,Talcahuano
+C,1,n29,n28,Talcahuano
+C,1,n29,n30,Talcahuano
+C,1,n30,n29,Talcahuano
+C,1,n30,n31,Talcahuano
+C,1,n31,n30,Talcahuano
+C,1,n20,n31,Talcahuano
+C,1,n31,n20,Talcahuano
+C,1,n22,n29,Talcahuano
+C,1,n29,n22,Talcahuano
+C,1,n24,n27,Talcahuano
+C,1,n27,n24,Talcahuano
+C,1,n33,n30,Talcahuano
+C,1,n30,n33,Talcahuano
+C,1,n35,n28,Talcahuano
+C,1,n28,n35,Talcahuano
+C,1,n37,n26,Talcahuano
+C,1,n26,n37,Talcahuano
+C,1,n32,n33,Defensa
+C,1,n33,n32,Defensa
+C,1,n33,n34,Defensa
+C,1,n34,n33,Defensa
+C,1,n34,n35,Defensa
+C,1,n35,n34,Defensa
+C,1,n35,n36,Defensa
+C,1,n36,n35,Defensa
+C,1,n36,n37,Defensa
+C,1,n37,n36,Defensa
+C,1,n27,n36,Defensa
+C,1,n36,n27,Defensa
+C,1,n29,n34,Defensa
+C,1,n34,n29,Defensa
+C,1,n31,n32,Defensa
+C,1,n32,n31,Defensa

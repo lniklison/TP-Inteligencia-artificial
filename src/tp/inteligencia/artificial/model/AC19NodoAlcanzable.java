@@ -27,7 +27,7 @@ public class AC19NodoAlcanzable {
     }
 
     private void generarPosicionAleatoria() {
-        int g = (int) Math.random()*1000%360;
+        int g = (int) ((Math.random()*1000)%360);
         this.x = Math.cos(g);
         this.y = Math.sin(g);
         System.out.println("Grados: " + g + "\tPosX: " + this.x + "\tPosY: " + this.y);

@@ -47,23 +47,7 @@ public class AndroideC19 extends SearchBasedAgent {
         for(int i = 0; i<AC19EnvironmentState.POSITIONS.length; i++){
             actions.addElement(new GoX(AC19EnvironmentState.POSITIONS[i][0]));
         }
-        System.out.println("Acciones: "+actions.toString());        
-//        actions.addElement(new GoB());
-//        actions.addElement(new GoC());
-//        actions.addElement(new GoD());
-//        actions.addElement(new GoE());
-//        actions.addElement(new GoF());
-//        actions.addElement(new GoG());
-//        actions.addElement(new GoH());
-//        actions.addElement(new GoI());
-//        actions.addElement(new GoJ());
-//        actions.addElement(new GoK());
-//        actions.addElement(new GoL());
-//        actions.addElement(new GoM());
-//        actions.addElement(new GoN());
-//        actions.addElement(new GoO());
-//        actions.addElement(new GoP());
-//        actions.addElement(new GoQ());
+        System.out.println("Acciones: "+actions.toString());
 
         // Robot agent problem
         Problem problem = new Problem(goal, agentState, actions);
