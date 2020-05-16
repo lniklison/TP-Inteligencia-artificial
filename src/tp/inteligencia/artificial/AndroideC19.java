@@ -33,7 +33,7 @@ import java.util.logging.Logger;
 
 public class AndroideC19 extends SearchBasedAgent {
 
-    public AndroideC19() {
+    public AndroideC19(Integer[][] positions) {
         // Robot agent goal
         AC19Goal goal = new AC19Goal();
 
@@ -44,8 +44,8 @@ public class AndroideC19 extends SearchBasedAgent {
         // Robot agent actions
         Vector<SearchAction> actions = new Vector<SearchAction>();
         
-        for(int i = 0; i<AC19EnvironmentState.POSITIONS.length; i++){
-            actions.addElement(new GoX(AC19EnvironmentState.POSITIONS[i][0]));
+        for(int i = 0; i<positions.length; i++){
+            actions.addElement(new GoX(positions[i][0]));
         }
         System.out.println("Acciones: "+actions.toString());
 
