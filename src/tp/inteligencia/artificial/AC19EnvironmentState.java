@@ -285,7 +285,9 @@ import tp.inteligencia.artificial.model.AC19NodoAlcanzable;
         int i =0;
         for(AC19NodoAlcanzable nodo : coleccion){
             if(i==indice.intValue()){
-                return nodo.getNodo();
+                if(!(nodo.getNodo()==position)){
+                    return nodo.getNodo();
+                }
             }
             i++;
         }
