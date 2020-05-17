@@ -23,42 +23,71 @@ import java.util.HashMap;
 
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
+import tp.inteligencia.artificial.model.AC19NodoAlcanzable;
 
 public class AndroideC19State extends SearchBasedAgentState {
 
-    public static final Integer A = 1;
-    public static final Integer B = 2;
-    public static final Integer C = 3;
-    public static final Integer D = 4;
-    public static final Integer E = 5;
-    public static final Integer F = 6;
-    public static final Integer G = 7;
-    public static final Integer H = 8;
-    public static final Integer I = 9;
-    public static final Integer J = 10;
-    public static final Integer K = 11;
-    public static final Integer L = 12;
-    public static final Integer M = 13;
-    public static final Integer N = 14;
-    public static final Integer O = 15;
-    public static final Integer P = 16;
-    public static final Integer Q = 17;
+    public static final Integer N1 = 1;
+    public static final Integer N2 = 2;
+    public static final Integer N3 = 3;
+    public static final Integer N4 = 4;
+    public static final Integer N5 = 5;
+    public static final Integer N6 = 6;
+    public static final Integer N7 = 7;
+    public static final Integer N8 = 8;
+    public static final Integer N9 = 9;
+    public static final Integer N10 = 10;
+    public static final Integer N11 = 11;
+    public static final Integer N12 = 12;
+    public static final Integer N13 = 13;
+    public static final Integer N14 = 14;
+    public static final Integer N15 = 15;
+    public static final Integer N16 = 16;
+    public static final Integer N17 = 17;
     
     private ArrayList<Integer> pocicionesEnfermos;
-
+    private ArrayList<ArrayList<Integer>> positions = new ArrayList<ArrayList<Integer>>();
+    private ArrayList<ArrayList<Integer>> positions2 = new ArrayList<ArrayList<Integer>>();
+    private ArrayList<Integer> p0 = new ArrayList<Integer>(); 
+    private ArrayList<Integer> p1 = new ArrayList<Integer>();
+    private ArrayList<Integer> p2 = new ArrayList<Integer>();
+    private ArrayList<Integer> p3 = new ArrayList<Integer>();
+    private ArrayList<Integer> p4 = new ArrayList<Integer>();
+    private ArrayList<Integer> p5 = new ArrayList<Integer>();
+    private ArrayList<Integer> p6 = new ArrayList<Integer>();
+    private ArrayList<Integer> p7 = new ArrayList<Integer>();
+    private ArrayList<Integer> p8 = new ArrayList<Integer>();
+    private ArrayList<Integer> p9 = new ArrayList<Integer>();
+    private ArrayList<Integer> p10 = new ArrayList<Integer>();
+    private ArrayList<Integer> p11 = new ArrayList<Integer>();
+    private ArrayList<Integer> p12 = new ArrayList<Integer>();
+    private ArrayList<Integer> p13 = new ArrayList<Integer>();
+    private ArrayList<Integer> p14 = new ArrayList<Integer>();
+    private ArrayList<Integer> p15 = new ArrayList<Integer>();
+    private ArrayList<Integer> p16 = new ArrayList<Integer>();
     /**
      * Actual agent position
      */
     Integer position;
+    Integer position2;
 
     /**
      * This map has a point of the world (A, B, C, ...) as key, and a collection
      * of successors of that point.
      */
-    private HashMap<Integer, Collection<Integer>> knownMap;
+    private HashMap<Integer, Collection<AC19NodoAlcanzable>> knownMap;
+    private HashMap<Integer, Collection<AC19NodoAlcanzable>> knownMap2;
     private ArrayList<Integer> visitedPositions;
 
     public AndroideC19State() {
+        this.initState();
+    }
+    
+    AndroideC19State(ArrayList<ArrayList<Integer>> positions, HashMap<Integer, Collection<AC19NodoAlcanzable>> map) {
+        positions2 = positions;
+        position2 = N1;
+        knownMap2 = map;
+        
         this.initState();
     }
 
@@ -69,47 +98,68 @@ public class AndroideC19State extends SearchBasedAgentState {
         ArrayList<Integer> visitedPosition = (ArrayList<Integer>) visitedPositions.clone();
         newState.setVisitedPositions(visitedPosition);
         ArrayList<Integer> positions = (ArrayList<Integer>) pocicionesEnfermos.clone();
+        newState.setSuccessors((HashMap<Integer, Collection<AC19NodoAlcanzable>>) knownMap.clone());
         newState.setPocicionesEnfermos(positions);
         return newState;
     }
 
     @Override
     public void initState() {
-        position = A;
+        position = N1;
 
         /**
          * In this matrix the first element of each row represents a position
          * in the map and the seccessors of that position.
          */
-        Integer[][] positions = new Integer[][]{
-            {A, C, G},
-            {B, J, K, O},
-            {C, D, G},
-            {D, C, E},
-            {E, F, H, I, D},
-            {F, E, H, G, Q},
-            {G, C, F, Q},
-            {H, E, F, I, J},
-            {I, E, H, J, L},
-            {J, B, H, I, K},
-            {K, J, N, L},
-            {L, I, K, M},
-            {M, L, N},
-            {N, K, M},
-            {O, B, P},
-            {P, O, Q},
-            {Q, B, F, G, P}
-        };
-
-        knownMap = new HashMap<Integer, Collection<Integer>>();
-        for (int i = 0; i < positions.length; i++) {
-            ArrayList<Integer> successors = new ArrayList<Integer>();
-            for (int j = 1; j < positions[i].length; j++) {
-                successors.add(positions[i][j]);
-            }
-            knownMap.put(positions[i][0], successors);
-
-        }
+//        p0.add(N1);p0.add(N3);p0.add(N7);
+//        p1.add(N2);p1.add(N10);p1.add(N11);p1.add(N15);
+//        p2.add(N3);p2.add(N4);p2.add(N7);
+//        p3.add(N4);p3.add(N3);p3.add(N5);
+//        p4.add(N5);p4.add(N6);p4.add(N8);p4.add(N9);p4.add(N4);
+//        p5.add(N6);p5.add(N5);p5.add(N8);p5.add(N7);p5.add(N17);
+//        p6.add(N7);p6.add(N3);p6.add(N6);p6.add(N17);
+//        p7.add(N8);p7.add(N5);p7.add(N6);p7.add(N9);p7.add(N10);
+//        p8.add(N9);p8.add(N5);p8.add(N8);p8.add(N10);p8.add(N12);
+//        p9.add(N10);p9.add(N2);p9.add(N8);p9.add(N9);p9.add(N11);
+//        p10.add(N11);p10.add(N10);p10.add(N14);p10.add(N12);
+//        p11.add(N12);p11.add(N9);p11.add(N11);p11.add(N13);
+//        p12.add(N13);p12.add(N12);p12.add(N14);
+//        p13.add(N14);p13.add(N11);p13.add(N13);
+//        p14.add(N15);p14.add(N2);p14.add(N16);
+//        p15.add(N16);p15.add(N15);p15.add(N17);
+//        p16.add(N17);p16.add(N2);p16.add(N6);p16.add(N7);p16.add(N16);
+//        
+//        positions.add(p0);
+//        positions.add(p1);
+//        positions.add(p2);
+//        positions.add(p3);
+//        positions.add(p4);
+//        positions.add(p5);
+//        positions.add(p6);
+//        positions.add(p7);
+//        positions.add(p8);
+//        positions.add(p9);
+//        positions.add(p10);
+//        positions.add(p11);
+//        positions.add(p12);
+//        positions.add(p13);
+//        positions.add(p14);
+//        positions.add(p15);
+//        positions.add(p16);
+        
+        positions = positions2;
+        knownMap = new HashMap<Integer, Collection<AC19NodoAlcanzable>>();
+        knownMap = knownMap2;
+        
+//        for (int i = 0; i < positions.size(); i++) {
+//            ArrayList<AC19NodoAlcanzable> successors = new ArrayList<AC19NodoAlcanzable>();
+//            for (int j = 1; j < positions.get(i).size(); j++) {
+//                int nodo = positions.get(i).get(j);
+//                successors.add(new AC19NodoAlcanzable(nodo, "CalleHacia"+nodo));
+//            }
+//            knownMap.put(positions.get(i).get(0), successors);
+//
+//        }
 
         visitedPositions = new ArrayList<Integer>();
         pocicionesEnfermos = new ArrayList<Integer>();
@@ -152,8 +202,11 @@ public class AndroideC19State extends SearchBasedAgentState {
         this.position = position;
     }
 
-    public Collection<Integer> getSuccessors() {
+    public Collection<AC19NodoAlcanzable> getSuccessors() {
         return knownMap.get(position);
+    }
+    public void setSuccessors( HashMap<Integer, Collection<AC19NodoAlcanzable>> map) {
+        this.knownMap = map;
     }
 
     public ArrayList<Integer> getVisitedPositions() {

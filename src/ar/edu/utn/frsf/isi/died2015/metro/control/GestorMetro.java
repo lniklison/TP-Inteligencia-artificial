@@ -134,7 +134,7 @@ public class GestorMetro
      * {@link ar.edu.utn.frsf.isi.died2015.metro.modelo.Nodo Estación} con las estaciones de
      * trenes del sistema de metro.
      */
-    public Iterable<Nodo> getEstaciones()
+    public Iterable<Nodo> getNodos()
     {
         return this.nodos.values();
     }
@@ -147,18 +147,18 @@ public class GestorMetro
         this.idColor = 0;
         this.coloresLineas = new HashMap<Calle, Color>();
         this.colores = new ArrayList<Color>();
-        colores.add(new Color(51, 167, 216));
-        colores.add(new Color(0, 168, 143));
-        colores.add(new Color(142, 252, 7));
-        colores.add(new Color(254, 242, 0));
-        colores.add(new Color(255, 194, 15));
-        colores.add(new Color(247, 143, 30));
-        colores.add(new Color(243, 112, 32));
-        colores.add(new Color(238, 27, 36));
-        colores.add(new Color(228, 64, 151));
-        colores.add(new Color(166, 68, 153));
-        colores.add(new Color(136, 105, 173));
-        colores.add(new Color(50, 118, 181));
+        colores.add(new Color(173, 216, 230));
+        colores.add(new Color(173, 230, 173));
+        colores.add(new Color(230, 173, 173));
+        colores.add(new Color(173, 173, 230));
+        colores.add(new Color(216, 173, 230));
+        colores.add(new Color(230, 173, 230));
+        colores.add(new Color(230, 173, 187));
+        colores.add(new Color(173, 230, 187));
+//        colores.add(new Color(228, 64, 151));
+//        colores.add(new Color(166, 68, 153));
+//        colores.add(new Color(136, 105, 173));
+//        colores.add(new Color(50, 118, 181));
     }
 
     /*
@@ -212,7 +212,7 @@ public class GestorMetro
 //                        e.setTiempoTrasbordo(Integer.valueOf(linea[3]));
                         nodo.setAccesible(true);
                         
-                        System.out.println("Nodo creadu: "+nodo.toString());
+//                        System.out.println("Nodo creado: "+nodo.toString());
 
 //                        int cantCajeros = Integer.valueOf(linea[5]);
 //                        int i = 6;
@@ -255,11 +255,11 @@ public class GestorMetro
                         cuadra.setDestino(d);
 
                         cuadra.setHabilitado(Integer.valueOf(linea[5]) == 1);
-                        System.out.println("Cuadra creada: "+cuadra.toString());
+//                        System.out.println("Cuadra creada: "+cuadra.toString());
                         Calle calle = new Calle(linea[4]);
 //                        t.setLineaTren(lt);
                         
-                        System.out.println("Calle creada: "+calle.toString());
+//                        System.out.println("Calle creada: "+calle.toString());
                         this.nodos.get(linea[2]).addCuadra(cuadra);
 
                         // Creamos un tramo inverso sólo para buscarlo que la tabla de tiempos y así

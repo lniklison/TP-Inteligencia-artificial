@@ -25,6 +25,9 @@ import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 import tp.inteligencia.artificial.AC19EnvironmentState;
 import frsf.cidisi.faia.state.AgentState;
 import frsf.cidisi.faia.state.EnvironmentState;
+import java.util.Arrays;
+import java.util.Iterator;
+import tp.inteligencia.artificial.model.AC19NodoAlcanzable;
 
 public class GoX extends SearchAction {
     private Integer nodo = 0;
@@ -40,15 +43,26 @@ public class GoX extends SearchAction {
     @Override
     public SearchBasedAgentState execute(SearchBasedAgentState s) {
         AndroideC19State agentState = (AndroideC19State) s;
-
+//        System.out.println("Ejecutando arbol... en Nodo: "+this.nodo);
         if (agentState.getVisitedPositions().contains(this.nodo)) {
             return null;
         }
-        ArrayList<Integer> successors = new ArrayList<Integer>();
+        ArrayList<AC19NodoAlcanzable> successors = new ArrayList<AC19NodoAlcanzable>();
         successors.addAll(agentState.getSuccessors());
+//        System.out.println("Sucesores de "+this.nodo+" "+successors.toString());
         if (successors != null) {
-            int index = successors.indexOf(this.nodo);
+            int index = -1;
+            for (Iterator<AC19NodoAlcanzable> it = successors.iterator(); it.hasNext();) {
+                AC19NodoAlcanzable n = it.next();
+                if(n.getNodo()==this.nodo){
+                    index = 1;
+                }
+            }
+//            int index = successors.indexOf(this.nodo);
             if (index >= 0) {
+//                System.out.printf("Nodo "+ agentState.getPosition() +" => [ ");
+//                    System.out.printf("["+this.nodo+"]");
+//                System.out.printf("]\n");
                 agentState.setPosition(this.nodo);
                 agentState.removePositionEnfermo(this.nodo);
                 return agentState;

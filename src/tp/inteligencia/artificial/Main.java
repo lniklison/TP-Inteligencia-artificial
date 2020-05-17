@@ -4,7 +4,7 @@ import java.awt.EventQueue;
 
 import javax.swing.UIManager;
 
-//import ar.edu.utn.frsf.isi.died2015.metro.vistas.VentanaPrincipal;
+import ar.edu.utn.frsf.isi.died2015.metro.vistas.VentanaPrincipal;
 
 /**
  * Clase principal de la aplicación.
@@ -22,24 +22,24 @@ public class Main
     /**
      * Lanza la aplicación.
      */
-//    public static void main(String[] args)
-//    {
-//        EventQueue.invokeLater(new Runnable()
-//        {
-//            public void run()
-//            {
-//                try
-//                {
-//                    UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-//                    VentanaPrincipal window = new VentanaPrincipal();
-//
-//                }
-//                catch(Exception e)
-//                {
-//                    e.printStackTrace();
-//                }
-//            }
-//        });
-//    }
+    public static void main(String[] args)
+    {
+        EventQueue.invokeLater(new Runnable()
+        {
+            public void run()
+            {
+                try
+                {
+                    UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+                    VentanaPrincipal window = new VentanaPrincipal();
+
+                }
+                catch(Exception e)
+                {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
 
 }

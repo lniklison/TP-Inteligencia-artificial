@@ -102,8 +102,8 @@ public class PanelGrafo extends JPanel implements MouseListener, MouseMotionList
         this.traslacionX = 0;
         this.traslacionY = 0;
 
-        this.anchoLineaArco = 10.0f;
-        this.diametroVertice = 30.0f;
+        this.anchoLineaArco = 8.0f;
+        this.diametroVertice = 20.0f;
 
         this.puntoInicioPaneo = new Point(0, 0);
         this.puntoFinalPaneo = new Point(0, 0);
@@ -277,10 +277,13 @@ public class PanelGrafo extends JPanel implements MouseListener, MouseMotionList
         g.setColor(Color.DARK_GRAY);
         double dx = (inicio.getPosX() + inicio.getDespX() + fin.getPosX() + fin.getDespX()) / 2;
         double dy = (inicio.getPosY() + inicio.getDespY() + fin.getPosY() + fin.getDespY()) / 2;
+        
+        double ddx = fin.getPosX() + fin.getDespX() - (inicio.getPosX() + inicio.getDespX());
+        double ddy = fin.getPosY() + fin.getDespY() - (inicio.getPosY() + inicio.getDespY());
         AffineTransform orig = g.getTransform();
-        g.translate(dx, dy);
-        g.rotate(-Math.PI/4);
-        g.drawString(a.getDato().toString(), 0, 0);
+        g.translate(inicio.getPosX()+ inicio.getDespX(), inicio.getPosY()+ inicio.getDespY());
+        g.rotate(Math.atan2(ddy,ddx));
+        g.drawString(a.getDato().toString(), 15, -12);
         g.setTransform(orig);
     }
 

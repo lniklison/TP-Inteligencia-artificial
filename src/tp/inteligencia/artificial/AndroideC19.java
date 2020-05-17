@@ -28,37 +28,42 @@ import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.solver.search.BreathFirstSearch;
 import frsf.cidisi.faia.solver.search.DepthFirstSearch;
 import frsf.cidisi.faia.solver.search.Search;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import tp.inteligencia.artificial.model.AC19NodoAlcanzable;
 
 public class AndroideC19 extends SearchBasedAgent {
 
-    public AndroideC19(Integer[][] positions) {
+    public AndroideC19(ArrayList<ArrayList<Integer>> positions, HashMap<Integer, Collection<AC19NodoAlcanzable>> map) {
         // Robot agent goal
         AC19Goal goal = new AC19Goal();
-
-        // Robot agent state
-        AndroideC19State agentState = new AndroideC19State();
-        this.setAgentState(agentState);
 
         // Robot agent actions
         Vector<SearchAction> actions = new Vector<SearchAction>();
         
-        for(int i = 0; i<positions.length; i++){
-            actions.addElement(new GoX(positions[i][0]));
+        for(int i = 0; i<positions.size(); i++){
+            actions.addElement(new GoX(positions.get(i).get(0)));
         }
         System.out.println("Acciones: "+actions.toString());
 
+        // Robot agent state
+        AndroideC19State agentState = new AndroideC19State(positions, map);
+        this.setAgentState(agentState);
+        
         // Robot agent problem
         Problem problem = new Problem(goal, agentState, actions);
         this.setProblem(problem);
     }
 
+
     @Override
     public Action selectAction() {
         // Breath first strategy
-//        BreathFirstSearch searchStrategy = new BreathFirstSearch();
-        DepthFirstSearch searchStrategy = new DepthFirstSearch();
+        BreathFirstSearch searchStrategy = new BreathFirstSearch();
+//        DepthFirstSearch searchStrategy = new DepthFirstSearch();
 
         Search searchSolver = new Search(searchStrategy);
 

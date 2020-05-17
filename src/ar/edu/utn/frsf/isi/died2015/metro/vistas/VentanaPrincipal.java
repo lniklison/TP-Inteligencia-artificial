@@ -41,6 +41,9 @@ import ar.edu.utn.frsf.isi.died2015.metro.vistas.listeners.ReclamoEstacionListen
 import ar.edu.utn.frsf.isi.died2015.metro.vistas.paneles.PanelBuscarCamino;
 import ar.edu.utn.frsf.isi.died2015.metro.vistas.paneles.PanelCaminos;
 import ar.edu.utn.frsf.isi.died2015.metro.vistas.paneles.PanelGrafo;
+import frsf.cidisi.faia.simulator.SearchBasedAgentSimulator;
+import tp.inteligencia.artificial.AC19Environment;
+import tp.inteligencia.artificial.AndroideC19;
 
 public class VentanaPrincipal extends JFrame implements ActionListener, BuscarCaminoListener,
                 CaminoListener, ReclamoEstacionListener, FichaEstacionListener, InspeccionListener, PanelGrafoListener
@@ -53,7 +56,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener, BuscarCa
     private JFileChooser fc;
 
     private JMenuItem mitemCargarCvs, mitemGuardar, mitemRestaurar, mitemSalir, mitemReclamos,
-                    mitemInspecciones, mitemFicha;
+                    mitemInspecciones, mitemFicha, mitemEjecutarAgente;
 
     private PanelGrafo panelGrafo;
     private PanelBuscarCamino panelBuscar;
@@ -90,11 +93,14 @@ public class VentanaPrincipal extends JFrame implements ActionListener, BuscarCa
         this.mitemCargarCvs = new JMenuItem("Cargar CVS");
         this.mitemGuardar = new JMenuItem("Guardar distribución");
         this.mitemRestaurar = new JMenuItem("Restaurar distribución");
+        this.mitemEjecutarAgente = new JMenuItem("Ejecutar agente");
         this.mitemSalir = new JMenuItem("Salir");
         menuArchivo.add(this.mitemCargarCvs);
         menuArchivo.addSeparator();
         menuArchivo.add(this.mitemGuardar);
         menuArchivo.add(this.mitemRestaurar);
+        menuArchivo.addSeparator();
+        menuArchivo.add(this.mitemEjecutarAgente);
         menuArchivo.addSeparator();
         menuArchivo.add(this.mitemSalir);
 
@@ -152,6 +158,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener, BuscarCa
         this.mitemReclamos.addActionListener(this);
         this.mitemSalir.addActionListener(this);
         this.mitemInspecciones.addActionListener(this);
+        this.mitemEjecutarAgente.addActionListener(this);
 
         // De los paneles
         this.panelBuscar.addBuscarCaminoListener(this);
@@ -193,7 +200,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener, BuscarCa
 
         // Obtenemos las estaciones para cargar los demás paneles y diálogos.
         this.estaciones = new Vector<Nodo>();
-        for (Nodo e : this.gestor.getEstaciones())
+        for (Nodo e : this.gestor.getNodos())
             estaciones.add(e);
         Collections.sort(estaciones);
         this.panelBuscar.setModeloOrigen(estaciones);
@@ -254,6 +261,17 @@ public class VentanaPrincipal extends JFrame implements ActionListener, BuscarCa
                 this.dialogoReclamos.seleccionarEstacionPorIndice(0);
                 this.dialogoReclamos.setVisible(true);
             }
+        }else if(e.getSource() == this.mitemEjecutarAgente){
+            AC19Environment environment = new AC19Environment(this.gestor.getNodos());
+
+            AndroideC19 agent = new AndroideC19(environment.getEnvironmentState().getPositions(),
+                environment.getEnvironmentState().getMap());
+
+            SearchBasedAgentSimulator simulator =
+                new SearchBasedAgentSimulator(environment, agent);
+        
+            simulator.start();
+            
         } else if (e.getSource() == this.mitemInspecciones) // Al querer generar las inspecciones.
         {
             String[] options = new String[] { "Aceptar", "Cancelar" };

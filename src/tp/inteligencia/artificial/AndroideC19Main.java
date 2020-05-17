@@ -27,7 +27,8 @@ public class AndroideC19Main {
 
         AC19Environment environment = new AC19Environment();
 
-        AndroideC19 agent = new AndroideC19(environment.getEnvironmentState().getPositions());
+        AndroideC19 agent = new AndroideC19(environment.getEnvironmentState().getPositions(),
+            environment.getEnvironmentState().getMap());
 
         SearchBasedAgentSimulator simulator =
                 new SearchBasedAgentSimulator(environment, agent);

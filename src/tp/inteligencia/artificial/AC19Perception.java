@@ -43,7 +43,8 @@ public class AC19Perception extends Perception {
         AC19Environment robotEnvironment = (AC19Environment) environment;
         AC19EnvironmentState environmentState =
                 robotEnvironment.getEnvironmentState();
-
+        
+        this.setPocicionesEnfermos(environmentState.getPosicionesEnfermos());
     }
 
     // The following methods are Robot-specific:

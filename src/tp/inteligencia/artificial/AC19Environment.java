@@ -17,17 +17,50 @@
  */
 package tp.inteligencia.artificial;
 
+import ar.edu.utn.frsf.isi.died2015.metro.modelo.Calle;
+import ar.edu.utn.frsf.isi.died2015.metro.modelo.Cuadra;
+import ar.edu.utn.frsf.isi.died2015.metro.modelo.Nodo;
 import frsf.cidisi.faia.agent.Action;
 import frsf.cidisi.faia.agent.Agent;
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.environment.Environment;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Iterator;
+import tp.inteligencia.artificial.model.AC19NodoAlcanzable;
 
 public class AC19Environment extends Environment {
-
+    
+    private HashMap<Integer, Collection<AC19NodoAlcanzable>> map;
+    private ArrayList<ArrayList<Integer>> positions;
+    
     public AC19Environment() {
         // Create the environment state
         this.environmentState = new AC19EnvironmentState();
+    }
+
+    public AC19Environment(Iterable<Nodo> nodos) {
+        
+        this.map = new HashMap<Integer, Collection<AC19NodoAlcanzable>>();
+        this.positions = new ArrayList<ArrayList<Integer>>();
+        
+        for(Nodo n : nodos){
+            ArrayList<AC19NodoAlcanzable> successors = new ArrayList<AC19NodoAlcanzable>();
+            ArrayList<Integer> po = new ArrayList<Integer>();
+            int origen = Integer.valueOf(n.getId());
+            po.add(origen);
+            for(Cuadra c : n.getCuadras()){
+                int nodo = Integer.valueOf(c.getDestino().getId());
+                successors.add(new AC19NodoAlcanzable(nodo, "CalleHacia"+nodo));
+                po.add(nodo);
+            }
+            map.put(origen, successors);
+            positions.add(po);
+        }
+                
+        this.environmentState = new AC19EnvironmentState(map, positions);
     }
    
     @Override
