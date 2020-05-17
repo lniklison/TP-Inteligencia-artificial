@@ -44,7 +44,7 @@ public class AC19Perception extends Perception {
         AC19EnvironmentState environmentState =
                 robotEnvironment.getEnvironmentState();
         
-        this.setPocicionesEnfermos(environmentState.getPosicionesEnfermos());
+        this.setPosicionesEnfermos(environmentState.getPosicionesEnfermos());
     }
 
     // The following methods are Robot-specific:
@@ -60,11 +60,11 @@ public class AC19Perception extends Perception {
         return str.toString();
     }
 
-    public void setPocicionesEnfermos(ArrayList<Integer> posicionesEnfermos) {
+    public void setPosicionesEnfermos(ArrayList<Integer> posicionesEnfermos) {
         this.posicionesEnfermos = posicionesEnfermos;
     }
     
-    public ArrayList<Integer> getPocicionesEnfermos() {
+    public ArrayList<Integer> getPosicionesEnfermos() {
         return this.posicionesEnfermos;
     }
 }

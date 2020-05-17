@@ -35,6 +35,7 @@ public class AC19Environment extends Environment {
     
     private HashMap<Integer, Collection<AC19NodoAlcanzable>> map;
     private ArrayList<ArrayList<Integer>> positions;
+    private ArrayList<Integer> posicionesEnfermos;
     
     public AC19Environment() {
         // Create the environment state
@@ -45,6 +46,7 @@ public class AC19Environment extends Environment {
         
         this.map = new HashMap<Integer, Collection<AC19NodoAlcanzable>>();
         this.positions = new ArrayList<ArrayList<Integer>>();
+        this.posicionesEnfermos = new ArrayList<Integer>();
         
         for(Nodo n : nodos){
             ArrayList<AC19NodoAlcanzable> successors = new ArrayList<AC19NodoAlcanzable>();
@@ -57,10 +59,17 @@ public class AC19Environment extends Environment {
                 po.add(nodo);
             }
             map.put(origen, successors);
+            
+            Double num = (Math.random()*11);
+            if(num%5==0){
+                posicionesEnfermos.add(Integer.parseInt(n.getId()));
+            }
+            
             positions.add(po);
+            
         }
-                
-        this.environmentState = new AC19EnvironmentState(map, positions);
+        
+        this.environmentState = new AC19EnvironmentState(map, positions,posicionesEnfermos);
     }
    
     @Override
@@ -70,7 +79,7 @@ public class AC19Environment extends Environment {
         
         ArrayList<Integer> posicionesEnfermos = this.getEnvironmentState().getPosicionesEnfermos();
         
-        robotPerception.setPocicionesEnfermos(posicionesEnfermos);
+        robotPerception.setPosicionesEnfermos(posicionesEnfermos);
         
         return robotPerception;
     }
@@ -83,5 +92,9 @@ public class AC19Environment extends Environment {
     @Override
     public AC19EnvironmentState getEnvironmentState() {
         return (AC19EnvironmentState) super.getEnvironmentState();
+    }
+
+    public ArrayList<Integer> getPosicionesEnfermos() {
+        return posicionesEnfermos;
     }
 }

@@ -37,7 +37,7 @@ import tp.inteligencia.artificial.model.AC19NodoAlcanzable;
 
 public class AndroideC19 extends SearchBasedAgent {
 
-    public AndroideC19(ArrayList<ArrayList<Integer>> positions, HashMap<Integer, Collection<AC19NodoAlcanzable>> map) {
+    public AndroideC19(ArrayList<ArrayList<Integer>> positions, HashMap<Integer, Collection<AC19NodoAlcanzable>> map,ArrayList<Integer> posicionesEnfermos) {
         // Robot agent goal
         AC19Goal goal = new AC19Goal();
 
@@ -50,7 +50,7 @@ public class AndroideC19 extends SearchBasedAgent {
         System.out.println("Acciones: "+actions.toString());
 
         // Robot agent state
-        AndroideC19State agentState = new AndroideC19State(positions, map);
+        AndroideC19State agentState = new AndroideC19State(positions, map,posicionesEnfermos);
         this.setAgentState(agentState);
         
         // Robot agent problem
