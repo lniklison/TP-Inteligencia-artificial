@@ -17,6 +17,7 @@
  */
 package tp.inteligencia.artificial;
 
+import ar.edu.utn.frsf.isi.died2015.metro.modelo.Nodo;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -246,6 +247,13 @@ import tp.inteligencia.artificial.model.AC19NodoAlcanzable;
             System.out.println("AMBIENTE STATE - REMOVIENDO "+position);
             this.posicionesEnfermos.remove(position);
         }
+        
+        for(int i=0; i< posicionesEnfermos.size(); i++){
+            Double num = (Math.random()*11);
+            if(num%9<1){
+                posicionesEnfermos.set(i,this.posicionCercana(posicionesEnfermos.get(i)));
+            }
+        }
     }
 
     public ArrayList<ArrayList<Integer>> getPositions() {
@@ -263,5 +271,26 @@ import tp.inteligencia.artificial.model.AC19NodoAlcanzable;
     
     public Integer getPosition(){
         return this.position;
+    }
+    
+    private Integer posicionCercana(Integer posicion){
+        
+        Integer cantidadDeAdyacentes = otroMap.get(posicion).size();
+        
+//        Double num = (Math.random()*10);
+//        Double posibilidadDeCambiar = (num%cantidadDeAdyacentes);
+//        if(posibilidadDeCambiar>5){
+        Collection<AC19NodoAlcanzable> coleccion = otroMap.get(posicion);
+        Double indice = (Math.random()*cantidadDeAdyacentes);
+        int i =0;
+        for(AC19NodoAlcanzable nodo : coleccion){
+            if(i==indice.intValue()){
+                return nodo.getNodo();
+            }
+            i++;
+        }
+//        }
+        return posicion;
+        
     }
 }

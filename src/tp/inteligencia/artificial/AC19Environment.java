@@ -65,14 +65,13 @@ public class AC19Environment extends Environment {
                 po.add(nodo);
             }
             map.put(origen, successors);
-            
-            Double num = (Math.random()*100);
-//            System.out.println("DOBLE : "+num);
-            if(num%99<1){
-                System.out.println("Agregando enfermo en nodo "+n.getId());
-                posicionesEnfermos.add(Integer.parseInt(n.getId()));
+            if(posicionesEnfermos.size()<3){
+                
+                Double num = (Math.random()*11);
+                if(num%5<1){
+                    posicionesEnfermos.add(Integer.parseInt(n.getId()));
+                }
             }
-            
             positions.add(po);
             
         }
