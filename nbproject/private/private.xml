@@ -4,15 +4,15 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/tp/inteligencia/artificial/AC19Environment.java</file>
-            <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/tp/inteligencia/artificial/model/AC19NodoAlcanzable.java</file>
+            <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/ar/edu/utn/frsf/isi/died2015/metro/modelo/Vertice.java</file>
+            <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/ar/edu/utn/frsf/isi/died2015/metro/modelo/TipoDetalleCamino.java</file>
             <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/ar/edu/utn/frsf/isi/died2015/metro/modelo/Grafo.java</file>
+            <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/ar/edu/utn/frsf/isi/died2015/metro/modelo/DetalleCamino.java</file>
             <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/tp/inteligencia/artificial/AndroideC19State.java</file>
             <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/ar/edu/utn/frsf/isi/died2015/metro/vistas/paneles/PanelGrafo.java</file>
             <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/ar/edu/utn/frsf/isi/died2015/metro/vistas/VentanaPrincipal.java</file>
-            <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/ar/edu/utn/frsf/isi/died2015/metro/control/util/ParseadorCSV.java</file>
-            <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/ar/edu/utn/frsf/isi/died2015/metro/vistas/dialogos/DialogoInspeccion.java</file>
             <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/tp/inteligencia/artificial/AC19Goal.java</file>
-            <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/ar/edu/utn/frsf/isi/died2015/metro/modelo/Nodo.java</file>
+            <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/ar/edu/utn/frsf/isi/died2015/metro/modelo/Inspeccion.java</file>
             <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/tp/inteligencia/artificial/AC19EnvironmentState.java</file>
             <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/tp/inteligencia/artificial/AC19Perception.java</file>
             <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/tp/inteligencia/artificial/Main.java</file>
@@ -20,9 +20,8 @@
             <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/ar/edu/utn/frsf/isi/died2015/metro/vistas/paneles/PanelCaminos.java</file>
             <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/ar/edu/utn/frsf/isi/died2015/metro/control/GestorMetro.java</file>
             <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/ar/edu/utn/frsf/isi/died2015/metro/modelo/Cuadra.java</file>
-            <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/ar/edu/utn/frsf/isi/died2015/metro/vistas/dialogos/DialogoFichaEstacion.java</file>
-            <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/ar/edu/utn/frsf/isi/died2015/metro/modelo/Camino.java</file>
             <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/ar/edu/utn/frsf/isi/died2015/metro/modelo/Calle.java</file>
+            <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/ar/edu/utn/frsf/isi/died2015/metro/modelo/Arco.java</file>
             <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/tp/inteligencia/artificial/AndroideC19.java</file>
             <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/tp/inteligencia/artificial/AndroideC19Main.java</file>
         </group>
