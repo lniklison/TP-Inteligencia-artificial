@@ -228,7 +228,7 @@ public class GestorMetro
                         this.nodos.put(nodo.getId(), nodo);
 
                         // Creamos el vértice del grafo que modela a la estación.
-                        Vertice v = new Vertice(idVertice, true, nodo.getNombre());
+                        Vertice v = new Vertice(Integer.valueOf(nodo.getId()), true, nodo.getNombre());
                         idVertice += 1;
                         // Mapeamos la estación con el vértice
                         this.verticeANodos.put(v, nodo);

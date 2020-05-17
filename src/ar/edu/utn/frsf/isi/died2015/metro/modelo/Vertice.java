@@ -123,7 +123,11 @@ public class Vertice
     @Override
     public String toString()
     {
-        return "Vertice [id=" + id + ", habilitado=" + habilitado + "]";
+        return "Vertice [id=" + id 
+                + ", habilitado=" + habilitado 
+                + ", PosX: "+this.getPosX()
+                + ", PosY: "+this.getDespY()
+                + "]";
     }
     
     @Override
