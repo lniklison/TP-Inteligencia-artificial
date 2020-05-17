@@ -45,7 +45,7 @@ public class AC19Perception extends Perception {
                 robotEnvironment.getEnvironmentState();
         System.out.println("Percibiendo algo");
         environmentState.setAgentPosition(((AndroideC19State)robotAgent.getAgentState()).getPosition());
-        this.setPocicionesEnfermos(environmentState.getPosicionesEnfermos());
+        this.setPosicionesEnfermos(environmentState.getPosicionesEnfermos());
     }
 
     // The following methods are Robot-specific:
