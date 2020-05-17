@@ -45,7 +45,8 @@ public class AndroideC19State extends SearchBasedAgentState {
     public static final Integer N16 = 16;
     public static final Integer N17 = 17;
     
-    private ArrayList<Integer> pocicionesEnfermos;
+    private ArrayList<Integer> posicionesEnfermos;
+    private ArrayList<Integer> posicionesEnfermos2;
     private ArrayList<ArrayList<Integer>> positions = new ArrayList<ArrayList<Integer>>();
     private ArrayList<ArrayList<Integer>> positions2 = new ArrayList<ArrayList<Integer>>();
     private ArrayList<Integer> p0 = new ArrayList<Integer>(); 
@@ -83,10 +84,11 @@ public class AndroideC19State extends SearchBasedAgentState {
         this.initState();
     }
     
-    AndroideC19State(ArrayList<ArrayList<Integer>> positions, HashMap<Integer, Collection<AC19NodoAlcanzable>> map) {
+    AndroideC19State(ArrayList<ArrayList<Integer>> positions, HashMap<Integer, Collection<AC19NodoAlcanzable>> map,ArrayList<Integer> posicionesEnfermosA) {
         positions2 = positions;
         position2 = N1;
         knownMap2 = map;
+        posicionesEnfermos2 = posicionesEnfermosA;
         
         this.initState();
     }
@@ -97,9 +99,9 @@ public class AndroideC19State extends SearchBasedAgentState {
         newState.setPosition(position);
         ArrayList<Integer> visitedPosition = (ArrayList<Integer>) visitedPositions.clone();
         newState.setVisitedPositions(visitedPosition);
-        ArrayList<Integer> positions = (ArrayList<Integer>) pocicionesEnfermos.clone();
+        ArrayList<Integer> positions = (ArrayList<Integer>) posicionesEnfermos.clone();
         newState.setSuccessors((HashMap<Integer, Collection<AC19NodoAlcanzable>>) knownMap.clone());
-        newState.setPocicionesEnfermos(positions);
+        newState.setPosicionesEnfermos(positions);
         return newState;
     }
 
@@ -162,7 +164,8 @@ public class AndroideC19State extends SearchBasedAgentState {
 //        }
 
         visitedPositions = new ArrayList<Integer>();
-        pocicionesEnfermos = new ArrayList<Integer>();
+        posicionesEnfermos = new ArrayList<Integer>();
+        posicionesEnfermos = posicionesEnfermos2;
 
     }
 
@@ -170,10 +173,10 @@ public class AndroideC19State extends SearchBasedAgentState {
     public void updateState(Perception p) {
         AC19Perception rp = (AC19Perception) p;
         visitedPositions.add(position);
-        this.pocicionesEnfermos = rp.getPocicionesEnfermos();
+        this.posicionesEnfermos = rp.getPosicionesEnfermos();
         System.out.printf("UPDATE ANDROIDE STATE: [");
         System.out.printf("Posicion actual: "+position);
-        System.out.printf(" - Posiciones por visitar: "+pocicionesEnfermos.toString());
+        System.out.printf(" - Posiciones por visitar: "+posicionesEnfermos.toString());
         System.out.printf(" - Posiciones visitadas: "+visitedPositions.toString()+"]");
 //        this.removePositionToVisit(position);
     }
@@ -218,18 +221,18 @@ public class AndroideC19State extends SearchBasedAgentState {
         this.visitedPositions = visitedPositions;
     }
     
-    public ArrayList<Integer> getPocicionesEnfermos(){
-        return this.pocicionesEnfermos;
+    public ArrayList<Integer> getPosicionesEnfermos(){
+        return this.posicionesEnfermos;
     }
     
-    public void setPocicionesEnfermos(ArrayList<Integer> positions){
-        this.pocicionesEnfermos = positions;
+    public void setPosicionesEnfermos(ArrayList<Integer> positions){
+        this.posicionesEnfermos = positions;
     }
     
     public void removePositionEnfermo(Integer position){
-        if(this.pocicionesEnfermos.contains(position)){
+        if(this.posicionesEnfermos.contains(position)){
 //            System.out.println("AGENTE STATE - REMOVIENDO "+position);
-            this.pocicionesEnfermos.remove(position);
+            this.posicionesEnfermos.remove(position);
         }
     }
 }

@@ -61,11 +61,11 @@ public class AC19Perception extends Perception {
         return str.toString();
     }
 
-    public void setPocicionesEnfermos(ArrayList<Integer> posicionesEnfermos) {
+    public void setPosicionesEnfermos(ArrayList<Integer> posicionesEnfermos) {
         this.posicionesEnfermos = posicionesEnfermos;
     }
     
-    public ArrayList<Integer> getPocicionesEnfermos() {
+    public ArrayList<Integer> getPosicionesEnfermos() {
         return this.posicionesEnfermos;
     }
 }

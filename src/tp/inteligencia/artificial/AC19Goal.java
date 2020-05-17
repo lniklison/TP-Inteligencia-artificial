@@ -31,7 +31,7 @@ public class AC19Goal extends GoalTest {
 //        ((RobotAgentState) agentState).removePositionToVisit(posicionActual);
         
         ArrayList<Integer> visitedPositions = ((AndroideC19State) agentState).getVisitedPositions();
-        ArrayList<Integer> positionsToVisit = ((AndroideC19State) agentState).getPocicionesEnfermos();
+        ArrayList<Integer> positionsToVisit = ((AndroideC19State) agentState).getPosicionesEnfermos();
         
 //        System.out.println("#######################################");
 //        System.out.println("Posicion actual: "+posicionActual);
