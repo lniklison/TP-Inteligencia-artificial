@@ -20,6 +20,7 @@ package tp.inteligencia.artificial;
 import ar.edu.utn.frsf.isi.died2015.metro.modelo.Calle;
 import ar.edu.utn.frsf.isi.died2015.metro.modelo.Cuadra;
 import ar.edu.utn.frsf.isi.died2015.metro.modelo.Nodo;
+import ar.edu.utn.frsf.isi.died2015.metro.vistas.paneles.PanelGrafo;
 import frsf.cidisi.faia.agent.Action;
 import frsf.cidisi.faia.agent.Agent;
 import frsf.cidisi.faia.agent.Perception;
@@ -35,16 +36,18 @@ public class AC19Environment extends Environment {
     
     private HashMap<Integer, Collection<AC19NodoAlcanzable>> map;
     private ArrayList<ArrayList<Integer>> positions;
+    private PanelGrafo panelGrafo;
     
     public AC19Environment() {
         // Create the environment state
         this.environmentState = new AC19EnvironmentState();
     }
 
-    public AC19Environment(Iterable<Nodo> nodos) {
+    public AC19Environment(Iterable<Nodo> nodos, PanelGrafo panelGrafo) {
         
         this.map = new HashMap<Integer, Collection<AC19NodoAlcanzable>>();
         this.positions = new ArrayList<ArrayList<Integer>>();
+        this.panelGrafo = panelGrafo;
         
         for(Nodo n : nodos){
             ArrayList<AC19NodoAlcanzable> successors = new ArrayList<AC19NodoAlcanzable>();
@@ -62,6 +65,7 @@ public class AC19Environment extends Environment {
                 
         this.environmentState = new AC19EnvironmentState(map, positions);
     }
+
    
     @Override
     public Perception getPercept() {
@@ -69,8 +73,10 @@ public class AC19Environment extends Environment {
         AC19Perception robotPerception = new AC19Perception();
         
         ArrayList<Integer> posicionesEnfermos = this.getEnvironmentState().getPosicionesEnfermos();
-        
         robotPerception.setPocicionesEnfermos(posicionesEnfermos);
+        
+        this.panelGrafo.dibujarAgente(this.getEnvironmentState().getPosition());
+        
         
         return robotPerception;
     }

@@ -75,6 +75,7 @@ import tp.inteligencia.artificial.model.AC19NodoAlcanzable;
     
     private ArrayList<Integer> posicionesEnfermos;
     private ArrayList<Integer> posicionesEnfermos2;
+    private Integer position;
     public AC19EnvironmentState() {
 //        map = new HashMap<Integer, Collection<Integer>>();
 //        otroMap = new HashMap<Integer, Collection<AC19NodoAlcanzable>>();
@@ -99,6 +100,10 @@ import tp.inteligencia.artificial.model.AC19NodoAlcanzable;
         AC19EnvironmentState newState = new AC19EnvironmentState();
         newState.setMap((HashMap<Integer, Collection<AC19NodoAlcanzable>>)otroMap.clone());
         newState.setPocicionesEnfermos((ArrayList<Integer>)posicionesEnfermos.clone());
+        System.out.printf("CLONADO AMBIENTE STATE: [");
+        System.out.printf("Posicion: "+position);
+        System.out.printf("Posiciones: "+posicionesEnfermos.toString()+"]");
+        newState.setAgentPosition(position);
         return newState;
     }
 
@@ -234,7 +239,10 @@ import tp.inteligencia.artificial.model.AC19NodoAlcanzable;
     }
     
     public void removePositionEnfermo(Integer position){
+        this.setAgentPosition(position);
+            System.out.println("AMBIENTE STATE - Posiciones enfermos "+posicionesEnfermos.toString());
         if(this.posicionesEnfermos.contains(position)){
+            System.out.println("AMBIENTE STATE - REMOVIENDO "+position);
             this.posicionesEnfermos.remove(position);
         }
     }
@@ -245,5 +253,14 @@ import tp.inteligencia.artificial.model.AC19NodoAlcanzable;
 
     public void setPositions(ArrayList<ArrayList<Integer>> positions) {
         this.positions = positions;
+    }
+
+    void setAgentPosition(Integer position) {
+        this.position=position;
+        System.out.println("Agente en la posicion: "+position);
+    }
+    
+    public Integer getPosition(){
+        return this.position;
     }
 }

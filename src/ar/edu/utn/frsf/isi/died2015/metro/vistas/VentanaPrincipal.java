@@ -262,7 +262,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener, BuscarCa
                 this.dialogoReclamos.setVisible(true);
             }
         }else if(e.getSource() == this.mitemEjecutarAgente){
-            AC19Environment environment = new AC19Environment(this.gestor.getNodos());
+            AC19Environment environment = new AC19Environment(this.gestor.getNodos(),this.panelGrafo);
 
             AndroideC19 agent = new AndroideC19(environment.getEnvironmentState().getPositions(),
                 environment.getEnvironmentState().getMap());

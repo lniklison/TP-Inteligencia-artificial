@@ -87,6 +87,7 @@ public class AndroideC19 extends SearchBasedAgent {
 
     @Override
     public void see(Perception perception) {
+        System.out.println("AGENTE - VIENDO PERCEPCION: "+perception.toString());
         this.getAgentState().updateState(perception);
     }
 }

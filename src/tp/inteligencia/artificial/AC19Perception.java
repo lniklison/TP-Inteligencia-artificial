@@ -39,11 +39,12 @@ public class AC19Perception extends Perception {
      */
     @Override
     public void initPerception(Agent agent, Environment environment) {
-        AndroideC19 RobotAgent = (AndroideC19) agent;
+        AndroideC19 robotAgent = (AndroideC19) agent;
         AC19Environment robotEnvironment = (AC19Environment) environment;
         AC19EnvironmentState environmentState =
                 robotEnvironment.getEnvironmentState();
-        
+        System.out.println("Percibiendo algo");
+        environmentState.setAgentPosition(((AndroideC19State)robotAgent.getAgentState()).getPosition());
         this.setPocicionesEnfermos(environmentState.getPosicionesEnfermos());
     }
 

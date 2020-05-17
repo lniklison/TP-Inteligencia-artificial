@@ -635,4 +635,8 @@ public class PanelGrafo extends JPanel implements MouseListener, MouseMotionList
 
     /* ***************************************************************************** */
 
+    public void dibujarAgente(Integer position) {
+        System.out.println("PANEL GRAFO:Agente en posicion: "+position);
+    }
+
 }

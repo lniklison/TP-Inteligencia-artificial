@@ -171,9 +171,10 @@ public class AndroideC19State extends SearchBasedAgentState {
         AC19Perception rp = (AC19Perception) p;
         visitedPositions.add(position);
         this.pocicionesEnfermos = rp.getPocicionesEnfermos();
-        System.out.println("Posicion actual: "+position);
-        System.out.println("Posiciones por visitar: "+pocicionesEnfermos.toString());
-        System.out.println("Posiciones visitadas: "+visitedPositions.toString());
+        System.out.printf("UPDATE ANDROIDE STATE: [");
+        System.out.printf("Posicion actual: "+position);
+        System.out.printf(" - Posiciones por visitar: "+pocicionesEnfermos.toString());
+        System.out.printf(" - Posiciones visitadas: "+visitedPositions.toString()+"]");
 //        this.removePositionToVisit(position);
     }
 
@@ -227,6 +228,7 @@ public class AndroideC19State extends SearchBasedAgentState {
     
     public void removePositionEnfermo(Integer position){
         if(this.pocicionesEnfermos.contains(position)){
+//            System.out.println("AGENTE STATE - REMOVIENDO "+position);
             this.pocicionesEnfermos.remove(position);
         }
     }
