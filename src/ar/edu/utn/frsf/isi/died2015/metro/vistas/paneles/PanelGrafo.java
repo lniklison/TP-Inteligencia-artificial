@@ -39,6 +39,10 @@ import ar.edu.utn.frsf.isi.died2015.metro.modelo.excepciones.GrafoArcoInexistent
 import ar.edu.utn.frsf.isi.died2015.metro.modelo.excepciones.GrafoVerticeInexistenteException;
 import ar.edu.utn.frsf.isi.died2015.metro.vistas.componentes.ShapeStroke;
 import ar.edu.utn.frsf.isi.died2015.metro.vistas.listeners.PanelGrafoListener;
+import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import tp.inteligencia.artificial.AC19Environment;
 
 public class PanelGrafo extends JPanel implements MouseListener, MouseMotionListener, KeyListener,
                 ActionListener
@@ -85,6 +89,8 @@ public class PanelGrafo extends JPanel implements MouseListener, MouseMotionList
     private JMenu menuArcoB;
     private JMenuItem mitemInhabilitarA;
     private JMenuItem mitemInhabilitarB;
+    
+    private Vertice agente;
 
     private Arco arcoA, arcoB;
 
@@ -142,6 +148,8 @@ public class PanelGrafo extends JPanel implements MouseListener, MouseMotionList
         this.mitemDesde.addActionListener(this);
         this.mitemHasta.addActionListener(this);
         // --------------
+        
+        this.agente = new Vertice(3000, true, "AGENTE");
     }
 
     public void addPanelGrafoListeners(PanelGrafoListener listener)
@@ -182,6 +190,10 @@ public class PanelGrafo extends JPanel implements MouseListener, MouseMotionList
     {
         LinkedHashSet<Color> colores = new LinkedHashSet<Color>();
 
+        if(v.getId()==1 && agente.getId()==3000){
+            agente.setDesp(v.getDespX(), v.getDespY());
+            agente.setPos(v.getPosX(), v.getPosY());
+        };
         // Buscamos los colores de los arcos adyacentes.
         try
         {
@@ -212,8 +224,8 @@ public class PanelGrafo extends JPanel implements MouseListener, MouseMotionList
         // Dibujamos la información del vértice.
         double d = (Math.cos(Math.PI / 4) * (this.diametroVertice - this.diametroVertice / 2.5));
         g.setColor(Color.BLACK);
-//        g.drawString(v.getDato().toString(), (int) (v.getPosX() + v.getDespX() + d),
-//                        (int) (v.getPosY() + v.getDespY() - d));
+        g.drawString(v.getId()+"", (int) (v.getPosX() + v.getDespX()),
+                        (int) (v.getPosY() + v.getDespY()));
     }
 
     private void dibujarArco(Graphics2D g, Arco a)
@@ -371,6 +383,7 @@ public class PanelGrafo extends JPanel implements MouseListener, MouseMotionList
         g.setFont(f);
         for (Vertice v : this.grafo.getVertices())
             dibujarVertice(g, v);
+        dibujarAgente(g);
         g.setFont(fd);
     }
 
@@ -636,7 +649,36 @@ public class PanelGrafo extends JPanel implements MouseListener, MouseMotionList
     /* ***************************************************************************** */
 
     public void dibujarAgente(Integer position) {
-        System.out.println("PANEL GRAFO:Agente en posicion: "+position);
+        if(position!=null){
+
+            this.grafo.getVertices().forEach((v) -> {
+                if(v.getId()==position){
+                    agente.setDesp(v.getDespX(), v.getDespY());
+                    agente.setPos(v.getPosX(), v.getPosY());
+                    agente.setId(4000);
+                    
+//                    try {
+//                        TimeUnit.SECONDS.sleep(1);
+//                    } catch (InterruptedException ex) {
+//                        Logger.getLogger(PanelGrafo.class.getName()).log(Level.SEVERE, null, ex);
+//                    }
+                    
+                    System.out.println("AGENTE - "+agente.toString());
+                    return;
+                }
+            });
+            System.out.println("AGENTE - "+agente.toString());
+
+//            System.out.println("PANEL GRAFO:Agente en posicion: "+position);
+        }
     }
+
+    private void dibujarAgente(Graphics2D g) {
+        System.out.println("AGENTE - "+agente.toString());
+        g.drawString(agente.getDato()+"", (int) (agente.getPosX() + agente.getDespX()),
+                            (int) (agente.getPosY() + agente.getDespY()));
+    }
+    
+    
 
 }

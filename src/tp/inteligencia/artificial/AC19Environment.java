@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import tp.inteligencia.artificial.model.AC19NodoAlcanzable;
 
 public class AC19Environment extends Environment {
@@ -45,7 +48,7 @@ public class AC19Environment extends Environment {
     }
 
     public AC19Environment(Iterable<Nodo> nodos, PanelGrafo panelGrafo) {
-        
+       
         this.map = new HashMap<Integer, Collection<AC19NodoAlcanzable>>();
         this.positions = new ArrayList<ArrayList<Integer>>();
         this.panelGrafo = panelGrafo;
@@ -63,8 +66,10 @@ public class AC19Environment extends Environment {
             }
             map.put(origen, successors);
             
-            Double num = (Math.random()*11);
-            if(num%5==0){
+            Double num = (Math.random()*100);
+//            System.out.println("DOBLE : "+num);
+            if(num%99<1){
+                System.out.println("Agregando enfermo en nodo "+n.getId());
                 posicionesEnfermos.add(Integer.parseInt(n.getId()));
             }
             
