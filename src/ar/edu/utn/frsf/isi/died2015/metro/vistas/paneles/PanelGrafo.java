@@ -91,6 +91,7 @@ public class PanelGrafo extends JPanel implements MouseListener, MouseMotionList
     private JMenuItem mitemInhabilitarB;
     
     private Vertice agente;
+    private ArrayList<Vertice> enfermos;
 
     private Arco arcoA, arcoB;
 
@@ -150,6 +151,8 @@ public class PanelGrafo extends JPanel implements MouseListener, MouseMotionList
         // --------------
         
         this.agente = new Vertice(3000, true, "AGENTE");
+//        this.inicializarEnfermos(posicionesEnfermos);
+//        this.enfermos = new ArrayList<Vertice>();
     }
 
     public void addPanelGrafoListeners(PanelGrafoListener listener)
@@ -679,6 +682,54 @@ public class PanelGrafo extends JPanel implements MouseListener, MouseMotionList
                             (int) (agente.getPosY() + agente.getDespY()));
     }
     
+    public void dibujarEnfermos(ArrayList<Integer> posicionesEnfermos) {
+        if(posicionesEnfermos!=null){
+            
+            this.enfermos = new ArrayList<Vertice>();
+            int i = 0;
+            for(Integer enf : posicionesEnfermos){
+                Vertice enfermo = (Vertice)enfermos.get(i);
+                this.grafo.getVertices().forEach((v) -> {
+                    if(v.getId()==enf){
+                        enfermo.setDesp(v.getDespX(), v.getDespY());
+                        enfermo.setPos(v.getPosX(), v.getPosY());
+                        
+                    }
+                });
+                i++;
+            }
+            if(i!=enfermos.size()){
+                for(int j=0;j<enfermos.size();j++){
+                    if(j>=i){
+                        enfermos.remove(j);
+                    }
+                }
+            }
+            
+            return;
+
+        }
+    }
+    
+    private void dibujarEnfermos(Graphics2D g) {
+        
+        for(Vertice e :enfermos){
+            g.drawString(e.getDato()+"", (int) (e.getPosX() + e.getDespX()),
+                            (int) (e.getPosY() + e.getDespY()));
+        }
+        
+    }
+    
+    public void inicializarEnfermos(ArrayList<Integer> posicionesEnfermos){
+        
+        this.enfermos = new ArrayList<Vertice>();
+        for(Integer enf : posicionesEnfermos){
+            Vertice v = new Vertice();
+            v.setDato("ENFERMO");
+            v.setHabilitado(true);
+            enfermos.add(v);
+        }
+    }
     
 
 }

@@ -277,21 +277,17 @@ import tp.inteligencia.artificial.model.AC19NodoAlcanzable;
         
         Integer cantidadDeAdyacentes = otroMap.get(posicion).size();
         
-//        Double num = (Math.random()*10);
-//        Double posibilidadDeCambiar = (num%cantidadDeAdyacentes);
-//        if(posibilidadDeCambiar>5){
         Collection<AC19NodoAlcanzable> coleccion = otroMap.get(posicion);
         Double indice = (Math.random()*cantidadDeAdyacentes);
         int i =0;
         for(AC19NodoAlcanzable nodo : coleccion){
             if(i==indice.intValue()){
-                if(!(nodo.getNodo()==position)){
-                    return nodo.getNodo();
-                }
+                if((nodo.getNodo()!=position)&&(!posicionesEnfermos.contains(nodo.getNodo()))){
+                     return nodo.getNodo();
+                 } 
             }
             i++;
         }
-//        }
         return posicion;
         
     }
