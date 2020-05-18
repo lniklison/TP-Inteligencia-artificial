@@ -176,8 +176,7 @@ public class AndroideC19State extends SearchBasedAgentState {
         this.posicionesEnfermos = rp.getPosicionesEnfermos();
         System.out.printf("UPDATE ANDROIDE STATE: [");
         System.out.printf("Posicion actual: "+position);
-        System.out.printf(" - Posiciones por visitar: "+posicionesEnfermos.toString());
-        System.out.printf(" - Posiciones visitadas: "+visitedPositions.toString()+"]");
+        System.out.printf(" - Posiciones visitadas: "+visitedPositions.toString()+"]\n");
 //        this.removePositionToVisit(position);
     }
 

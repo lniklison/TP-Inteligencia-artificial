@@ -3,17 +3,35 @@ node [shape = Mrecord];
 nodo0[label="{EO: 0|cost: 0.0|A: null}"]
 nodo1[label="{EO: 1|cost: 1.0|A: Go30}"]
 nodo3[label="{EO: 3|cost: 2.0|A: Go21|Posicion:\n30}"]
+nodo6[label="{EO: 6|cost: 3.0|A: Go18|Posicion:\n21}"]
+nodo10[label="{EO: 10|cost: 4.0|A: Go8|Posicion:\n18}"]
+
+nodo6 -> nodo10;
+nodo11[label="{EO: 11|cost: 4.0|A: Go19|Posicion:\n18}"]
+
+nodo6 -> nodo11;
+
+nodo3 -> nodo6;
 
 nodo1 -> nodo3;
-nodo4[label="{EO: 4|cost: 2.0|A: Go29|Posicion:\n30}"]
+nodo4[label="{EO: 4|cost: 2.0|A: Go31|Posicion:\n30}"]
+nodo7[label="{EO: 7|cost: 3.0|A: Go32|Posicion:\n31}"]
+
+nodo4 -> nodo7;
 
 nodo1 -> nodo4;
-nodo5[label="{EO: 5|cost: 2.0|A: Go33|Posicion:\n30}"]
-
-nodo1 -> nodo5;
 
 nodo0 -> nodo1;
-nodo2[label="{EO: 2|cost: 1.0|A: Go32}"]
+nodo2[label="{EO: 2|cost: 1.0|A: Go34}"]
+nodo5[label="{EO: 5|cost: 2.0|A: Go35|Posicion:\n34}"]
+nodo8[label="{EO: 8|cost: 3.0|A: Go28|Posicion:\n35}"]
+
+nodo5 -> nodo8;
+nodo9[label="{EO: 9|cost: 3.0|A: Go36|Posicion:\n35}"]
+
+nodo5 -> nodo9;
+
+nodo2 -> nodo5;
 
 nodo0 -> nodo2;
 

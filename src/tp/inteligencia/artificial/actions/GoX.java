@@ -79,8 +79,9 @@ public class GoX extends SearchAction {
     @Override
     public EnvironmentState execute(AgentState ast, EnvironmentState est) {
         AC19EnvironmentState res = (AC19EnvironmentState) est;
+        AndroideC19State as = (AndroideC19State) ast;
                 
-        res.removePositionEnfermo(this.nodo);
+        res.removePositionEnfermo(this.nodo, as.getVisitedPositions());
         
         this.execute((SearchBasedAgentState) ast);
         

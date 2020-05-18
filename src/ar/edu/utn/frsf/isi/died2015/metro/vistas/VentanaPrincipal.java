@@ -145,9 +145,9 @@ public class VentanaPrincipal extends JFrame implements ActionListener, BuscarCa
         bl.setVgap(5);
         cp.setLayout(bl);
 
-        cp.add(this.panelBuscar, BorderLayout.NORTH);
+//        cp.add(this.panelBuscar, BorderLayout.NORTH);
         cp.add(this.panelGrafo, BorderLayout.CENTER);
-        cp.add(this.panelCaminos, BorderLayout.WEST);
+//        cp.add(this.panelCaminos, BorderLayout.WEST);
 
         // Registramos los listeners.
 

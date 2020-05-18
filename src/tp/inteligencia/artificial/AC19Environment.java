@@ -61,14 +61,22 @@ public class AC19Environment extends Environment {
             ArrayList<Integer> po = new ArrayList<Integer>();
             int origen = Integer.valueOf(n.getId());
             po.add(origen);
+            System.out.printf(n.getId()+"->[");
+            
             for(Cuadra c : n.getCuadras()){
                 int nodo = Integer.valueOf(c.getDestino().getId());
-                successors.add(new AC19NodoAlcanzable(nodo, "CalleHacia"+nodo));
-                po.add(nodo);
+                if(nodo!=origen && c.isHabilitado()){
+                    successors.add(new AC19NodoAlcanzable(nodo, "CalleHacia"+nodo));
+                    po.add(nodo);
+                    
+                    System.out.printf(c.getDestino().getId()+", ");
+                }
             }
+            System.out.printf("]\n");
             map.put(origen, successors);
             
-            if(n.getId()!="1" && posicionesEnfermos.size()<3){
+            
+            if(Integer.parseInt(n.getId())!=1 && posicionesEnfermos.size()<3){
                 
                 Double num = (Math.random()*11);
                 if(num%5<1){

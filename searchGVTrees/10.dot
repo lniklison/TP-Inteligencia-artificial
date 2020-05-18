@@ -1,19 +1,70 @@
 digraph g {
 node [shape = Mrecord];
 nodo0[label="{EO: 0|cost: 0.0|A: null}"]
-nodo1[label="{EO: 1|cost: 1.0|A: Go30}"]
-nodo3[label="{EO: 3|cost: 2.0|A: Go21|Posicion:\n30}"]
+nodo1[label="{EO: 1|cost: 1.0|A: Go23}"]
+nodo3[label="{EO: 3|cost: 2.0|A: Go24|Posicion:\n23}"]
+nodo6[label="{EO: 6|cost: 3.0|A: Go25|Posicion:\n24}"]
+nodo11[label="{EO: 11|cost: 4.0|A: Go14|Posicion:\n25}"]
+nodo18[label="{EO: 18|cost: 5.0|A: Go12|Posicion:\n14}"]
+
+nodo11 -> nodo18;
+
+nodo6 -> nodo11;
+
+nodo3 -> nodo6;
+nodo7[label="{EO: 7|cost: 3.0|A: Go27|Posicion:\n24}"]
+nodo12[label="{EO: 12|cost: 4.0|A: Go28|Posicion:\n27}"]
+nodo19[label="{EO: 19|cost: 5.0|A: Go29|Posicion:\n28}"]
+
+nodo12 -> nodo19;
+
+nodo7 -> nodo12;
+nodo13[label="{EO: 13|cost: 4.0|A: Go36|Posicion:\n27}"]
+nodo20[label="{EO: 20|cost: 5.0|A: Go37|Posicion:\n36}"]
+
+nodo13 -> nodo20;
+
+nodo7 -> nodo13;
+
+nodo3 -> nodo7;
 
 nodo1 -> nodo3;
-nodo4[label="{EO: 4|cost: 2.0|A: Go29|Posicion:\n30}"]
-
-nodo1 -> nodo4;
-nodo5[label="{EO: 5|cost: 2.0|A: Go33|Posicion:\n30}"]
-
-nodo1 -> nodo5;
 
 nodo0 -> nodo1;
-nodo2[label="{EO: 2|cost: 1.0|A: Go32}"]
+nodo2[label="{EO: 2|cost: 1.0|A: Go29}"]
+nodo4[label="{EO: 4|cost: 2.0|A: Go30|Posicion:\n29}"]
+nodo8[label="{EO: 8|cost: 3.0|A: Go21|Posicion:\n30}"]
+nodo14[label="{EO: 14|cost: 4.0|A: Go18|Posicion:\n21}"]
+nodo21[label="{EO: 21|cost: 5.0|A: Go8|Posicion:\n18}"]
+
+nodo14 -> nodo21;
+nodo22[label="{EO: 22|cost: 5.0|A: Go19|Posicion:\n18}"]
+
+nodo14 -> nodo22;
+
+nodo8 -> nodo14;
+
+nodo4 -> nodo8;
+nodo9[label="{EO: 9|cost: 3.0|A: Go31|Posicion:\n30}"]
+nodo15[label="{EO: 15|cost: 4.0|A: Go32|Posicion:\n31}"]
+
+nodo9 -> nodo15;
+
+nodo4 -> nodo9;
+
+nodo2 -> nodo4;
+nodo5[label="{EO: 5|cost: 2.0|A: Go34|Posicion:\n29}"]
+nodo10[label="{EO: 10|cost: 3.0|A: Go35|Posicion:\n34}"]
+nodo16[label="{EO: 16|cost: 4.0|A: Go28|Posicion:\n35}"]
+
+nodo10 -> nodo16;
+nodo17[label="{EO: 17|cost: 4.0|A: Go36|Posicion:\n35}"]
+
+nodo10 -> nodo17;
+
+nodo5 -> nodo10;
+
+nodo2 -> nodo5;
 
 nodo0 -> nodo2;
 
