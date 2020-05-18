@@ -78,7 +78,6 @@ public class GoX extends SearchAction {
      */
     @Override
     public EnvironmentState execute(AgentState ast, EnvironmentState est) {
-        System.out.println("SE EJECUTA ESTO EN ALGUN MOMENTO??????");
         AC19EnvironmentState res = (AC19EnvironmentState) est;
                 
         res.removePositionEnfermo(this.nodo);

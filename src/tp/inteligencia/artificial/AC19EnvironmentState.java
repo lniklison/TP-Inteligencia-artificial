@@ -53,6 +53,9 @@ import tp.inteligencia.artificial.model.AC19NodoAlcanzable;
     //private HashMap<Integer, Collection<Integer>> map;
     private HashMap<Integer, Collection<AC19NodoAlcanzable>> otroMap;
     private HashMap<Integer, Collection<AC19NodoAlcanzable>> otroMap2;
+    
+    private ArrayList<AC19EnvironmentState> estados = new ArrayList<>();
+
 
     private ArrayList<ArrayList<Integer>> positions = new ArrayList<ArrayList<Integer>>();
     private ArrayList<ArrayList<Integer>> positions2= new ArrayList<ArrayList<Integer>>();
@@ -105,7 +108,7 @@ import tp.inteligencia.artificial.model.AC19NodoAlcanzable;
         System.out.printf("CLONADO AMBIENTE STATE: [");
         System.out.printf("Posicion: "+position);
         System.out.printf("Posiciones: "+posicionesEnfermos.toString()+"]");
-        newState.setAgentPosition(position);
+        newState.setAgentPosition(position);        
         return newState;
     }
 
@@ -285,12 +288,20 @@ import tp.inteligencia.artificial.model.AC19NodoAlcanzable;
         int i =0;
         for(AC19NodoAlcanzable nodo : coleccion){
             if(i==indice.intValue()){
-                return nodo.getNodo();
+                if(!posicionesEnfermos.contains(nodo.getNodo()))return nodo.getNodo();
             }
             i++;
         }
 //        }
         return posicion;
         
+    }
+    
+    public ArrayList<AC19EnvironmentState> getEstados() {
+        return estados;
+    }
+
+    public void setEstados(ArrayList<AC19EnvironmentState> estados) {
+        this.estados = estados;
     }
 }

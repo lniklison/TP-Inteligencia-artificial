@@ -126,7 +126,7 @@ public class Vertice
         return "Vertice [id=" + id 
                 + ", habilitado=" + habilitado 
                 + ", PosX: "+this.getPosX()
-                + ", PosY: "+this.getDespY()
+                + ", PosY: "+this.getPosY()
                 + "]";
     }
     

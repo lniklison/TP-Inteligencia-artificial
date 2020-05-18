@@ -5,6 +5,7 @@ import java.awt.EventQueue;
 import javax.swing.UIManager;
 
 import ar.edu.utn.frsf.isi.died2015.metro.vistas.VentanaPrincipal;
+import java.lang.reflect.InvocationTargetException;
 
 /**
  * Clase principal de la aplicación.
@@ -22,9 +23,9 @@ public class Main
     /**
      * Lanza la aplicación.
      */
-    public static void main(String[] args)
+    public static void main(String[] args) throws InterruptedException, InvocationTargetException
     {
-        EventQueue.invokeLater(new Runnable()
+        EventQueue.invokeAndWait(new Runnable()
         {
             public void run()
             {

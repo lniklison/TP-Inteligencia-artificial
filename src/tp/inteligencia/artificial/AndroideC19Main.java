@@ -17,23 +17,27 @@
  */
 package tp.inteligencia.artificial;
 
+import ar.edu.utn.frsf.isi.died2015.metro.control.GestorMetro;
+import ar.edu.utn.frsf.isi.died2015.metro.vistas.paneles.PanelGrafo;
 import frsf.cidisi.faia.exceptions.PrologConnectorException;
 import frsf.cidisi.faia.simulator.SearchBasedAgentSimulator;
+import javax.swing.SwingWorker;
 
-public class AndroideC19Main {
+public class AndroideC19Main extends Thread{
 
-    public static void main(String[] args) throws PrologConnectorException {
-        
+    private SearchBasedAgentSimulator simulator;
+    public AndroideC19Main(PanelGrafo panel){
 
-        AC19Environment environment = new AC19Environment();
+        AC19Environment environment = new AC19Environment(GestorMetro.getInstancia().getNodos(), panel);
 
-        AndroideC19 agent = new AndroideC19(environment.getEnvironmentState().getPositions(),
-            environment.getEnvironmentState().getMap(),environment.getEnvironmentState().getPosicionesEnfermos());
+            AndroideC19 agent = new AndroideC19(environment.getEnvironmentState().getPositions(),
+                environment.getEnvironmentState().getMap(),environment.getEnvironmentState().getPosicionesEnfermos());
 
-        SearchBasedAgentSimulator simulator =
+            simulator =
                 new SearchBasedAgentSimulator(environment, agent);
         
-        simulator.start();
+            simulator.start();
     }
+
 
 }

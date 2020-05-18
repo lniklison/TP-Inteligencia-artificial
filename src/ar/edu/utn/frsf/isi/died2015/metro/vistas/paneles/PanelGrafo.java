@@ -43,6 +43,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import tp.inteligencia.artificial.AC19Environment;
+import tp.inteligencia.artificial.AC19EnvironmentState;
 
 public class PanelGrafo extends JPanel implements MouseListener, MouseMotionListener, KeyListener,
                 ActionListener
@@ -90,7 +91,10 @@ public class PanelGrafo extends JPanel implements MouseListener, MouseMotionList
     private JMenuItem mitemInhabilitarA;
     private JMenuItem mitemInhabilitarB;
     
+    private Graphics2D graphics;
     private Vertice agente;
+    
+    private ArrayList<AC19EnvironmentState> estados;
 
     private Arco arcoA, arcoB;
 
@@ -391,12 +395,13 @@ public class PanelGrafo extends JPanel implements MouseListener, MouseMotionList
     protected void paintComponent(Graphics g)
     {
         super.paintComponent(g);
-
+        
         RenderingHints rh = new RenderingHints(RenderingHints.KEY_ANTIALIASING,
                         RenderingHints.VALUE_ANTIALIAS_ON);
         ((Graphics2D) g).setRenderingHints(rh);
 
         Graphics2D g2 = ((Graphics2D) g);
+        this.graphics = g2;
 
         if (this.transformadorCoordenadas == null)
             this.transformadorCoordenadas = g2.getTransform();
@@ -667,16 +672,31 @@ public class PanelGrafo extends JPanel implements MouseListener, MouseMotionList
                     return;
                 }
             });
-            System.out.println("AGENTE - "+agente.toString());
-
+            System.out.println("AGENTE - DIBUJAR "+agente.toString());
 //            System.out.println("PANEL GRAFO:Agente en posicion: "+position);
         }
     }
 
     private void dibujarAgente(Graphics2D g) {
-        System.out.println("AGENTE - "+agente.toString());
+        System.out.println("AGENTE - DIBUJANDO "+agente.toString());
+        if(estados!= null){
+            AC19EnvironmentState e = estados.get(0);
+            estados.remove(0);
+            this.dibujarAgente(e.getPosition());
+            
+            try{
+                TimeUnit.SECONDS.sleep(1);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(PanelGrafo.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
         g.drawString(agente.getDato()+"", (int) (agente.getPosX() + agente.getDespX()),
                             (int) (agente.getPosY() + agente.getDespY()));
+    }
+
+    public void dibujarEstados(ArrayList<AC19EnvironmentState> estados) {
+        this.estados = estados;
+        System.out.println("ESTADOS ["+estados.size()+"]");
     }
     
     

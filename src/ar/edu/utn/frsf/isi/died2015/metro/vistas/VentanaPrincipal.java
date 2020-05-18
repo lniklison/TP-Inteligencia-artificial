@@ -44,6 +44,7 @@ import ar.edu.utn.frsf.isi.died2015.metro.vistas.paneles.PanelGrafo;
 import frsf.cidisi.faia.simulator.SearchBasedAgentSimulator;
 import tp.inteligencia.artificial.AC19Environment;
 import tp.inteligencia.artificial.AndroideC19;
+import tp.inteligencia.artificial.AndroideC19Main;
 
 public class VentanaPrincipal extends JFrame implements ActionListener, BuscarCaminoListener,
                 CaminoListener, ReclamoEstacionListener, FichaEstacionListener, InspeccionListener, PanelGrafoListener
@@ -73,7 +74,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener, BuscarCa
     {
         super();
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setPreferredSize(new Dimension(1000, 700));
+        this.setPreferredSize(new Dimension(1000, 500));
         this.setTitle("Metro 2015");
 
         // Obtenemos el contentpane
@@ -271,6 +272,8 @@ public class VentanaPrincipal extends JFrame implements ActionListener, BuscarCa
                 new SearchBasedAgentSimulator(environment, agent);
         
             simulator.start();
+
+//                (new AndroideC19Main(this.panelGrafo)).run(); 
             
         } else if (e.getSource() == this.mitemInspecciones) // Al querer generar las inspecciones.
         {

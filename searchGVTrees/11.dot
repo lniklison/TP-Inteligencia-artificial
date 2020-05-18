@@ -8,7 +8,7 @@ nodo1 -> nodo3;
 nodo4[label="{EO: 4|cost: 2.0|A: Go29|Posicion:\n30}"]
 
 nodo1 -> nodo4;
-nodo5[label="{EO: 5|cost: 2.0|A: Go31|Posicion:\n30}"]
+nodo5[label="{EO: 5|cost: 2.0|A: Go33|Posicion:\n30}"]
 
 nodo1 -> nodo5;
 

@@ -42,6 +42,8 @@ public class AC19Environment extends Environment {
     private PanelGrafo panelGrafo;
     private ArrayList<Integer> posicionesEnfermos;
     
+    private ArrayList<AC19EnvironmentState> estados = new ArrayList<>();
+
     public AC19Environment() {
         // Create the environment state
         this.environmentState = new AC19EnvironmentState();
@@ -65,7 +67,8 @@ public class AC19Environment extends Environment {
                 po.add(nodo);
             }
             map.put(origen, successors);
-            if(posicionesEnfermos.size()<3){
+            
+            if(n.getId()!="1" && posicionesEnfermos.size()<3){
                 
                 Double num = (Math.random()*11);
                 if(num%5<1){
@@ -89,8 +92,10 @@ public class AC19Environment extends Environment {
         
         robotPerception.setPosicionesEnfermos(posicionesEnfermos);
         
-        this.panelGrafo.dibujarAgente(this.getEnvironmentState().getPosition());
-        
+//        this.panelGrafo.dibujarAgente(this.getEnvironmentState().getPosition());
+        estados.add((AC19EnvironmentState) this.getEnvironmentState().clone());
+        this.panelGrafo.dibujarEstados(estados);
+              
         
         return robotPerception;
     }
