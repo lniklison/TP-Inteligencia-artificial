@@ -44,9 +44,9 @@ public class GoX extends SearchAction {
     public SearchBasedAgentState execute(SearchBasedAgentState s) {
         AndroideC19State agentState = (AndroideC19State) s;
 //        System.out.println("Ejecutando arbol... en Nodo: "+this.nodo);
-        if (agentState.getVisitedPositions().contains(this.nodo)) {
-            return null;
-        }
+//        if (agentState.getVisitedPositions().contains(this.nodo)) {
+//            return null;
+//        }
         ArrayList<AC19NodoAlcanzable> successors = new ArrayList<AC19NodoAlcanzable>();
         successors.addAll(agentState.getSuccessors());
 //        System.out.println("Sucesores de "+this.nodo+" "+successors.toString());

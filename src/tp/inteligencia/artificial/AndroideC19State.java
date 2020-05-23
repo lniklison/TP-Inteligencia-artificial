@@ -86,7 +86,7 @@ public class AndroideC19State extends SearchBasedAgentState {
     
     AndroideC19State(ArrayList<ArrayList<Integer>> positions, HashMap<Integer, Collection<AC19NodoAlcanzable>> map,ArrayList<Integer> posicionesEnfermosA) {
         positions2 = positions;
-        position2 = N1;
+        position = N1;
         knownMap2 = map;
         posicionesEnfermos2 = posicionesEnfermosA;
         
@@ -107,7 +107,7 @@ public class AndroideC19State extends SearchBasedAgentState {
 
     @Override
     public void initState() {
-        position = N1;
+//        position = N1;
 
         /**
          * In this matrix the first element of each row represents a position
@@ -115,39 +115,10 @@ public class AndroideC19State extends SearchBasedAgentState {
          */
 //        p0.add(N1);p0.add(N3);p0.add(N7);
 //        p1.add(N2);p1.add(N10);p1.add(N11);p1.add(N15);
-//        p2.add(N3);p2.add(N4);p2.add(N7);
-//        p3.add(N4);p3.add(N3);p3.add(N5);
-//        p4.add(N5);p4.add(N6);p4.add(N8);p4.add(N9);p4.add(N4);
-//        p5.add(N6);p5.add(N5);p5.add(N8);p5.add(N7);p5.add(N17);
-//        p6.add(N7);p6.add(N3);p6.add(N6);p6.add(N17);
-//        p7.add(N8);p7.add(N5);p7.add(N6);p7.add(N9);p7.add(N10);
-//        p8.add(N9);p8.add(N5);p8.add(N8);p8.add(N10);p8.add(N12);
-//        p9.add(N10);p9.add(N2);p9.add(N8);p9.add(N9);p9.add(N11);
-//        p10.add(N11);p10.add(N10);p10.add(N14);p10.add(N12);
-//        p11.add(N12);p11.add(N9);p11.add(N11);p11.add(N13);
-//        p12.add(N13);p12.add(N12);p12.add(N14);
-//        p13.add(N14);p13.add(N11);p13.add(N13);
-//        p14.add(N15);p14.add(N2);p14.add(N16);
-//        p15.add(N16);p15.add(N15);p15.add(N17);
-//        p16.add(N17);p16.add(N2);p16.add(N6);p16.add(N7);p16.add(N16);
-//        
+//        ....
 //        positions.add(p0);
 //        positions.add(p1);
-//        positions.add(p2);
-//        positions.add(p3);
-//        positions.add(p4);
-//        positions.add(p5);
-//        positions.add(p6);
-//        positions.add(p7);
-//        positions.add(p8);
-//        positions.add(p9);
-//        positions.add(p10);
-//        positions.add(p11);
-//        positions.add(p12);
-//        positions.add(p13);
-//        positions.add(p14);
-//        positions.add(p15);
-//        positions.add(p16);
+//        ...
         
         positions = positions2;
         knownMap = new HashMap<Integer, Collection<AC19NodoAlcanzable>>();

@@ -178,9 +178,9 @@ import tp.inteligencia.artificial.model.AC19NodoAlcanzable;
         for(int i=0; i< posicionesEnfermos.size(); i++){
             Double num = (Math.random()*11);
             if(num%9<1){
-                Integer nuevaPoscion = this.posicionCercana(posicionesEnfermos.get(i));
-                if(!posicionesVisitadas.contains(nuevaPoscion)){
-                    posicionesEnfermos.set(i,nuevaPoscion);
+                Integer nuevaPosicion = this.posicionCercana(posicionesEnfermos.get(i));
+                if(!posicionesVisitadas.contains(nuevaPosicion)){
+                    posicionesEnfermos.set(i,nuevaPosicion);
                 }
                 
             }

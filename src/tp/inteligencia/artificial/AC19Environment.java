@@ -75,11 +75,10 @@ public class AC19Environment extends Environment {
             System.out.printf("]\n");
             map.put(origen, successors);
             
-            
-            if(Integer.parseInt(n.getId())!=1 && posicionesEnfermos.size()<3){
+            if(Integer.parseInt(n.getId())!=1 && posicionesEnfermos.size()<5){
                 
                 Double num = (Math.random()*11);
-                if(num%5<1){
+                if(num%5<1 && !posicionesEnfermos.contains(Integer.parseInt(n.getId()))){
                     posicionesEnfermos.add(Integer.parseInt(n.getId()));
                 }
             }

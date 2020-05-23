@@ -38,7 +38,8 @@ public class AC19Goal extends GoalTest {
 //        System.out.println("Posiciones visitadas: "+visitedPositions.toString());
 //        System.out.println("Posiciones por visitar: "+positionsToVisit.toString());
         
-        if (posicionActual.equals(32) && positionsToVisit.size()==0) {
+//        if (posicionActual.equals(32) && positionsToVisit.size()==0) {
+        if (positionsToVisit.size()==0) {
 //            System.out.println("Posicion actual: "+posicionActual);
 //            System.out.println("Posiciones visitadas: "+visitedPositions.toString());
             return true;
