@@ -229,6 +229,8 @@ public class GestorMetro
 
                         // Creamos el vértice del grafo que modela a la estación.
                         Vertice v = new Vertice(Integer.valueOf(nodo.getId()), true, nodo.getNombre());
+                        v.setPosX(Double.valueOf(linea[3])*100);
+                        v.setPosY(Double.valueOf(linea[4])*100);
                         idVertice += 1;
                         // Mapeamos la estación con el vértice
                         this.verticeANodos.put(v, nodo);
@@ -322,9 +324,9 @@ public class GestorMetro
             }
 
             this.grafo = g;
-            this.layout = new FRLayout(this.grafo, 900, 600, 20);
-            this.layout.setMarco(10);
-            this.layout.ejecutar(1000, true);
+//            this.layout = new FRLayout(this.grafo, 900, 600, 20);
+//            this.layout.setMarco(10);
+//            this.layout.ejecutar(1000, true);
             this.restaurarColores();
             this.guardarDistribucion();
             return true;

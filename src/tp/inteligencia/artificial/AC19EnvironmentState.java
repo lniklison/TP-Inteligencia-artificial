@@ -138,10 +138,10 @@ import tp.inteligencia.artificial.model.AC19NodoAlcanzable;
         
         //aqui se quitan las calles cortadas     
 //        Double num6 = (Math.random() *100);
-        Double num7 = (Math.random()*tamanioMapa);
-        int removerPosicionCuadraCortada = num7.intValue();       
-        
-        cuadrasCortadas.remove(removerPosicionCuadraCortada);
+//        Double num7 = (Math.random()*tamanioMapa);
+//        int removerPosicionCuadraCortada = num7.intValue();       
+//        
+//        cuadrasCortadas.remove(removerPosicionCuadraCortada);
 
         
         

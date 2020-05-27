@@ -27,7 +27,9 @@ import frsf.cidisi.faia.agent.Action;
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.solver.search.BreathFirstSearch;
 import frsf.cidisi.faia.solver.search.DepthFirstSearch;
+import frsf.cidisi.faia.solver.search.IStepCostFunction;
 import frsf.cidisi.faia.solver.search.Search;
+import frsf.cidisi.faia.solver.search.UniformCostSearch;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -62,8 +64,10 @@ public class AndroideC19 extends SearchBasedAgent {
     @Override
     public Action selectAction() {
         // Breath first strategy
-        BreathFirstSearch searchStrategy = new BreathFirstSearch();
+//        BreathFirstSearch searchStrategy = new BreathFirstSearch();
 //        DepthFirstSearch searchStrategy = new DepthFirstSearch();
+        IStepCostFunction costFunction = new CostFunction();
+        UniformCostSearch searchStrategy = new UniformCostSearch(costFunction);
 
         Search searchSolver = new Search(searchStrategy);
 

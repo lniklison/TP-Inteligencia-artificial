@@ -39,6 +39,7 @@ import ar.edu.utn.frsf.isi.died2015.metro.modelo.excepciones.GrafoArcoInexistent
 import ar.edu.utn.frsf.isi.died2015.metro.modelo.excepciones.GrafoVerticeInexistenteException;
 import ar.edu.utn.frsf.isi.died2015.metro.vistas.componentes.ShapeStroke;
 import ar.edu.utn.frsf.isi.died2015.metro.vistas.listeners.PanelGrafoListener;
+import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -300,8 +301,13 @@ public class PanelGrafo extends JPanel implements MouseListener, MouseMotionList
         double ddx = fin.getPosX() + fin.getDespX() - (inicio.getPosX() + inicio.getDespX());
         double ddy = fin.getPosY() + fin.getDespY() - (inicio.getPosY() + inicio.getDespY());
         AffineTransform orig = g.getTransform();
-        g.translate(inicio.getPosX()+ inicio.getDespX(), inicio.getPosY()+ inicio.getDespY());
-        g.rotate(Math.atan2(ddy,ddx));
+        if(Math.atan2(ddy,ddx)<-Math.PI/2 || Math.atan2(ddy,ddx)>Math.PI/2){
+            g.translate(fin.getPosX()+ fin.getDespX(), fin.getPosY()+ fin.getDespY());
+            g.rotate(Math.atan2(ddy,ddx)+Math.PI);
+        }else{
+            g.translate(inicio.getPosX()+ inicio.getDespX(), inicio.getPosY()+ inicio.getDespY());
+            g.rotate(Math.atan2(ddy,ddx));
+        }
         g.drawString(a.getDato().toString(), 15, -12);
         g.setTransform(orig);
     }
@@ -690,6 +696,23 @@ public class PanelGrafo extends JPanel implements MouseListener, MouseMotionList
             estados.remove(0);
             this.dibujarAgente(e.getPosition());
             this.dibujarEnfermos(e.getPosicionesEnfermos());
+            
+            HashMap cuadrasCortadas = e.getCuadrasCortadas();
+            
+            cuadrasCortadas.forEach((c, v) -> {
+                Vertice inicio = this.grafo.findVerticeById((Integer)c);
+                Vertice fin = this.grafo.findVerticeById((Integer)v);
+                
+                if(inicio != null && fin != null){
+                    try {
+                        this.grafo.getArco(inicio, fin).setHabilitado(false);
+                    } catch (GrafoArcoInexistenteException ex) {
+                        Logger.getLogger(PanelGrafo.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (GrafoVerticeInexistenteException ex) {
+                        Logger.getLogger(PanelGrafo.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+            });
             
             try{
                 TimeUnit.SECONDS.sleep(1);

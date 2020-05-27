@@ -235,7 +235,14 @@ public class Grafo
     {
         return this.vertices;
     }
-
+    
+    public Vertice findVerticeById(Integer id){
+        for(Vertice v : vertices){
+            if(v.getId() == id) return v;
+        }
+        return null;
+    }
+    
     /**
      * Retorna la cantidad de vértices del grafo.
      */

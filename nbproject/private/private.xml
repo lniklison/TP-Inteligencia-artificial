@@ -2,6 +2,21 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/tp/inteligencia/artificial/CostFunction.java</file>
+            <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/ar/edu/utn/frsf/isi/died2015/metro/modelo/Grafo.java</file>
+            <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/ar/edu/utn/frsf/isi/died2015/metro/control/algoritmos/FRLayout.java</file>
+            <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/tp/inteligencia/artificial/AndroideC19State.java</file>
+            <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/ar/edu/utn/frsf/isi/died2015/metro/vistas/paneles/PanelGrafo.java</file>
+            <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/ar/edu/utn/frsf/isi/died2015/metro/vistas/VentanaPrincipal.java</file>
+            <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/ar/edu/utn/frsf/isi/died2015/metro/modelo/Nodo.java</file>
+            <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/tp/inteligencia/artificial/AC19Perception.java</file>
+            <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/tp/inteligencia/artificial/AC19EnvironmentState.java</file>
+            <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/tp/inteligencia/artificial/Main.java</file>
+            <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/tp/inteligencia/artificial/actions/GoX.java</file>
+            <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/ar/edu/utn/frsf/isi/died2015/metro/control/GestorMetro.java</file>
+            <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/ar/edu/utn/frsf/isi/died2015/metro/modelo/Arco.java</file>
+            <file>file:/C:/Users/gino_/Documents/NetBeansProjects/TP-Inteligencia-artificial/src/tp/inteligencia/artificial/AndroideC19.java</file>
+        </group>
     </open-files>
 </project-private>

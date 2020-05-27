@@ -1,40 +1,40 @@
-N,1,Piedras - Hernandarias
-N,2,Piedras - Juan Castelli
-N,3,Piedras - Estanislao Zeballos
-N,4,Piedras - Obispo Boneo
-N,5,Piedras - Espora
-N,6,Piedras - Obispo Principe
-N,7,Antonia Godoy - Obispo Principe
-N,8,Antonia Godoy - Espora
-N,9,Antonia Godoy - Obispo Boneo
-N,10,Antonia Godoy - Estanislao Zeballos
-N,11,Antonia Godoy - Juan Castelli
-N,12,Antonia Godoy - Hernandarias
-N,13,Juan Maciel - Obispo Principe
-N,14,Patricio Cullen - Hernandarias
-N,15,Patricio Cullen - Juan Castelli
-N,16,Patricio Cullen - Estanislao Zeballos
-N,17,Patricio Cullen - Obispo Boneo
-N,18,Patricio Cullen - Espora
-N,19,Patricio Cullen - Obispo Principe
-N,20,Echague - Obispo Principe
-N,21,Echague - Espora
-N,22,Echague - Obispo Boneo
-N,23,Echague - Estanislao Zeballos
-N,24,Echague - Juan Castelli
-N,25,Echague - Hernandarias
-N,26,Talcahuano - Hernandarias
-N,27,Talcahuano - Juan Castelli
-N,28,Talcahuano - Estanislao Zeballos
-N,29,Talcahuano - Obispo Boneo
-N,30,Talcahuano - Espora
-N,31,Talcahuano - Obispo Principe
-N,32,Defensa - Obispo Principe
-N,33,Defensa - Espora
-N,34,Defensa - Obispo Boneo
-N,35,Defensa - Estanislao Zeballos
-N,36,Defensa - Juan Castelli
-N,37,Defensa - Hernandarias
+N,1,Piedras - Hernandarias						,0.0	,5.0
+N,2,Piedras - Juan Castelli						,0.0	,4.0
+N,3,Piedras - Estanislao Zeballos				,0.0	,3.0
+N,4,Piedras - Obispo Boneo						,0.0	,2.0
+N,5,Piedras - Espora							,0.0	,1.0
+N,6,Piedras - Obispo Principe					,0.0	,0.0
+N,7,Antonia Godoy - Obispo Principe				,1.0	,0.0
+N,8,Antonia Godoy - Espora						,1.0	,1.0
+N,9,Antonia Godoy - Obispo Boneo				,1.0	,2.0
+N,10,Antonia Godoy - Estanislao Zeballos		,1.0	,3.0
+N,11,Antonia Godoy - Juan Castelli				,1.0	,4.0
+N,12,Antonia Godoy - Hernandarias				,1.0	,5.0
+N,13,Juan Maciel - Obispo Principe				,1.5	,0.0
+N,14,Patricio Cullen - Hernandarias				,2.0	,5.0
+N,15,Patricio Cullen - Juan Castelli			,2.0	,4.0
+N,16,Patricio Cullen - Estanislao Zeballos		,2.0	,3.0
+N,17,Patricio Cullen - Obispo Boneo				,2.0	,2.0
+N,18,Patricio Cullen - Espora					,2.0	,1.0
+N,19,Patricio Cullen - Obispo Principe			,2.0	,0.0
+N,20,Echague - Obispo Principe					,3.0	,0.0
+N,21,Echague - Espora							,3.0	,1.0
+N,22,Echague - Obispo Boneo						,3.0	,2.0
+N,23,Echague - Estanislao Zeballos				,3.0	,3.0
+N,24,Echague - Juan Castelli					,3.0	,4.0
+N,25,Echague - Hernandarias						,3.0	,5.0
+N,26,Talcahuano - Hernandarias					,4.0	,5.0
+N,27,Talcahuano - Juan Castelli					,4.0	,4.0
+N,28,Talcahuano - Estanislao Zeballos			,4.0	,3.0
+N,29,Talcahuano - Obispo Boneo					,4.0	,2.0
+N,30,Talcahuano - Espora						,4.0	,1.0
+N,31,Talcahuano - Obispo Principe				,4.0	,0.0
+N,32,Defensa - Obispo Principe					,5.0	,0.0
+N,33,Defensa - Espora							,5.0	,1.0
+N,34,Defensa - Obispo Boneo						,5.0	,2.0
+N,35,Defensa - Estanislao Zeballos				,5.0	,3.0
+N,36,Defensa - Juan Castelli					,5.0	,4.0
+N,37,Defensa - Hernandarias						,5.0	,5.0
 C,1,1,2,Piedras,1
 C,1,2,1,Piedras,0
 C,1,2,3,Piedras,1
