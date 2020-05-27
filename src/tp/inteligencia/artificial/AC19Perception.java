@@ -21,10 +21,12 @@ import frsf.cidisi.faia.agent.Agent;
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.environment.Environment;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class AC19Perception extends Perception {
     
     private ArrayList<Integer> posicionesEnfermos;
+    private HashMap<Integer,Integer> cuadrasCortadas;
 
     public AC19Perception() {
         posicionesEnfermos = new ArrayList<Integer>();
@@ -46,6 +48,8 @@ public class AC19Perception extends Perception {
         System.out.println("Percibiendo algo");
         environmentState.setAgentPosition(((AndroideC19State)robotAgent.getAgentState()).getPosition());
         this.setPosicionesEnfermos(environmentState.getPosicionesEnfermos());
+        this.setCuadrasCortadas(environmentState.getCuadrasCortadas());
+       
         
         //ver si agregar calles cortadas aca
     }
@@ -69,5 +73,13 @@ public class AC19Perception extends Perception {
     
     public ArrayList<Integer> getPosicionesEnfermos() {
         return this.posicionesEnfermos;
+    }
+
+    public HashMap<Integer, Integer> getCuadrasCortadas() {
+        return cuadrasCortadas;
+    }
+
+    public void setCuadrasCortadas(HashMap<Integer, Integer> cuadrasCortadas) {
+        this.cuadrasCortadas = cuadrasCortadas;
     }
 }

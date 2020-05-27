@@ -132,7 +132,7 @@ import tp.inteligencia.artificial.model.AC19NodoAlcanzable;
         Double num4 = (Math.random() *100);
         Double num5 = (Math.random()*tamanioMapa);
         int nuevaPosicionCuadraCortada = num5.intValue();
-        if(num4%90<1 && !cuadrasCortadas.containsKey(nuevaPosicionCuadraCortada) && posicionesEnfermos.size()<3){
+        if(num4%90<1 && !cuadrasCortadas.containsKey(nuevaPosicionCuadraCortada) && cuadrasCortadas.size()<3){
             cuadrasCortadas.put(nuevaPosicionCuadraCortada, calleCercana(nuevaPosicionCuadraCortada));
         }
         
