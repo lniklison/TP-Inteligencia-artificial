@@ -18,11 +18,13 @@
 package tp.inteligencia.artificial;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Collection;
 import java.util.HashMap;
 
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
+import java.util.List;
 import tp.inteligencia.artificial.model.AC19NodoAlcanzable;
 
 public class AndroideC19State extends SearchBasedAgentState {
@@ -47,6 +49,9 @@ public class AndroideC19State extends SearchBasedAgentState {
     
     private ArrayList<Integer> posicionesEnfermos;
     private ArrayList<Integer> posicionesEnfermos2;
+    
+    private HashMap<Integer, Integer> cuadrasCortadas = new HashMap<Integer, Integer>();
+    private HashMap<Integer, Integer> cuadrasCortadas2 = new HashMap<Integer, Integer>();
     private ArrayList<ArrayList<Integer>> positions = new ArrayList<ArrayList<Integer>>();
     private ArrayList<ArrayList<Integer>> positions2 = new ArrayList<ArrayList<Integer>>();
     private ArrayList<Integer> p0 = new ArrayList<Integer>(); 
@@ -84,11 +89,12 @@ public class AndroideC19State extends SearchBasedAgentState {
         this.initState();
     }
     
-    AndroideC19State(ArrayList<ArrayList<Integer>> positions, HashMap<Integer, Collection<AC19NodoAlcanzable>> map,ArrayList<Integer> posicionesEnfermosA) {
+    AndroideC19State(ArrayList<ArrayList<Integer>> positions, HashMap<Integer, Collection<AC19NodoAlcanzable>> map,ArrayList<Integer> posicionesEnfermosA,HashMap<Integer,Integer> cuadrasCortadas) {
         positions2 = positions;
         position = N1;
         knownMap2 = map;
         posicionesEnfermos2 = posicionesEnfermosA;
+        cuadrasCortadas2 = cuadrasCortadas;
         
         this.initState();
     }
@@ -102,6 +108,7 @@ public class AndroideC19State extends SearchBasedAgentState {
         ArrayList<Integer> positions = (ArrayList<Integer>) posicionesEnfermos.clone();
         newState.setSuccessors((HashMap<Integer, Collection<AC19NodoAlcanzable>>) knownMap.clone());
         newState.setPosicionesEnfermos(positions);
+        newState.setCuadrasCortadas((HashMap<Integer,Integer>) cuadrasCortadas.clone());
         return newState;
     }
 
@@ -137,6 +144,8 @@ public class AndroideC19State extends SearchBasedAgentState {
         visitedPositions = new ArrayList<Integer>();
         posicionesEnfermos = new ArrayList<Integer>();
         posicionesEnfermos = posicionesEnfermos2;
+        cuadrasCortadas = new HashMap<Integer, Integer>();
+        cuadrasCortadas = cuadrasCortadas2;
 
     }
 
@@ -177,6 +186,26 @@ public class AndroideC19State extends SearchBasedAgentState {
     }
 
     public Collection<AC19NodoAlcanzable> getSuccessors() {
+        
+        if(cuadrasCortadas.containsKey(position)){
+            Integer sgte = cuadrasCortadas.get(position);
+            Collection<AC19NodoAlcanzable> coleccionNodos = knownMap.get(position);
+            ArrayList<AC19NodoAlcanzable> coleccionNodosADevolver = new ArrayList<AC19NodoAlcanzable>();
+//            System.out.printf("posicion: "+ position +"-");
+//            System.out.printf("NODOS ALCANZABLES :[");
+            for(AC19NodoAlcanzable n : coleccionNodos ){
+                if(!n.getNodo().equals(sgte)){
+//                    System.out.printf("Nodo{ nodo:" + n.getNodo() + ", calle:"+ n.getCalle() +"}");
+                    coleccionNodosADevolver.add(n);
+                }
+//                else
+//                    System.out.printf("NodoNoAgregado{ nodo:" + n.getNodo() + ", calle:"+ n.getCalle() +"}");
+            }
+//            System.out.printf("]/n");
+            return coleccionNodosADevolver;
+
+
+        }
         return knownMap.get(position);
     }
     public void setSuccessors( HashMap<Integer, Collection<AC19NodoAlcanzable>> map) {
@@ -201,8 +230,17 @@ public class AndroideC19State extends SearchBasedAgentState {
     
     public void removePositionEnfermo(Integer position){
         if(this.posicionesEnfermos.contains(position)){
-//            System.out.println("AGENTE STATE - REMOVIENDO "+position);
             this.posicionesEnfermos.remove(position);
         }
     }
+
+    public HashMap<Integer,Integer> getCuadrasCortadas() {
+        return cuadrasCortadas;
+    }
+
+    public void setCuadrasCortadas(HashMap<Integer, Integer> cuadrasCortadas) {
+        this.cuadrasCortadas = cuadrasCortadas;
+    }
+    
+    
 }

@@ -264,9 +264,12 @@ public class VentanaPrincipal extends JFrame implements ActionListener, BuscarCa
             }
         }else if(e.getSource() == this.mitemEjecutarAgente){
             AC19Environment environment = new AC19Environment(this.gestor.getNodos(),this.panelGrafo);
+//            AC19Environment environment = new AC19Environment(this.gestor.getNodos(),this.panelGrafo,this.gestor.getGrafo().getArcosNoDirigidos());
 
             AndroideC19 agent = new AndroideC19(environment.getEnvironmentState().getPositions(),
-                environment.getEnvironmentState().getMap(),environment.getEnvironmentState().getPosicionesEnfermos());
+                environment.getEnvironmentState().getMap(),
+                    environment.getEnvironmentState().getPosicionesEnfermos(),
+                    environment.getEnvironmentState().getCuadrasCortadas());
 
             SearchBasedAgentSimulator simulator =
                 new SearchBasedAgentSimulator(environment, agent);

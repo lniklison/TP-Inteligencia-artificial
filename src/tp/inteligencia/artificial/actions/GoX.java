@@ -60,9 +60,6 @@ public class GoX extends SearchAction {
             }
 //            int index = successors.indexOf(this.nodo);
             if (index >= 0) {
-//                System.out.printf("Nodo "+ agentState.getPosition() +" => [ ");
-//                    System.out.printf("["+this.nodo+"]");
-//                System.out.printf("]\n");
                 agentState.setPosition(this.nodo);
                 agentState.removePositionEnfermo(this.nodo);
                 return agentState;

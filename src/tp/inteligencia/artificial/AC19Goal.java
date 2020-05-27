@@ -27,10 +27,10 @@ public class AC19Goal extends GoalTest {
     @Override
     public boolean isGoalState(AgentState agentState) {
         // Agent reach the goal if it is in B
-        Integer posicionActual = ((AndroideC19State) agentState).getPosition();
+//        Integer posicionActual = ((AndroideC19State) agentState).getPosition();
 //        ((RobotAgentState) agentState).removePositionToVisit(posicionActual);
         
-        ArrayList<Integer> visitedPositions = ((AndroideC19State) agentState).getVisitedPositions();
+//        ArrayList<Integer> visitedPositions = ((AndroideC19State) agentState).getVisitedPositions();
         ArrayList<Integer> positionsToVisit = ((AndroideC19State) agentState).getPosicionesEnfermos();
         
 //        System.out.println("#######################################");

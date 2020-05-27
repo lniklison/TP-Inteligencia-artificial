@@ -31,7 +31,7 @@ public class AndroideC19Main extends Thread{
         AC19Environment environment = new AC19Environment(GestorMetro.getInstancia().getNodos(), panel);
 
             AndroideC19 agent = new AndroideC19(environment.getEnvironmentState().getPositions(),
-                environment.getEnvironmentState().getMap(),environment.getEnvironmentState().getPosicionesEnfermos());
+                environment.getEnvironmentState().getMap(),environment.getEnvironmentState().getPosicionesEnfermos(),environment.getEnvironmentState().getCuadrasCortadas());
 
             simulator =
                 new SearchBasedAgentSimulator(environment, agent);

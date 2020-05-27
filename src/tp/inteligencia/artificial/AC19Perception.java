@@ -46,6 +46,8 @@ public class AC19Perception extends Perception {
         System.out.println("Percibiendo algo");
         environmentState.setAgentPosition(((AndroideC19State)robotAgent.getAgentState()).getPosition());
         this.setPosicionesEnfermos(environmentState.getPosicionesEnfermos());
+        
+        //ver si agregar calles cortadas aca
     }
 
     // The following methods are Robot-specific:

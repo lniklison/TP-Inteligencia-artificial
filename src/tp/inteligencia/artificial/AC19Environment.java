@@ -17,6 +17,7 @@
  */
 package tp.inteligencia.artificial;
 
+import ar.edu.utn.frsf.isi.died2015.metro.modelo.Arco;
 import ar.edu.utn.frsf.isi.died2015.metro.modelo.Calle;
 import ar.edu.utn.frsf.isi.died2015.metro.modelo.Cuadra;
 import ar.edu.utn.frsf.isi.died2015.metro.modelo.Nodo;
@@ -41,6 +42,8 @@ public class AC19Environment extends Environment {
     private ArrayList<ArrayList<Integer>> positions;
     private PanelGrafo panelGrafo;
     private ArrayList<Integer> posicionesEnfermos;
+//    private HashMap<Integer,AC19NodoAlcanzable> cuadrasCortadas;
+    private HashMap<Integer,Integer> cuadrasCortadas;
     
     private ArrayList<AC19EnvironmentState> estados = new ArrayList<>();
 
@@ -49,12 +52,15 @@ public class AC19Environment extends Environment {
         this.environmentState = new AC19EnvironmentState();
     }
 
+//    public AC19Environment(Iterable<Nodo> nodos, PanelGrafo panelGrafo,Iterable<Arco> arcos) {
     public AC19Environment(Iterable<Nodo> nodos, PanelGrafo panelGrafo) {
        
         this.map = new HashMap<Integer, Collection<AC19NodoAlcanzable>>();
         this.positions = new ArrayList<ArrayList<Integer>>();
         this.panelGrafo = panelGrafo;
         this.posicionesEnfermos = new ArrayList<Integer>();
+        this.cuadrasCortadas = new HashMap<Integer,Integer>();
+        this.cuadrasCortadas = new HashMap<Integer,Integer>();
         
         for(Nodo n : nodos){
             ArrayList<AC19NodoAlcanzable> successors = new ArrayList<AC19NodoAlcanzable>();
@@ -75,6 +81,9 @@ public class AC19Environment extends Environment {
             System.out.printf("]\n");
             map.put(origen, successors);
             
+//            cuadrasCortadas.put(2, new AC19NodoAlcanzable(11, "CalleHacia"+15));
+            cuadrasCortadas.put(11,15);
+            
             if(Integer.parseInt(n.getId())!=1 && posicionesEnfermos.size()<5){
                 
                 Double num = (Math.random()*11);
@@ -82,11 +91,12 @@ public class AC19Environment extends Environment {
                     posicionesEnfermos.add(Integer.parseInt(n.getId()));
                 }
             }
+            if(!posicionesEnfermos.contains(15))posicionesEnfermos.add(15);
             positions.add(po);
             
         }
         
-        this.environmentState = new AC19EnvironmentState(map, positions,posicionesEnfermos);
+        this.environmentState = new AC19EnvironmentState(map, positions,posicionesEnfermos,cuadrasCortadas);
     }
 
    
