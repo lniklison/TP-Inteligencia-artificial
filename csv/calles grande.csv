@@ -1,15 +1,15 @@
-N,1,Gral Paz - Regimiento 12,1.0,1.0
-N,2,Gral Paz - Javier de la rosa,1.0,2.0
-N,3,Gral Paz - Padre Genesio,1.0,3.0
-N,4,Gral Paz - Cardenal Fasolino,1.0,4.0
-N,5,Gral Paz - Alberti,1.0,5.0
-N,6,Gral Paz - Obispo Principe,1.0,6.0
-N,7,Gral Paz - Espora,1.0,7.0
-N,8,Gral Paz - Obispo Boneo,1.0,8.0
-N,9,Gral Paz - Estanislao Zeballos,1.0,9.0
-N,10,Gral Paz - Juan Castelli,1.0,10.0
-N,11,Gral Paz - Hernandarias,1.0,11.0
-N,12,Gral Paz - J.P. Lopez,1.0,12.0
+N,1,Gral Paz - Regimiento 12,3.0,1.0
+N,2,Gral Paz - Javier de la rosa,3.0,2.0
+N,3,Gral Paz - Padre Genesio,3.0,3.0
+N,4,Gral Paz - Cardenal Fasolino,3.0,4.0
+N,5,Gral Paz - Alberti,3.0,5.0
+N,6,Gral Paz - Obispo Principe,3.0,6.0
+N,7,Gral Paz - Espora,3.0,7.0
+N,8,Gral Paz - Obispo Boneo,3.0,8.0
+N,9,Gral Paz - Estanislao Zeballos,2.0,9.0
+N,10,Gral Paz - Juan Castelli,2.0,10.0
+N,11,Gral Paz - Hernandarias,2.0,11.0
+N,12,Gral Paz - J.P. Lopez,2.0,12.0
 N,13,Gral Paz - Angel Cassanello,1.0,13.0
 N,14,Gral Paz - Ricardo Aldao,1.0,14.0
 N,15,Gral Paz - Pedro de vega,1.0,15.0
@@ -153,11 +153,11 @@ N,152,Alte Brown - Obispo Boneo,12.0,8.0
 N,153,Alte Brown - Estanislao Zeballos,12.0,9.0
 N,154,Alte Brown - Juan Castelli,12.0,10.0
 N,155,Alte Brown - Riobamba,12.0,10.5
-N,156,Alte Brown - Hernandarias,12.0,11.0
-N,157,Alte Brown - J.P. Lopez,12.0,12.0
-N,158,Alte Brown - Angel Cassanello,12.0,13.0
-N,159,Alte Brown - Ricardo Aldao,12.0,14.0
-N,160,Alte Brown - Pedro de vega,12.0,15.0
+N,156,Alte Brown - Hernandarias,11.0,11.0
+N,157,Alte Brown - J.P. Lopez,11.0,12.0
+N,158,Alte Brown - Angel Cassanello,10.0,13.0
+N,159,Alte Brown - Ricardo Aldao,9.0,14.0
+N,160,Alte Brown - Pedro de vega,9.0,15.0
 N,161,Italia - Regimiento 12,12.0,1.0
 C,1,1,2,Gral Paz,1
 C,1,2,1,Gral Paz,1
@@ -415,8 +415,8 @@ C,1,65,76,Antonia Godoy,0
 C,1,76,65,Antonia Godoy,1
 C,1,78,75,Patricio Cullen,1
 C,1,75,78,Patricio Cullen,0
-C,1,76,77,Juan Maciel,0
-C,1,77,76,Juan Maciel,1
+C,1,76,77,Juan Maciel,1
+C,1,77,76,Juan Maciel,0
 C,1,77,89,Juan Maciel,1
 C,1,89,77,Juan Maciel,1
 C,1,78,79,Patricio Cullen,0
@@ -469,6 +469,7 @@ C,1,90,91,Patricio Cullen,0
 C,1,91,90,Patricio Cullen,1
 C,1,64,90,Antonia Godoy,1
 C,1,90,98,Antonia Godoy,1
+C,1,98,90,Antonia Godoy,0
 C,1,90,64,Antonia Godoy,0
 C,1,91,92,Patricio Cullen,0
 C,1,92,91,Patricio Cullen,1
@@ -717,15 +718,32 @@ C,1,159,109,Ricardo Aldao,0
 C,1,146,161,Alte Brown,1
 C,1,161,146,Alte Brown,1
 C,1,145,124,Regimiento 12,1
+C,1,124,145,Regimiento 12,0
 C,1,123,95,Regimiento 12,1
+C,1,95,123,Regimiento 12,0
 C,1,94,60,Regimiento 12,1
+C,1,60,94,Regimiento 12,0
 C,1,59,26,Regimiento 12,1
+C,1,26,59,Regimiento 12,0
 C,1,26,1,Regimiento 12,1
+C,1,1,26,Regimiento 12,0
 C,1,93,96,Javier de la rosa,1
+C,1,96,93,Javier de la rosa,0
 C,1,127,142,Defensa,1
+C,1,142,127,Defensa,0
 C,1,160,110,Pedro de vega,1
+C,1,110,160,Pedro de vega,0
 C,1,110,78,Pedro de vega,1
+C,1,78,110,Pedro de vega,0
 C,1,75,43,Pedro de vega,1
+C,1,43,75,Pedro de vega,0
 C,1,42,19,Pedro de vega,1
+C,1,19,42,Pedro de vega,0
 C,1,121,97,Echague,1
+C,1,97,121,Echague,0
 C,1,92,62,Echague,1
+C,1,62,92,Echague,0
+C,1,77,64,Juan Maciel,1
+C,1,64,77,Juan Maciel,0
+C,1,77,90,Juan Maciel,1
+C,1,90,77,Juan Maciel,0

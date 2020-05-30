@@ -74,6 +74,8 @@ public class VentanaPrincipal extends JFrame implements ActionListener, BuscarCa
     {
         super();
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setPreferredSize(new Dimension(1000, 500));
+        this.setTitle("Agente Buscador");
         this.setPreferredSize(new Dimension(683, 766));
         this.setBounds(683, 0, 0, 0);
         this.setTitle("Metro 2015");
