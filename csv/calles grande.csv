@@ -747,3 +747,7 @@ C,1,77,64,Juan Maciel,1
 C,1,64,77,Juan Maciel,0
 C,1,77,90,Juan Maciel,1
 C,1,90,77,Juan Maciel,0
+C,1,12,18,Dorrego,0
+C,1,18,12,Dorrego,1
+C,1,18,13,Angel Cassanello,1
+C,1,13,18,Angel Cassanello,0
