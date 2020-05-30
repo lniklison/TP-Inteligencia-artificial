@@ -39,6 +39,7 @@ import ar.edu.utn.frsf.isi.died2015.metro.modelo.excepciones.GrafoArcoInexistent
 import ar.edu.utn.frsf.isi.died2015.metro.modelo.excepciones.GrafoVerticeInexistenteException;
 import ar.edu.utn.frsf.isi.died2015.metro.vistas.componentes.ShapeStroke;
 import ar.edu.utn.frsf.isi.died2015.metro.vistas.listeners.PanelGrafoListener;
+import java.awt.event.MouseWheelEvent;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
@@ -69,6 +70,8 @@ public class PanelGrafo extends JPanel implements MouseListener, MouseMotionList
     // Almacenamos la traslación del grafo cuando se hace "pan".
     private int traslacionX;
     private int traslacionY;
+    
+    private double scale;
 
     // Tamaños relativos a los dibujos del grafo.
     private float anchoLineaArco;
@@ -113,6 +116,8 @@ public class PanelGrafo extends JPanel implements MouseListener, MouseMotionList
 
         this.traslacionX = 0;
         this.traslacionY = 0;
+        
+        this.scale = 1.0;
 
         this.anchoLineaArco = 8.0f;
         this.diametroVertice = 20.0f;
@@ -240,7 +245,7 @@ public class PanelGrafo extends JPanel implements MouseListener, MouseMotionList
     {
         Vertice inicio = a.getInicio();
         Vertice fin = a.getFin();
-
+        
         g.setStroke(new BasicStroke(this.anchoLineaArco));
 
         // Dibujamos la línea
@@ -345,6 +350,8 @@ public class PanelGrafo extends JPanel implements MouseListener, MouseMotionList
 
         Stroke defaultStroke = g.getStroke();
         Vertice inicio, fin;
+        
+        g.scale(scale, scale);
 
         // Dibujamos el arco seleccionado con el mouse.
         if (this.arcoSeleccionado != null)
@@ -396,10 +403,12 @@ public class PanelGrafo extends JPanel implements MouseListener, MouseMotionList
         g.setFont(f);
         for (Vertice v : this.grafo.getVertices())
             dibujarVertice(g, v);
-        
+                
+        cambiarEstadoActual();
         dibujarEnfermos(g);        
         dibujarAgente(g);
-        
+        mostrarInfo(g);
+                
         g.setFont(fd);
     }
 
@@ -426,7 +435,7 @@ public class PanelGrafo extends JPanel implements MouseListener, MouseMotionList
                         -this.traslacionY, Color.WHITE));
         ((Graphics2D) g).fill(new Rectangle2D.Double(-this.traslacionX, -this.traslacionY,
                         getWidth(), getHeight()));
-
+        
         // Dibujamos el grafo.
         dibujarGrafo((Graphics2D) g);
     }
@@ -626,6 +635,13 @@ public class PanelGrafo extends JPanel implements MouseListener, MouseMotionList
             this.puntoInicioPaneo.translate(0, -(int) VELOCIDAD_SCROLL);
             this.puntoFinalPaneo = null;
         }
+        if (e.getKeyCode() == KeyEvent.VK_PLUS){
+            this.scale += 0.1;
+            System.out.println("Scale: "+scale);
+        }
+        if (e.getKeyCode() == KeyEvent.VK_MINUS){
+            if(scale>0.2)this.scale -= 0.1;
+        }
     }
 
     @Override
@@ -665,35 +681,11 @@ public class PanelGrafo extends JPanel implements MouseListener, MouseMotionList
 
     /* ***************************************************************************** */
 
-    public void dibujarAgente(Integer position) {
-        if(position!=null){
-
-            this.grafo.getVertices().forEach((v) -> {
-                if(v.getId()==position){
-                    agente.setDesp(v.getDespX(), v.getDespY());
-                    agente.setPos(v.getPosX(), v.getPosY());
-                    agente.setId(4000);
-                    
-//                    try {
-//                        TimeUnit.SECONDS.sleep(1);
-//                    } catch (InterruptedException ex) {
-//                        Logger.getLogger(PanelGrafo.class.getName()).log(Level.SEVERE, null, ex);
-//                    }
-                    
-//                    System.out.println("AGENTE - "+agente.toString());
-                    return;
-                }
-            });
-//            System.out.println("AGENTE - DIBUJAR "+agente.toString());
-//            System.out.println("PANEL GRAFO:Agente en posicion: "+position);
-        }
-    }
-
-    private void dibujarAgente(Graphics2D g) {
-//        System.out.println("AGENTE - DIBUJANDO "+agente.toString());
+    private void cambiarEstadoActual(){
+        //REMOVEMOS DE A UNO LOS ESTADOS DEL ARRAY PARA VISUALIZARLOS CADA UN SEGUNDO
         if(estados!= null && estados.size()>0){
             AC19EnvironmentState e = estados.get(0);
-            estados.remove(0);
+//            estados.remove(0);
             this.dibujarAgente(e.getPosition());
             this.dibujarEnfermos(e.getPosicionesEnfermos());
             
@@ -720,11 +712,25 @@ public class PanelGrafo extends JPanel implements MouseListener, MouseMotionList
                 Logger.getLogger(PanelGrafo.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-        
+    }
+    public void dibujarAgente(Integer position) {
+        if(position!=null){
+            this.grafo.getVertices().forEach((v) -> {
+                if(v.getId()==position){
+                    agente.setDesp(v.getDespX(), v.getDespY());
+                    agente.setPos(v.getPosX(), v.getPosY());
+                    agente.setId(4000);
+                    return;
+                }
+            });
+        }
+    }
+
+    private void dibujarAgente(Graphics2D g) {
         int centerX = (int) (agente.getPosX() + agente.getDespX());
         int centerY = (int) (agente.getPosY() + agente.getDespY());
         int radius = 10;
-                
+        
         Shape theCircle = new Ellipse2D.Double(
                 centerX - radius, centerY - radius, 2.0 * radius, 2.0 * radius);
         g.setColor(new Color(0, 0, 200));
@@ -740,9 +746,7 @@ public class PanelGrafo extends JPanel implements MouseListener, MouseMotionList
     
     public void dibujarEnfermos(ArrayList<Integer> posicionesEnfermos) {
         if(posicionesEnfermos!=null){
-            
             this.enfermos = new ArrayList<Vertice>();
-//            int i = 0;
             for(Integer enf : posicionesEnfermos){
                 Vertice enfermo = new Vertice(enf, true, "ENFERMO");
                 this.grafo.getVertices().forEach((v) -> {
@@ -752,7 +756,6 @@ public class PanelGrafo extends JPanel implements MouseListener, MouseMotionList
                         enfermos.add(enfermo);
                     }
                 });
-//                i++;
             }
         }
     }
@@ -786,5 +789,13 @@ public class PanelGrafo extends JPanel implements MouseListener, MouseMotionList
         }
     }
     
-
+    private void mostrarInfo(Graphics2D g){
+        if(estados!= null && estados.size()>0){
+            AC19EnvironmentState e = estados.get(0);
+            estados.remove(0);
+            g.scale(1/scale, 1/scale);
+            g.drawString("ENFERMOS: "+e.getPosicionesEnfermos().size(), 10-traslacionX,20-traslacionY);
+            g.drawString("KM RECORRIDOS: "+e.getMetrosRecorridos()/1000, 10-traslacionX,35-traslacionY);
+        }
+    }
 }

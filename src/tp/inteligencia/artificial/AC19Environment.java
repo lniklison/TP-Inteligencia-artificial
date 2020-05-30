@@ -31,6 +31,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -61,7 +62,7 @@ public class AC19Environment extends Environment {
         this.posicionesEnfermos = new ArrayList<Integer>();
         this.cuadrasCortadas = new HashMap<Integer,Integer>();
         this.cuadrasCortadas = new HashMap<Integer,Integer>();
-        
+        Random rn = new Random();
         for(Nodo n : nodos){
             ArrayList<AC19NodoAlcanzable> successors = new ArrayList<AC19NodoAlcanzable>();
             ArrayList<Integer> po = new ArrayList<Integer>();
@@ -72,7 +73,7 @@ public class AC19Environment extends Environment {
             for(Cuadra c : n.getCuadras()){
                 int nodo = Integer.valueOf(c.getDestino().getId());
                 if(nodo!=origen && c.isHabilitado()){
-                    successors.add(new AC19NodoAlcanzable(nodo, "CalleHacia"+nodo));
+                    successors.add(new AC19NodoAlcanzable(nodo, "CalleHacia"+nodo, c));
                     po.add(nodo);
                     
                     System.out.printf(c.getDestino().getId()+", ");
@@ -84,10 +85,10 @@ public class AC19Environment extends Environment {
 //            cuadrasCortadas.put(2, new AC19NodoAlcanzable(11, "CalleHacia"+15));
             cuadrasCortadas.put(11,15);
             
-            if(Integer.parseInt(n.getId())!=1 && posicionesEnfermos.size()<5){
+            if(Integer.parseInt(n.getId())!=1 && posicionesEnfermos.size()<2){
                 
-                Double num = (Math.random()*11);
-                if(num%5<1 && !posicionesEnfermos.contains(Integer.parseInt(n.getId()))){
+                Double num = (rn.nextDouble()*100);
+                if(num>90 && !posicionesEnfermos.contains(Integer.parseInt(n.getId()))){
                     posicionesEnfermos.add(Integer.parseInt(n.getId()));
                 }
             }

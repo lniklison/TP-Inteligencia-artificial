@@ -84,6 +84,8 @@ public class AndroideC19State extends SearchBasedAgentState {
     private HashMap<Integer, Collection<AC19NodoAlcanzable>> knownMap;
     private HashMap<Integer, Collection<AC19NodoAlcanzable>> knownMap2;
     private ArrayList<Integer> visitedPositions;
+    private double metrosRecorridos;
+    private double metrosUltimaCuadra;
 
     public AndroideC19State() {
         this.initState();
@@ -109,6 +111,8 @@ public class AndroideC19State extends SearchBasedAgentState {
         newState.setSuccessors((HashMap<Integer, Collection<AC19NodoAlcanzable>>) knownMap.clone());
         newState.setPosicionesEnfermos(positions);
         newState.setCuadrasCortadas((HashMap<Integer,Integer>) cuadrasCortadas.clone());
+        newState.setMetros(metrosRecorridos);
+        newState.setMetrosUltimaCuadra(metrosUltimaCuadra);
         return newState;
     }
 
@@ -130,6 +134,9 @@ public class AndroideC19State extends SearchBasedAgentState {
         positions = positions2;
         knownMap = new HashMap<Integer, Collection<AC19NodoAlcanzable>>();
         knownMap = knownMap2;
+        
+        metrosRecorridos = 0;
+        metrosUltimaCuadra = 0;
         
 //        for (int i = 0; i < positions.size(); i++) {
 //            ArrayList<AC19NodoAlcanzable> successors = new ArrayList<AC19NodoAlcanzable>();
@@ -162,8 +169,9 @@ public class AndroideC19State extends SearchBasedAgentState {
 
     @Override
     public String toString() {
-        String str = "Posicion: " + position;
-
+        String str = "Posicion:" + position 
+                +"\n Enfermos:"+posicionesEnfermos.size()
+                +"\n KM:"+metrosRecorridos/1000;
         return str;
 
     }
@@ -184,7 +192,24 @@ public class AndroideC19State extends SearchBasedAgentState {
     public void setPosition(Integer position) {
         this.position = position;
     }
-
+    
+    public void sumarMetros(double m){
+        this.metrosRecorridos += m;
+        this.metrosUltimaCuadra = m;
+    }
+    public void setMetros(double m){
+        this.metrosRecorridos = m;
+    }
+    public double getMetrosRecorridos(){
+        return this.metrosRecorridos;
+    }
+    public void setMetrosUltimaCuadra(double m){
+        this.metrosUltimaCuadra = m;
+    }
+    public double getMetrosUltimaCuadra(){
+        return this.metrosUltimaCuadra;
+    }
+    
     public Collection<AC19NodoAlcanzable> getSuccessors() {
         
         if(cuadrasCortadas.containsKey(position)){
@@ -241,6 +266,5 @@ public class AndroideC19State extends SearchBasedAgentState {
     public void setCuadrasCortadas(HashMap<Integer, Integer> cuadrasCortadas) {
         this.cuadrasCortadas = cuadrasCortadas;
     }
-    
     
 }

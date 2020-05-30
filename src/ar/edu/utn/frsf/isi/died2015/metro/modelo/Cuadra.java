@@ -80,6 +80,13 @@ public class Cuadra
     {
         this.tiempo = tiempo;
     }
+    
+    public double getMetros(){
+        double dX = this.destino.getPosX() - this.origen.getPosX();
+        double dY = this.destino.getPosY() - this.origen.getPosY();
+        double r = Math.sqrt((Math.pow(dX, 2) + Math.pow(dY, 2)));
+        return r;
+    }
 
     @Override
     public String toString()
@@ -87,7 +94,7 @@ public class Cuadra
         
         return this.origen.toString() + " => "+ this.destino.toString();
     }
-    
+        
     @Override
     public boolean equals(Object obj)
     {

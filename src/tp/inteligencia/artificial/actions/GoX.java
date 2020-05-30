@@ -52,15 +52,18 @@ public class GoX extends SearchAction {
 //        System.out.println("Sucesores de "+this.nodo+" "+successors.toString());
         if (successors != null) {
             int index = -1;
+            double metros = 0;
             for (Iterator<AC19NodoAlcanzable> it = successors.iterator(); it.hasNext();) {
                 AC19NodoAlcanzable n = it.next();
                 if(n.getNodo()==this.nodo){
                     index = 1;
+                    metros = n.getCuadra().getMetros();
                 }
             }
 //            int index = successors.indexOf(this.nodo);
             if (index >= 0) {
                 agentState.setPosition(this.nodo);
+                agentState.sumarMetros(metros);
                 agentState.removePositionEnfermo(this.nodo);
                 return agentState;
             }
@@ -78,7 +81,7 @@ public class GoX extends SearchAction {
         AC19EnvironmentState res = (AC19EnvironmentState) est;
         AndroideC19State as = (AndroideC19State) ast;
                 
-        res.removePositionEnfermo(this.nodo, as.getVisitedPositions());
+        res.actualizarAccionesAgente(this.nodo, as.getVisitedPositions(), as.getMetrosRecorridos());
         
         this.execute((SearchBasedAgentState) ast);
         

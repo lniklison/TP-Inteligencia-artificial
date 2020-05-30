@@ -25,8 +25,10 @@ import frsf.cidisi.faia.agent.search.SearchAction;
 import frsf.cidisi.faia.agent.search.SearchBasedAgent;
 import frsf.cidisi.faia.agent.Action;
 import frsf.cidisi.faia.agent.Perception;
+import frsf.cidisi.faia.solver.search.AStarSearch;
 import frsf.cidisi.faia.solver.search.BreathFirstSearch;
 import frsf.cidisi.faia.solver.search.DepthFirstSearch;
+import frsf.cidisi.faia.solver.search.IEstimatedCostFunction;
 import frsf.cidisi.faia.solver.search.IStepCostFunction;
 import frsf.cidisi.faia.solver.search.Search;
 import frsf.cidisi.faia.solver.search.UniformCostSearch;
@@ -66,8 +68,13 @@ public class AndroideC19 extends SearchBasedAgent {
         // Breath first strategy
 //        BreathFirstSearch searchStrategy = new BreathFirstSearch();
 //        DepthFirstSearch searchStrategy = new DepthFirstSearch();
-        IStepCostFunction costFunction = new CostFunction();
-        UniformCostSearch searchStrategy = new UniformCostSearch(costFunction);
+
+//        IStepCostFunction costFunction = new CostFunction();
+//        UniformCostSearch searchStrategy = new UniformCostSearch(costFunction);
+
+        IStepCostFunction cost = new CostFunction();
+        IEstimatedCostFunction heuristic = new Heuristic();
+        AStarSearch searchStrategy = new AStarSearch(cost, heuristic);
 
         Search searchSolver = new Search(searchStrategy);
 

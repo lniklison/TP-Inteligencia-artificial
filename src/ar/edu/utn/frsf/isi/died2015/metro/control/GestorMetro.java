@@ -211,7 +211,7 @@ public class GestorMetro
                         nodo.setNombre(linea[2]);
 //                        e.setTiempoTrasbordo(Integer.valueOf(linea[3]));
                         nodo.setAccesible(true);
-                        
+                        nodo.setPos(Double.valueOf(linea[3])*100, Double.valueOf(linea[4])*100);
 //                        System.out.println("Nodo creado: "+nodo.toString());
 
 //                        int cantCajeros = Integer.valueOf(linea[5]);
@@ -229,8 +229,8 @@ public class GestorMetro
 
                         // Creamos el vértice del grafo que modela a la estación.
                         Vertice v = new Vertice(Integer.valueOf(nodo.getId()), true, nodo.getNombre());
-                        v.setPosX(Double.valueOf(linea[3])*100);
-                        v.setPosY(Double.valueOf(linea[4])*100);
+                        v.setPosX(nodo.getPosX());
+                        v.setPosY(nodo.getPosY());
                         idVertice += 1;
                         // Mapeamos la estación con el vértice
                         this.verticeANodos.put(v, nodo);
@@ -445,77 +445,6 @@ public class GestorMetro
         return password.equals("/*admin*/");
     }
 
-    /**
-     * Retorna un {@link java.util.Vector Vector} las
-     * {@link ar.edu.utn.frsf.isi.died2015.metro.modelo.Nodo estaciones} que deben
-     * inspeccionarse.
-     */
-//    public Vector<Nodo> getEstacionesAInspeccionar()
-//    {
-//        Vector<Nodo> estaciones = new Vector<Nodo>();
-//
-//        // Almacenamos las estaciones en una estructura ordenable, primero con cantidad de reclamos
-//        // y luego por fecha (más antígua primero).
-//        PriorityQueue<Nodo> pq = new PriorityQueue<Nodo>(new Comparator<Nodo>()
-//        {
-//            @Override
-//            public int compare(Nodo e1, Nodo e2)
-//            {
-////                int diff = e2.getReclamos().size() - e1.getReclamos().size();
-////                if (diff == 0) // Igual cantidad de reclamos
-////                {
-////                    Reclamo r1 = e1.getReclamos().peek();
-////                    Reclamo r2 = e2.getReclamos().peek();
-////
-////                    if (r1 == null) return 0; // Estaciones sin reclamos.
-////                    return r1.getFecha().compareTo(r2.getFecha());
-////                }
-////                return diff;
-//            }
-//        });
-//
-//        for (Nodo e : this.nodos.values())
-//            if(e.getReclamos().size() != 0)
-//                pq.add(e);
-//
-//        for (int i = 0; i < 3 && !pq.isEmpty(); ++i)
-//        {
-//            Nodo e = pq.poll();
-//            estaciones.add(e);
-//        }
-//
-//        return estaciones;
-//    }
-
-    /**
-     * Genera las inspecciones a cada una de las estaciones pasadas como argumento. A cada una de
-     * las estaciones se le asignará una inspección con un días consecutivos a partir del día
-     * corriente, es decir, a la primera estación se le asignará una inspección con el día hoy, a la
-     * segunda (de existir) con el día de mañana y así sucesivamente. Este método no verifica que
-     * las estaciones pasadas como argumento sean las correctas por lo que se recomienda obtenerlas
-     * primero con el método
-     * {@link ar.edu.utn.frsf.isi.died2015.metro.control.GestorMetro#getEstacionesAInspeccionar()
-     * GestorMetro#getEstacionesAInspeccionar()}
-     * 
-     * @param estaciones
-     *            {@link java.util.Vector Vector} de
-     *            {@link ar.edu.utn.frsf.isi.died2015.metro.modelo.Nodo Estacion} con las
-     *            estaciones a inspeccionar.
-     * @see {@link ar.edu.utn.frsf.isi.died2015.metro.control.GestorMetro#getEstacionesAInspeccionar()}
-     */
-//    public void generarInspecciones(Vector<Nodo> estaciones)
-//    {
-//        Calendar c  = Calendar.getInstance(); // calendario con el día de hoy.
-//        
-//        for(Nodo e : estaciones)
-//        {
-//            Inspeccion i = new Inspeccion();
-//            i.setFecha(c.getTime());
-//            e.addInspeccion(i);
-//            e.delReclamos();
-//            c.add(Calendar.DATE, 1);
-//        }
-//    }
 
     
     /**

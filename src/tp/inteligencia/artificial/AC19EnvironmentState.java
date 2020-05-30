@@ -24,6 +24,7 @@ import java.util.HashMap;
 
 import frsf.cidisi.faia.state.EnvironmentState;
 import java.util.Map;
+import java.util.Random;
 import tp.inteligencia.artificial.model.AC19NodoAlcanzable;
 
     public class AC19EnvironmentState extends EnvironmentState {
@@ -55,7 +56,8 @@ import tp.inteligencia.artificial.model.AC19NodoAlcanzable;
     private HashMap<Integer, Collection<AC19NodoAlcanzable>> otroMap2;
     
     private ArrayList<AC19EnvironmentState> estados = new ArrayList<>();
-
+    
+    private double metrosRecorridos;
 
     private ArrayList<ArrayList<Integer>> positions = new ArrayList<ArrayList<Integer>>();
     private ArrayList<ArrayList<Integer>> positions2= new ArrayList<ArrayList<Integer>>();
@@ -110,46 +112,12 @@ import tp.inteligencia.artificial.model.AC19NodoAlcanzable;
     public Object clone() {
         AC19EnvironmentState newState = new AC19EnvironmentState();
         newState.setMap((HashMap<Integer, Collection<AC19NodoAlcanzable>>)otroMap.clone());
-        //movi esto que estaba abajo a acá-----------------------------------
-        for(int i=0; i< posicionesEnfermos.size(); i++){
-            Double num = (Math.random()*11);
-            if(num%9<1){
-                Integer nuevaPosicion = this.posicionCercana(posicionesEnfermos.get(i));
-                posicionesEnfermos.set(i,nuevaPosicion);
-            }
-        }
-        
-        Integer tamanioMapa = otroMap.size();
-        
-        Double num2 = (Math.random() *100);
-        Double num3 = (Math.random()*tamanioMapa);
-        int nuevaPosicion = num3.intValue();
-        if(num2%70<1 && !posicionesEnfermos.contains(nuevaPosicion) && nuevaPosicion!=1){
-            posicionesEnfermos.add(nuevaPosicion);
-        }
-        //--------------------------------------------------------------
-        //aqui se agregan las calles cortadas
-        Double num4 = (Math.random() *100);
-        Double num5 = (Math.random()*tamanioMapa);
-        int nuevaPosicionCuadraCortada = num5.intValue();
-        if(num4%90<1 && !cuadrasCortadas.containsKey(nuevaPosicionCuadraCortada) && cuadrasCortadas.size()<3){
-            cuadrasCortadas.put(nuevaPosicionCuadraCortada, calleCercana(nuevaPosicionCuadraCortada));
-        }
-        
-        //aqui se quitan las calles cortadas     
-//        Double num6 = (Math.random() *100);
-//        Double num7 = (Math.random()*tamanioMapa);
-//        int removerPosicionCuadraCortada = num7.intValue();       
-//        
-//        cuadrasCortadas.remove(removerPosicionCuadraCortada);
-
-        
-        
-        //--------------------------------------------------------------
         newState.setPosicionesEnfermos((ArrayList<Integer>)posicionesEnfermos.clone());
         newState.setCuadrasCortadas((HashMap<Integer,Integer>) cuadrasCortadas.clone());
+        newState.setMetrosRecorridos(metrosRecorridos);
         System.out.printf("CLONADO AMBIENTE STATE: [");
         System.out.printf("Posicion: "+position);
+        System.out.printf("Metros recorridos: "+metrosRecorridos);
         System.out.printf("Posiciones: "+posicionesEnfermos.toString()+"]");
         newState.setAgentPosition(position);        
         return newState;
@@ -161,7 +129,7 @@ import tp.inteligencia.artificial.model.AC19NodoAlcanzable;
          * In this matrix the first element of each row represents a position
          * in the map and the seccessors of that position.
          */
-        
+        metrosRecorridos = 0;
         positions = positions2;
         
         otroMap = otroMap2;
@@ -211,31 +179,56 @@ import tp.inteligencia.artificial.model.AC19NodoAlcanzable;
         this.posicionesEnfermos = posiciones;
     }
     
-    public void removePositionEnfermo(Integer position, ArrayList<Integer> posicionesVisitadas){
+    public void actualizarAccionesAgente(Integer position, ArrayList<Integer> posicionesVisitadas, double metrosRecorridos){
+        //SETEAR POSICION AGENTE
         this.setAgentPosition(position);
-            System.out.println("AMBIENTE STATE - Posiciones enfermos "+posicionesEnfermos.toString());
+//            System.out.println("AMBIENTE STATE - Posiciones enfermos "+posicionesEnfermos.toString());
+        
+        //SETEAR METROS RECORRIDOS POR EL AGENTE
+        this.setMetrosRecorridos(metrosRecorridos);
+        
+        //MULTAR ENFERMO SI EL AGENTE LLEGÓ A SU POSICION 
         if(this.posicionesEnfermos.contains(position)){
             System.out.println("AMBIENTE STATE - REMOVIENDO "+position);
             this.posicionesEnfermos.remove(position);
         }
+        Random rn = new Random();
+        //MOVER ALEATORIAMENTE UN ENFERMO
+        for(int i=0; i< posicionesEnfermos.size(); i++){
+            Double num = (rn.nextDouble()*100);
+            if(num>90){
+                Integer nuevaPosicion = this.posicionCercana(posicionesEnfermos.get(i));
+                posicionesEnfermos.set(i,nuevaPosicion);
+            }
+        }
+        //GENERAR ALEATORIAMENTE NUEVOS ENFERMOS
+        Integer tamanioMapa = otroMap.size();
         
-//        for(int i=0; i< posicionesEnfermos.size(); i++){
-//            Double num = (Math.random()*11);
-//            if(num%9<1){
-//                Integer nuevaPosicion = this.posicionCercana(posicionesEnfermos.get(i));
-//                if(!posicionesVisitadas.contains(nuevaPosicion)){
-//                    posicionesEnfermos.set(i,nuevaPosicion);
-//                }
-//                
-//            }
-//        }
+        Double num2 = (rn.nextDouble() *100);
+        Double num3 = (rn.nextDouble() *tamanioMapa);
+        int nuevaPosicion = num3.intValue();
+        if(num2>90 && !posicionesEnfermos.contains(nuevaPosicion) && nuevaPosicion!=1 && posicionesEnfermos.size()<2){
+            posicionesEnfermos.add(nuevaPosicion);
+        }
+        
+        //GENERAR ALEATORIAMENTE CORTES DE CALLES
+        Double num4 = (rn.nextDouble() *100);
+        Double num5 = (rn.nextDouble() *tamanioMapa);
+        int nuevaPosicionCuadraCortada = num5.intValue();
+        if(num4>90 && !cuadrasCortadas.containsKey(nuevaPosicionCuadraCortada) && cuadrasCortadas.size()<3){
+            cuadrasCortadas.put(nuevaPosicionCuadraCortada, calleCercana(nuevaPosicionCuadraCortada));
+        }
+        
+        //aqui se quitan las calles cortadas     
+//        Double num6 = (Math.random() *100);
+//        Double num7 = (Math.random()*tamanioMapa);
+//        int removerPosicionCuadraCortada = num7.intValue();       
 //        
-//        Double num2 = (Math.random() *100);
-//        Double num3 = (Math.random()*otroMap.size());
-//        int nuevaPosicion = num3.intValue();
-//        if(num2%70<1 && !posicionesEnfermos.contains(nuevaPosicion) && nuevaPosicion!=1 && !posicionesVisitadas.contains(nuevaPosicion)){
-//            posicionesEnfermos.add(nuevaPosicion);
-//        }
+//        cuadrasCortadas.remove(removerPosicionCuadraCortada);
+
+        
+        
+        //--------------------------------------------------------------
     }
 
     public ArrayList<ArrayList<Integer>> getPositions() {
@@ -258,9 +251,9 @@ import tp.inteligencia.artificial.model.AC19NodoAlcanzable;
     private Integer posicionCercana(Integer posicion){
         
         Integer cantidadDeAdyacentes = otroMap.get(posicion).size();
-        
+        Random rn = new Random();
         Collection<AC19NodoAlcanzable> coleccion = otroMap.get(posicion);
-        Double indice = (Math.random()*cantidadDeAdyacentes);
+        Double indice = (rn.nextDouble() *cantidadDeAdyacentes);
         int i =0;
         for(AC19NodoAlcanzable nodo : coleccion){
             if(i==indice.intValue()){
@@ -277,9 +270,9 @@ import tp.inteligencia.artificial.model.AC19NodoAlcanzable;
     private Integer calleCercana(Integer posicion){
         
         Integer cantidadDeAdyacentes = otroMap.get(posicion).size();
-        
+        Random rn = new Random();
         Collection<AC19NodoAlcanzable> coleccion = otroMap.get(posicion);
-        Double indice = (Math.random()*cantidadDeAdyacentes);
+        Double indice = (rn.nextDouble()*cantidadDeAdyacentes);
         int i =0;
         for(AC19NodoAlcanzable nodo : coleccion){
             if(i==indice.intValue()){
@@ -309,4 +302,11 @@ import tp.inteligencia.artificial.model.AC19NodoAlcanzable;
         this.cuadrasCortadas = cuadrasCortadas;
     }
     
+    public void setMetrosRecorridos(double m){
+        this.metrosRecorridos = m;
+    }
+    
+    public double getMetrosRecorridos(){
+        return this.metrosRecorridos;
+    }
 }

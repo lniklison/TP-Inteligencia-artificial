@@ -17,20 +17,22 @@
  */
 package tp.inteligencia.artificial;
 
-import frsf.cidisi.faia.solver.search.IStepCostFunction;
+import frsf.cidisi.faia.solver.search.IEstimatedCostFunction;
 import frsf.cidisi.faia.solver.search.NTree;
 
 /**
- * This class can be used in any search strategy like
- * Uniform Cost.
+ * This class allows to define a function to be used by any
+ * informed search strategy, like A Star or Greedy.
  */
-public class CostFunction implements IStepCostFunction {
+public class Heuristic implements IEstimatedCostFunction {
 
     /**
-     * This method calculates the cost of the given NTree node.
+     * It returns the estimated cost to reach the goal from a NTree node.
      */
     @Override
-    public double calculateCost(NTree node) {
-        return ((AndroideC19State) node.getAgentState()).getMetrosUltimaCuadra();
+    public double getEstimatedCost(NTree node) {
+        AndroideC19State agentState = (AndroideC19State) node.getAgentState();
+
+        return (agentState.getPosicionesEnfermos().size());
     }
 }

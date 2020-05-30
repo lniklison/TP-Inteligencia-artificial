@@ -5,6 +5,7 @@
  */
 package tp.inteligencia.artificial.model;
 
+import ar.edu.utn.frsf.isi.died2015.metro.modelo.Cuadra;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -16,21 +17,13 @@ import java.util.Collection;
 public class AC19NodoAlcanzable {
     private Integer nodo;
     private String calle;
-    private Double x;
-    private Double y;
+    private Cuadra cuadra;
 
-    public AC19NodoAlcanzable(Integer nodo, String calle) {
+    public AC19NodoAlcanzable(Integer nodo, String calle, Cuadra c) {
         this.nodo = nodo;
         this.calle = calle;
+        this.cuadra = c;
         
-        generarPosicionAleatoria();
-    }
-
-    private void generarPosicionAleatoria() {
-        int g = (int) ((Math.random()*1000)%360);
-        this.x = Math.cos(g);
-        this.y = Math.sin(g);
-//        System.out.println("Grados: " + g + "\tPosX: " + this.x + "\tPosY: " + this.y);
     }
 
     public Integer getNodo() {
@@ -48,20 +41,9 @@ public class AC19NodoAlcanzable {
     public void setCalle(String calle) {
         this.calle = calle;
     }
-
-    public Double getX() {
-        return x;
+    
+    public Cuadra getCuadra(){
+        return this.cuadra;
     }
 
-    public void setX(Double x) {
-        this.x = x;
-    }
-
-    public Double getY() {
-        return y;
-    }
-
-    public void setY(Double y) {
-        this.y = y;
-    }
 }
