@@ -190,7 +190,7 @@ C,1,14,13,Gral Paz,1
 C,1,14,15,Gral Paz,1
 C,1,15,14,Gral Paz,1
 C,1,15,16,Gral Paz,1
-C,1,16,15,Gral Paz,1
+C,1,16,15,Pedro de vega,1
 C,1,16,17,Dorrego,1
 C,1,17,16,Dorrego,0
 C,1,19,16,Pedro de vega,1
@@ -199,8 +199,8 @@ C,1,17,18,Dorrego,1
 C,1,18,17,Dorrego,0
 C,1,14,17,Ricardo Aldao,1
 C,1,17,14,Ricardo Aldao,1
-C,1,18,21,Dorrego,0
-C,1,21,18,Dorrego,1
+C,1,18,21,Angel Cassanello,0
+C,1,21,18,Angel Cassanello,1
 C,1,19,20,Velez Sarfield,0
 C,1,20,19,Velez Sarfield,1
 C,1,20,21,Velez Sarfield,0
@@ -217,80 +217,78 @@ C,1,12,22,J.P. Lopez,1
 C,1,22,12,J.P. Lopez,1
 C,1,23,24,Velez Sarfield,0
 C,1,24,23,Velez Sarfield,1
-C,1,37,23,Tacuari,1
-C,1,23,37,Tacuari,0
+C,1,37,23,Hernandarias,1
+C,1,23,37,Hernandarias,0
 C,1,24,25,Velez Sarfield,0
 C,1,25,24,Velez Sarfield,1
-C,1,10,24,Gral Paz,1
-C,1,24,10,Gral Paz,1
-C,1,35,25,Tacuari,1
-C,1,25,35,Tacuari,0
+C,1,10,24,Juan Castelli,1
+C,1,24,10,Juan Castelli,1
+C,1,35,25,Estanislao Zeballos,1
+C,1,25,35,Estanislao Zeballos,0
 C,1,26,27,Tacuari,0
 C,1,27,26,Tacuari,1
 C,1,27,28,Tacuari,0
 C,1,28,27,Tacuari,1
-C,1,2,27,Gral Paz,1
-C,1,27,2,Gral Paz,1
+C,1,2,27,Javier de la rosa,1
+C,1,27,2,Javier de la rosa,1
 C,1,28,29,Tacuari,0
 C,1,29,28,Tacuari,1
-C,1,57,28,Piedras,1
-C,1,28,57,Piedras,0
+C,1,57,28,Padre Genesio,1
+C,1,28,57,Padre Genesio,0
 C,1,29,30,Tacuari,0
 C,1,30,29,Tacuari,1
-C,1,56,29,Piedras,1
-C,1,29,56,Piedras,0
+C,1,56,29,Pje de andrea,1
+C,1,29,56,Pje de andrea,0
 C,1,30,31,Tacuari,0
 C,1,31,30,Tacuari,1
-C,1,4,30,Gral Paz,1
-C,1,30,4,Gral Paz,1
+C,1,4,30,Cardenal Fasolino,1
+C,1,30,4,Cardenal Fasolino,1
 C,1,31,32,Tacuari,0
 C,1,32,31,Tacuari,1
-C,1,54,31,Piedras,1
-C,1,31,54,Piedras,0
+C,1,54,31,Alberti,1
+C,1,31,54,Alberti,0
 C,1,32,33,Tacuari,0
 C,1,33,32,Tacuari,1
-C,1,6,32,Gral Paz,1
-C,1,32,6,Gral Paz,1
+C,1,6,32,Obispo Principe,1
+C,1,32,6,Obispo Principe,1
 C,1,33,34,Tacuari,0
 C,1,34,33,Tacuari,1
-C,1,52,33,Piedras,1
-C,1,33,52,Piedras,0
+C,1,52,33,Espora,1
+C,1,33,52,Espora,0
 C,1,34,35,Tacuari,0
 C,1,35,34,Tacuari,1
-C,1,8,34,Gral Paz,1
-C,1,34,8,Gral Paz,1
+C,1,8,34,Obispo Boneo,1
+C,1,34,8,Obispo Boneo,1
 C,1,35,36,Tacuari,0
 C,1,36,35,Tacuari,1
 C,1,50,35,Estanislao Zeballos,1
 C,1,35,50,Estanislao Zeballos,0
 C,1,36,37,Tacuari,0
 C,1,37,36,Tacuari,1
-C,1,24,36,Velez Sarfield,1
-C,1,36,24,Velez Sarfield,0
+C,1,24,36,Juan Castelli,1
+C,1,36,24,Juan Castelli,0
 C,1,37,38,Tacuari,0
 C,1,38,37,Tacuari,1
-C,1,48,37,Piedras,1
-C,1,37,48,Piedras,0
+C,1,48,37,Hernandarias,1
+C,1,37,48,Hernandarias,0
 C,1,38,39,Tacuari,0
 C,1,39,38,Tacuari,1
-C,1,47,38,Piedras,1
-C,1,38,47,Piedras,0
+C,1,47,38,Pje Pujato,1
+C,1,38,47,Pje Pujato,1
 C,1,39,40,Tacuari,0
 C,1,40,39,Tacuari,1
-C,1,22,39,Velez Sarfield,1
-C,1,39,22,Velez Sarfield,0
+C,1,22,39,J.P. Lopez,1
+C,1,39,22,J.P. Lopez,0
 C,1,40,41,Tacuari,0
 C,1,41,40,Tacuari,1
-C,1,45,40,Piedras,1
-C,1,40,45,Piedras,0
+C,1,45,40,Angel Cassanello,1
+C,1,40,45,Angel Cassanello,0
 C,1,41,42,Tacuari,0
 C,1,42,41,Tacuari,1
 C,1,20,41,Ricardo Aldao,1
 C,1,41,20,Ricardo Aldao,0
-C,1,42,43,Tacuari,0
-C,1,43,42,Tacuari,1
-C,1,43,42,Piedras,1
-C,1,42,43,Piedras,0
+C,1,42,43,Pedro de vega,0
+C,1,43,42,Pedro de vega,1
 C,1,43,44,Piedras,0
 C,1,44,43,Piedras,1
 C,1,44,45,Piedras,0
@@ -299,58 +297,54 @@ C,1,41,44,Ricardo Aldao,1
 C,1,44,41,Ricardo Aldao,0
 C,1,45,46,Piedras,0
 C,1,46,45,Piedras,1
-C,1,73,45,Antonia Godoy,1
-C,1,45,73,Antonia Godoy,0
+C,1,73,45,Angel Cassanello,1
+C,1,45,73,Angel Cassanello,0
 C,1,46,47,Piedras,0
 C,1,47,46,Piedras,1
-C,1,39,46,Tacuari,1
-C,1,46,39,Tacuari,0
+C,1,39,46,J.P. Lopez,1
+C,1,46,39,J.P. Lopez,0
 C,1,47,48,Piedras,0
 C,1,48,47,Piedras,1
-C,1,38,47,Tacuari,1
-C,1,47,38,Tacuari,0
 C,1,48,49,Piedras,0
 C,1,49,48,Piedras,1
-C,1,70,48,Antonia Godoy,1
-C,1,48,70,Antonia Godoy,0
+C,1,70,48,Hernandarias,1
+C,1,48,70,Hernandarias,0
 C,1,49,50,Piedras,0
 C,1,50,49,Piedras,1
-C,1,36,49,Tacuari,1
-C,1,49,36,Tacuari,0
+C,1,36,49,Juan Castelli,1
+C,1,49,36,Juan Castelli,0
 C,1,50,51,Piedras,0
 C,1,51,50,Piedras,1
 C,1,68,50,Estanislao Zeballos,1
 C,1,50,68,Estanislao Zeballos,0
 C,1,51,52,Piedras,0
 C,1,52,51,Piedras,1
-C,1,34,51,Tacuari,1
-C,1,51,34,Tacuari,0
+C,1,34,51,Obispo Boneo,1
+C,1,51,34,Obispo Boneo,0
 C,1,52,53,Piedras,0
 C,1,53,52,Piedras,1
-C,1,66,52,Antonia Godoy,1
-C,1,52,66,Antonia Godoy,0
+C,1,66,52,Espora,1
+C,1,52,66,Espora,0
 C,1,53,54,Piedras,0
 C,1,54,53,Piedras,1
-C,1,32,53,Tacuari,1
-C,1,53,32,Tacuari,0
+C,1,32,53,Obispo Principe,1
+C,1,53,32,Obispo Principe,0
 C,1,54,55,Piedras,0
 C,1,55,54,Piedras,1
 C,1,55,56,Piedras,0
 C,1,56,55,Piedras,1
-C,1,30,55,Tacuari,1
-C,1,55,30,Tacuari,0
+C,1,30,55,Cardenal Fasolino,1
+C,1,55,30,Cardenal Fasolino,0
 C,1,56,57,Piedras,0
 C,1,57,56,Piedras,1
-C,1,29,56,Tacuari,1
-C,1,56,29,Tacuari,0
 C,1,57,58,Piedras,0
 C,1,58,57,Piedras,1
-C,1,62,57,Antonia Godoy,1
-C,1,57,62,Antonia Godoy,0
+C,1,62,57,Padre Genesio,1
+C,1,57,62,Padre Genesio,0
 C,1,58,59,Piedras,0
 C,1,59,58,Piedras,1
-C,1,27,58,Tacuari,1
-C,1,58,27,Tacuari,0
+C,1,27,58,Javier de la rosa,1
+C,1,58,27,Javier de la rosa,0
 C,1,59,60,Piedras,0
 C,1,60,59,Piedras,1
 C,1,60,59,Antonia Godoy,1
@@ -359,66 +353,66 @@ C,1,60,61,Antonia Godoy,0
 C,1,61,60,Antonia Godoy,1
 C,1,61,62,Antonia Godoy,0
 C,1,62,61,Antonia Godoy,1
-C,1,58,61,Piedras,1
-C,1,61,58,Piedras,0
+C,1,58,61,Javier de la rosa,1
+C,1,61,58,Javier de la rosa,0
 C,1,62,63,Antonia Godoy,0
 C,1,63,62,Antonia Godoy,1
 C,1,63,64,Antonia Godoy,0
 C,1,64,63,Antonia Godoy,1
-C,1,91,63,Patricio Cullen,1
-C,1,63,91,Patricio Cullen,0
+C,1,91,63,Pje de andrea,1
+C,1,63,91,Pje de andrea,0
 C,1,64,65,Antonia Godoy,0
 C,1,65,64,Antonia Godoy,1
-C,1,55,64,Piedras,1
-C,1,64,55,Piedras,0
+C,1,55,64,Cardenal Fasolino,1
+C,1,64,55,Cardenal Fasolino,0
 C,1,65,66,Antonia Godoy,0
 C,1,66,65,Antonia Godoy,1
-C,1,53,65,Piedras,1
-C,1,65,53,Piedras,0
+C,1,53,65,Obispo Principe,1
+C,1,65,53,Obispo Principe,0
 C,1,66,67,Antonia Godoy,0
 C,1,67,66,Antonia Godoy,1
-C,1,87,66,Patricio Cullen,1
-C,1,66,87,Patricio Cullen,0
+C,1,87,66,Espora,1
+C,1,66,87,Espora,0
 C,1,67,68,Antonia Godoy,0
 C,1,68,67,Antonia Godoy,1
-C,1,51,67,Piedras,1
-C,1,67,51,Piedras,0
+C,1,51,67,Obispo Boneo,1
+C,1,67,51,Obispo Boneo,0
 C,1,68,69,Antonia Godoy,0
 C,1,69,68,Antonia Godoy,1
 C,1,85,68,Estanislao Zeballos,1
 C,1,68,85,Estanislao Zeballos,0
 C,1,69,70,Antonia Godoy,0
 C,1,70,69,Antonia Godoy,1
-C,1,49,69,Piedras,1
-C,1,69,49,Piedras,0
+C,1,49,69,Juan Castelli,1
+C,1,69,49,Juan Castelli,0
 C,1,70,71,Antonia Godoy,0
 C,1,71,70,Antonia Godoy,1
-C,1,83,70,Patricio Cullen,1
-C,1,70,83,Patricio Cullen,0
+C,1,83,70,Hernandarias,1
+C,1,70,83,Hernandarias,0
 C,1,71,72,Antonia Godoy,0
 C,1,72,71,Antonia Godoy,1
-C,1,82,71,Patricio Cullen,1
-C,1,71,82,Patricio Cullen,0
+C,1,82,71,Pje Pujato,1
+C,1,71,82,Pje Pujato,1
 C,1,72,73,Antonia Godoy,0
 C,1,73,72,Antonia Godoy,1
 C,1,46,72,J.P. Lopez,1
 C,1,72,46,J.P. Lopez,0
 C,1,73,74,Antonia Godoy,0
 C,1,74,73,Antonia Godoy,1
-C,1,80,73,Patricio Cullen,1
-C,1,73,80,Patricio Cullen,0
+C,1,80,73,Angel Cassanello,1
+C,1,73,80,Angel Cassanello,0
 C,1,74,75,Antonia Godoy,0
 C,1,75,74,Antonia Godoy,1
-C,1,44,74,Piedras,1
-C,1,74,44,Piedras,0
-C,1,65,76,Antonia Godoy,0
-C,1,76,65,Antonia Godoy,1
-C,1,78,75,Patricio Cullen,1
-C,1,75,78,Patricio Cullen,0
+C,1,44,74,Ricardo Aldao,1
+C,1,74,44,Ricardo Aldao,0
+C,1,65,76,Obispo Principe,0
+C,1,76,65,Obispo Principe,1
+C,1,78,75,Pedro de vega,1
+C,1,75,78,Pedro de vega,0
 C,1,76,77,Juan Maciel,1
 C,1,77,76,Juan Maciel,0
-C,1,77,89,Juan Maciel,1
-C,1,89,77,Juan Maciel,1
+C,1,77,89,Alberti,1
+C,1,89,77,Alberti,1
 C,1,78,79,Patricio Cullen,0
 C,1,79,78,Patricio Cullen,1
 C,1,79,80,Patricio Cullen,0
@@ -427,60 +421,58 @@ C,1,74,79,Ricardo Aldao,1
 C,1,79,74,Ricardo Aldao,0
 C,1,80,81,Patricio Cullen,0
 C,1,81,80,Patricio Cullen,1
-C,1,108,80,Echague,1
-C,1,80,108,Echague,0
+C,1,108,80,Angel Cassanello,1
+C,1,80,108,Angel Cassanello,0
 C,1,81,82,Patricio Cullen,0
 C,1,82,81,Patricio Cullen,1
 C,1,72,81,J.P. Lopez,1
 C,1,81,72,J.P. Lopez,0
 C,1,82,83,Patricio Cullen,0
 C,1,83,82,Patricio Cullen,1
-C,1,71,82,Antonia Godoy,1
-C,1,82,71,Antonia Godoy,0
 C,1,83,84,Patricio Cullen,0
 C,1,84,83,Patricio Cullen,1
-C,1,105,83,Echague,1
-C,1,83,105,Echague,0
+C,1,105,83,Hernandarias,1
+C,1,83,105,Hernandarias,0
 C,1,84,85,Patricio Cullen,0
 C,1,85,84,Patricio Cullen,1
-C,1,69,84,Antonia Godoy,1
-C,1,84,69,Antonia Godoy,0
+C,1,69,84,Juan Castelli,1
+C,1,84,69,Juan Castelli,0
 C,1,85,86,Patricio Cullen,0
 C,1,86,85,Patricio Cullen,1
 C,1,103,85,Estanislao Zeballos,1
 C,1,85,103,Estanislao Zeballos,0
 C,1,86,87,Patricio Cullen,0
 C,1,87,86,Patricio Cullen,1
-C,1,67,86,Antonia Godoy,1
-C,1,86,67,Antonia Godoy,0
+C,1,67,86,Obispo Boneo,1
+C,1,86,67,Obispo Boneo,0
 C,1,87,88,Patricio Cullen,0
 C,1,88,87,Patricio Cullen,1
-C,1,101,87,Echague,1
-C,1,87,101,Echague,0
+C,1,101,87,Espora,1
+C,1,87,101,Espora,0
 C,1,88,89,Patricio Cullen,0
 C,1,89,88,Patricio Cullen,1
-C,1,76,88,Juan Maciel,1
-C,1,88,76,Juan Maciel,0
+C,1,76,88,Obispo Principe,1
+C,1,88,76,Obispo Principe,0
 C,1,89,90,Patricio Cullen,0
 C,1,90,89,Patricio Cullen,1
-C,1,99,89,Echague,1
-C,1,89,99,Echague,0
+C,1,99,89,Alberti,1
+C,1,89,99,Alberti,0
 C,1,90,91,Patricio Cullen,0
 C,1,91,90,Patricio Cullen,1
-C,1,64,90,Antonia Godoy,1
-C,1,90,98,Antonia Godoy,1
-C,1,98,90,Antonia Godoy,0
-C,1,90,64,Antonia Godoy,0
+C,1,64,90,Cardenal Fasolino,1
+C,1,90,98,Cardenal Fasolino,1
+C,1,98,90,Cardenal Fasolino,0
+C,1,90,64,Cardenal Fasolino,0
 C,1,91,92,Patricio Cullen,0
 C,1,92,91,Patricio Cullen,1
 C,1,92,93,Patricio Cullen,0
 C,1,93,92,Patricio Cullen,1
-C,1,97,92,Echague,1
-C,1,92,97,Echague,0
+C,1,97,92,Padre Genesio,1
+C,1,92,97,Padre Genesio,0
 C,1,93,94,Patricio Cullen,0
 C,1,94,93,Patricio Cullen,1
-C,1,61,93,Antonia Godoy,1
-C,1,93,61,Antonia Godoy,0
+C,1,61,93,Javier de la rosa,1
+C,1,93,61,Javier de la rosa,0
 C,1,94,95,Patricio Cullen,0
 C,1,95,94,Patricio Cullen,1
 C,1,95,94,Echague,1
@@ -491,38 +483,36 @@ C,1,96,97,Echague,0
 C,1,97,96,Echague,1
 C,1,97,98,Echague,0
 C,1,98,97,Echague,1
-C,1,92,97,Patricio Cullen,1
-C,1,97,92,Patricio Cullen,0
 C,1,98,99,Echague,0
 C,1,99,98,Echague,1
 C,1,99,100,Echague,0
 C,1,100,99,Echague,1
-C,1,119,99,Talcahuano,1
-C,1,99,119,Talcahuano,0
+C,1,119,99,Alberti,1
+C,1,99,119,Alberti,0
 C,1,100,101,Echague,0
 C,1,101,100,Echague,1
-C,1,88,100,Patricio Cullen,1
-C,1,100,88,Patricio Cullen,0
+C,1,88,100,Obispo Principe,1
+C,1,100,88,Obispo Principe,0
 C,1,101,102,Echague,0
 C,1,102,101,Echague,1
-C,1,117,101,Talcahuano,1
-C,1,101,117,Talcahuano,0
+C,1,117,101,Espora,1
+C,1,101,117,Espora,0
 C,1,102,103,Echague,0
 C,1,103,102,Echague,1
-C,1,86,102,Patricio Cullen,1
-C,1,102,86,Patricio Cullen,0
+C,1,86,102,Obispo Boneo,1
+C,1,102,86,Obispo Boneo,0
 C,1,103,104,Echague,0
 C,1,104,103,Echague,1
 C,1,115,103,Estanislao Zeballos,1
 C,1,103,115,Estanislao Zeballos,0
 C,1,104,105,Echague,0
 C,1,105,104,Echague,1
-C,1,84,104,Patricio Cullen,1
-C,1,104,84,Patricio Cullen,0
+C,1,84,104,Juan Castelli,1
+C,1,104,84,Juan Castelli,0
 C,1,105,106,Echague,0
 C,1,106,105,Echague,1
-C,1,113,105,Talcahuano,1
-C,1,105,113,Talcahuano,0
+C,1,113,105,Hernandarias,1
+C,1,105,113,Hernandarias,0
 C,1,106,107,Echague,0
 C,1,107,106,Echague,1
 C,1,107,108,Echague,0
@@ -531,62 +521,62 @@ C,1,81,107,J.P. Lopez,1
 C,1,107,81,J.P. Lopez,0
 C,1,108,109,Echague,0
 C,1,109,108,Echague,1
-C,1,111,108,Talcahuano,1
-C,1,108,111,Talcahuano,0
+C,1,111,108,Angel Cassanello,1
+C,1,108,111,Angel Cassanello,0
 C,1,109,110,Echague,0
 C,1,110,109,Echague,1
 C,1,79,109,Ricardo Aldao,1
 C,1,109,79,Ricardo Aldao,0
-C,1,110,160,Echague,0
-C,1,160,110,Echague,1
+C,1,110,160,Pedro de vega,0
+C,1,160,110,Pedro de vega,1
 C,1,111,112,Talcahuano,0
 C,1,112,111,Talcahuano,1
-C,1,158,111,Alte Brown,1
-C,1,111,158,Alte Brown,1
+C,1,158,111,Angel Cassanello,1
+C,1,111,158,Angel Cassanello,1
 C,1,112,113,Talcahuano,0
 C,1,113,112,Talcahuano,1
 C,1,107,112,J.P. Lopez,1
 C,1,112,107,J.P. Lopez,0
 C,1,113,114,Talcahuano,0
 C,1,114,113,Talcahuano,1
-C,1,134,113,Defensa,1
-C,1,113,134,Defensa,0
+C,1,134,113,Hernandarias,1
+C,1,113,134,Hernandarias,0
 C,1,114,115,Talcahuano,0
 C,1,115,114,Talcahuano,1
-C,1,104,114,Echague,1
-C,1,114,104,Echague,0
+C,1,104,114,Juan Castelli,1
+C,1,114,104,Juan Castelli,0
 C,1,115,116,Talcahuano,0
 C,1,116,115,Talcahuano,1
 C,1,132,115,Estanislao Zeballos,1
 C,1,115,132,Estanislao Zeballos,0
 C,1,116,117,Talcahuano,0
 C,1,117,116,Talcahuano,1
-C,1,102,116,Echague,1
-C,1,116,102,Echague,0
+C,1,102,116,Obispo Boneo,1
+C,1,116,102,Obispo Boneo,0
 C,1,117,118,Talcahuano,0
 C,1,118,117,Talcahuano,1
-C,1,130,117,Defensa,1
-C,1,117,130,Defensa,0
+C,1,130,117,Espora,1
+C,1,117,130,Espora,0
 C,1,118,119,Talcahuano,0
 C,1,119,118,Talcahuano,1
-C,1,100,118,Echague,1
-C,1,118,100,Echague,0
+C,1,100,118,Obispo Principe,1
+C,1,118,100,Obispo Principe,0
 C,1,119,120,Talcahuano,0
 C,1,120,119,Talcahuano,1
-C,1,128,119,Defensa,1
-C,1,119,128,Defensa,0
+C,1,128,119,Alberti,1
+C,1,119,128,Alberti,0
 C,1,120,121,Talcahuano,0
 C,1,121,120,Talcahuano,1
-C,1,98,120,Echague,1
-C,1,120,98,Echague,0
+C,1,98,120,Cardenal Fasolino,1
+C,1,120,98,Cardenal Fasolino,0
 C,1,121,122,Talcahuano,0
 C,1,122,121,Talcahuano,1
-C,1,126,121,Defensa,1
-C,1,121,126,Defensa,0
+C,1,126,121,Padre Genesio,1
+C,1,121,126,Padre Genesio,0
 C,1,122,123,Talcahuano,0
 C,1,123,122,Talcahuano,1
-C,1,96,122,Echague,1
-C,1,122,96,Echague,0
+C,1,96,122,Javier de la rosa,1
+C,1,122,96,Javier de la rosa,0
 C,1,123,124,Talcahuano,0
 C,1,124,123,Talcahuano,1
 C,1,124,123,Defensa,1
@@ -595,112 +585,112 @@ C,1,124,125,Defensa,0
 C,1,125,124,Defensa,1
 C,1,125,126,Defensa,0
 C,1,126,125,Defensa,1
-C,1,122,125,Talcahuano,1
-C,1,125,122,Talcahuano,0
+C,1,122,125,Javier de la rosa,1
+C,1,125,122,Javier de la rosa,0
 C,1,126,127,Defensa,0
 C,1,127,126,Defensa,1
-C,1,143,126,Riobamba,1
-C,1,126,143,Riobamba,0
+C,1,143,126,Padre Genesio,1
+C,1,126,143,Padre Genesio,0
 C,1,127,128,Defensa,0
 C,1,128,127,Defensa,1
-C,1,120,127,Talcahuano,1
-C,1,127,120,Talcahuano,0
+C,1,120,127,Cardenal Fasolino,1
+C,1,127,120,Cardenal Fasolino,0
 C,1,128,129,Defensa,0
 C,1,129,128,Defensa,1
-C,1,141,128,Riobamba,1
-C,1,128,141,Riobamba,0
+C,1,141,128,Alberti,1
+C,1,128,141,Alberti,0
 C,1,129,130,Defensa,0
 C,1,130,129,Defensa,1
-C,1,118,129,Talcahuano,1
-C,1,129,118,Talcahuano,0
+C,1,118,129,Obispo Principe,1
+C,1,129,118,Obispo Principe,0
 C,1,130,131,Defensa,0
 C,1,131,130,Defensa,1
-C,1,139,130,Riobamba,1
-C,1,130,139,Riobamba,0
+C,1,139,130,Espora,1
+C,1,130,139,Espora,0
 C,1,131,132,Defensa,0
 C,1,132,131,Defensa,1
-C,1,116,131,Talcahuano,1
-C,1,131,116,Talcahuano,0
+C,1,116,131,Obispo Boneo,1
+C,1,131,116,Obispo Boneo,0
 C,1,132,133,Defensa,0
 C,1,133,132,Defensa,1
 C,1,137,132,Estanislao Zeballos,1
 C,1,132,137,Estanislao Zeballos,0
 C,1,133,134,Defensa,0
 C,1,134,133,Defensa,1
-C,1,156,134,Defensa,1
-C,1,134,156,Defensa,0
-C,1,114,133,Talcahuano,1
-C,1,133,114,Talcahuano,0
-C,1,136,155,Defensa,0
-C,1,155,136,Defensa,1
+C,1,156,134,Hernandarias,1
+C,1,134,156,Hernandarias,0
+C,1,114,133,Juan Castelli,1
+C,1,133,114,Juan Castelli,0
+C,1,136,155,Riobamba,0
+C,1,155,136,Juan Castelli,1
 C,1,135,134,Defensa,1
 C,1,134,135,Defensa,0
 C,1,112,135,J.P. Lopez,1
 C,1,135,112,J.P. Lopez,0
 C,1,136,137,Riobamba,0
 C,1,137,136,Riobamba,1
-C,1,133,136,Defensa,1
-C,1,136,133,Defensa,0
+C,1,133,136,Juan Castelli,1
+C,1,136,133,Juan Castelli,0
 C,1,137,138,Riobamba,0
 C,1,138,137,Riobamba,1
 C,1,153,137,Estanislao Zeballos,1
 C,1,137,153,Estanislao Zeballos,1
 C,1,138,139,Riobamba,0
 C,1,139,138,Riobamba,1
-C,1,131,138,Defensa,1
-C,1,138,131,Defensa,0
+C,1,131,138,Obispo Boneo,1
+C,1,138,131,Obispo Boneo,0
 C,1,139,140,Riobamba,0
 C,1,140,139,Riobamba,1
-C,1,151,139,Alte Brown,1
-C,1,139,151,Alte Brown,1
+C,1,151,139,Espora,1
+C,1,139,151,Espora,1
 C,1,140,141,Riobamba,0
 C,1,141,140,Riobamba,1
-C,1,129,140,Defensa,1
-C,1,140,129,Defensa,0
+C,1,129,140,Obispo Principe,1
+C,1,140,129,Obispo Principe,0
 C,1,141,142,Riobamba,0
 C,1,142,141,Riobamba,1
-C,1,149,141,Alte Brown,1
-C,1,141,149,Alte Brown,1
+C,1,149,141,Alberti,1
+C,1,141,149,Alberti,1
 C,1,142,143,Riobamba,0
 C,1,143,142,Riobamba,1
 C,1,143,144,Riobamba,0
 C,1,144,143,Riobamba,1
-C,1,147,143,Alte Brown,1
-C,1,143,147,Alte Brown,1
+C,1,147,143,Padre Genesio,1
+C,1,143,147,Padre Genesio,1
 C,1,144,145,Riobamba,0
 C,1,145,144,Riobamba,1
-C,1,125,144,Defensa,1
-C,1,144,125,Defensa,0
-C,1,145,161,Riobamba,0
-C,1,161,145,Riobamba,1
+C,1,125,144,Javier de la rosa,1
+C,1,144,125,Javier de la rosa,0
+C,1,145,161,Regimiento 12,0
+C,1,161,145,Regimiento 12,1
 C,1,146,147,Alte Brown,1
 C,1,147,146,Alte Brown,1
-C,1,144,146,Riobamba,1
-C,1,146,144,Riobamba,0
+C,1,144,146,Javier de la rosa,1
+C,1,146,144,Javier de la rosa,0
 C,1,147,148,Alte Brown,1
 C,1,148,147,Alte Brown,1
 C,1,148,149,Alte Brown,1
 C,1,149,148,Alte Brown,1
-C,1,142,148,Riobamba,1
-C,1,148,142,Riobamba,0
+C,1,142,148,Cardenal Fasolino,1
+C,1,148,142,Cardenal Fasolino,0
 C,1,149,150,Alte Brown,1
 C,1,150,149,Alte Brown,1
 C,1,150,151,Alte Brown,1
 C,1,151,150,Alte Brown,1
-C,1,140,150,Riobamba,1
-C,1,150,140,Riobamba,0
+C,1,140,150,Obispo Principe,1
+C,1,150,140,Obispo Principe,0
 C,1,151,152,Alte Brown,1
 C,1,152,151,Alte Brown,1
 C,1,152,153,Alte Brown,1
 C,1,153,152,Alte Brown,1
-C,1,138,152,Riobamba,1
-C,1,152,138,Riobamba,0
+C,1,138,152,Obispo Boneo,1
+C,1,152,138,Obispo Boneo,0
 C,1,153,154,Alte Brown,1
 C,1,154,153,Alte Brown,1
 C,1,154,155,Alte Brown,1
 C,1,155,154,Alte Brown,1
-C,1,136,154,Riobamba,1
-C,1,154,136,Riobamba,0
+C,1,136,154,Juan Castelli,1
+C,1,154,136,Juan Castelli,0
 C,1,155,156,Alte Brown,1
 C,1,156,155,Alte Brown,1
 C,1,156,157,Alte Brown,1
@@ -715,8 +705,8 @@ C,1,159,160,Alte Brown,1
 C,1,160,159,Alte Brown,1
 C,1,109,159,Ricardo Aldao,1
 C,1,159,109,Ricardo Aldao,0
-C,1,146,161,Alte Brown,1
-C,1,161,146,Alte Brown,1
+C,1,146,161,Regimiento 12,1
+C,1,161,146,Javier de la rosa,1
 C,1,145,124,Regimiento 12,1
 C,1,124,145,Regimiento 12,0
 C,1,123,95,Regimiento 12,1
@@ -729,8 +719,8 @@ C,1,26,1,Regimiento 12,1
 C,1,1,26,Regimiento 12,0
 C,1,93,96,Javier de la rosa,1
 C,1,96,93,Javier de la rosa,0
-C,1,127,142,Defensa,1
-C,1,142,127,Defensa,0
+C,1,127,142,Cardenal Fasolino,1
+C,1,142,127,Cardenal Fasolino,0
 C,1,160,110,Pedro de vega,1
 C,1,110,160,Pedro de vega,0
 C,1,110,78,Pedro de vega,1
@@ -739,27 +729,27 @@ C,1,75,43,Pedro de vega,1
 C,1,43,75,Pedro de vega,0
 C,1,42,19,Pedro de vega,1
 C,1,19,42,Pedro de vega,0
-C,1,121,97,Echague,1
-C,1,97,121,Echague,0
-C,1,92,62,Echague,1
-C,1,62,92,Echague,0
-C,1,77,64,Juan Maciel,1
-C,1,64,77,Juan Maciel,0
-C,1,77,90,Juan Maciel,1
-C,1,90,77,Juan Maciel,0
-C,1,12,18,Dorrego,0
-C,1,18,12,Dorrego,1
+C,1,121,97,Padre Genesio,1
+C,1,97,121,Padre Genesio,0
+C,1,92,62,Padre Genesio,1
+C,1,62,92,Padre Genesio,0
+C,1,77,64,Cardenal Fasolino,1
+C,1,64,77,Alberti,0
+C,1,77,90,Cardenal Fasolino,1
+C,1,90,77,Alberti,0
+C,1,12,18,Angel Cassanello,0
+C,1,18,12,J.P. Lopez,1
 C,1,18,13,Angel Cassanello,1
 C,1,13,18,Angel Cassanello,0
-C,1,23,11,Gral Paz,1
-C,1,11,23,Gral Paz,0
-C,1,8,25,Gral Paz,1
-C,1,25,0,Gral Paz,0
-C,1,33,7,Gral Paz,1
-C,1,7,33,Gral Paz,0
-C,1,33,7,Gral Paz,1
-C,1,7,33,Gral Paz,0
-C,1,31,5,Gral Paz,1
-C,1,5,31,Gral Paz,0
-C,1,28,2,Gral Paz,1
-C,1,2,28,Gral Paz,0
+C,1,23,11,Hernandarias,1
+C,1,11,23,Hernandarias,0
+C,1,8,25,Estanislao Zeballos,1
+C,1,25,8,Obispo Boneo,0
+C,1,33,7,Espora,1
+C,1,7,33,Espora,0
+C,1,33,7,Espora,1
+C,1,7,33,Espora,0
+C,1,31,5,Alberti,1
+C,1,5,31,Alberti,0
+C,1,28,2,Javier de la rosa,1
+C,1,2,28,Padre Genesio,0
