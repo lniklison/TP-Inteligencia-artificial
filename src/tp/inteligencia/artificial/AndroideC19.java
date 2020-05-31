@@ -69,12 +69,12 @@ public class AndroideC19 extends SearchBasedAgent {
 //        BreathFirstSearch searchStrategy = new BreathFirstSearch();
 //        DepthFirstSearch searchStrategy = new DepthFirstSearch();
 
-//        IStepCostFunction costFunction = new CostFunction();
-//        UniformCostSearch searchStrategy = new UniformCostSearch(costFunction);
+        IStepCostFunction costFunction = new CostFunction();
+        UniformCostSearch searchStrategy = new UniformCostSearch(costFunction);
 
-        IStepCostFunction cost = new CostFunction();
-        IEstimatedCostFunction heuristic = new Heuristic();
-        AStarSearch searchStrategy = new AStarSearch(cost, heuristic);
+//        IStepCostFunction cost = new CostFunction();
+//        IEstimatedCostFunction heuristic = new Heuristic();
+//        AStarSearch searchStrategy = new AStarSearch(cost, heuristic);
 
         Search searchSolver = new Search(searchStrategy);
 

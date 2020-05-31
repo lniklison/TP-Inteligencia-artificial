@@ -62,13 +62,13 @@ public class AC19Environment extends Environment {
         this.posicionesEnfermos = new ArrayList<Integer>();
         this.cuadrasCortadas = new HashMap<Integer,Integer>();
         this.cuadrasCortadas = new HashMap<Integer,Integer>();
-        Random rn = new Random();
+        Random rn = new Random(0);
         for(Nodo n : nodos){
             ArrayList<AC19NodoAlcanzable> successors = new ArrayList<AC19NodoAlcanzable>();
             ArrayList<Integer> po = new ArrayList<Integer>();
             int origen = Integer.valueOf(n.getId());
             po.add(origen);
-            System.out.printf(n.getId()+"->[");
+//            System.out.printf(n.getId()+"->[");
             
             for(Cuadra c : n.getCuadras()){
                 int nodo = Integer.valueOf(c.getDestino().getId());
@@ -76,10 +76,10 @@ public class AC19Environment extends Environment {
                     successors.add(new AC19NodoAlcanzable(nodo, "CalleHacia"+nodo, c));
                     po.add(nodo);
                     
-                    System.out.printf(c.getDestino().getId()+", ");
+//                    System.out.printf(c.getDestino().getId()+", ");
                 }
             }
-            System.out.printf("]\n");
+//            System.out.printf("]\n");
             map.put(origen, successors);
             
 //            cuadrasCortadas.put(2, new AC19NodoAlcanzable(11, "CalleHacia"+15));
@@ -88,7 +88,7 @@ public class AC19Environment extends Environment {
             if(Integer.parseInt(n.getId())!=1 && posicionesEnfermos.size()<2){
                 
                 Double num = (rn.nextDouble()*100);
-                if(num>90 && !posicionesEnfermos.contains(Integer.parseInt(n.getId()))){
+                if(num<10 && !posicionesEnfermos.contains(Integer.parseInt(n.getId()))){
                     posicionesEnfermos.add(Integer.parseInt(n.getId()));
                 }
             }

@@ -196,7 +196,7 @@ import tp.inteligencia.artificial.model.AC19NodoAlcanzable;
         //MOVER ALEATORIAMENTE UN ENFERMO
         for(int i=0; i< posicionesEnfermos.size(); i++){
             Double num = (rn.nextDouble()*100);
-            if(num>90){
+            if(num>75){
                 Integer nuevaPosicion = this.posicionCercana(posicionesEnfermos.get(i));
                 posicionesEnfermos.set(i,nuevaPosicion);
             }
@@ -207,7 +207,7 @@ import tp.inteligencia.artificial.model.AC19NodoAlcanzable;
         Double num2 = (rn.nextDouble() *100);
         Double num3 = (rn.nextDouble() *tamanioMapa);
         int nuevaPosicion = num3.intValue();
-        if(num2>90 && !posicionesEnfermos.contains(nuevaPosicion) && nuevaPosicion!=1 && posicionesEnfermos.size()<2){
+        if(num2>70 && !posicionesEnfermos.contains(nuevaPosicion) && nuevaPosicion!=1 && posicionesEnfermos.size()<2){
             posicionesEnfermos.add(nuevaPosicion);
         }
         
